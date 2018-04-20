@@ -1,0 +1,46 @@
+.social-footer-section {
+  color: #1F1F1F;
+  background-color: #F0F0F0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding-top: 3%;
+  padding-bottom: 3%; 
+}
+
+.social-footer-inner {
+  transition: all .25s ease-in-out .1s;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.social-button-padding {
+  padding-left: 2%;
+  padding-right: 2%;
+  cursor: pointer;
+}
+
+.footer-section {
+  color: rgba(255,255,255,.4);
+  background-color: #201a16;
+  -webkit-font-smoothing: antialiased;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.powered-by-text {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .5px;
+  line-height: 1.6em;
+  margin-top: 1em;
+}
+
+.link-to-kasuria {
+  text-decoration: none;
+  word-wrap: break-word;
+  background: transparent;
+  cursor: pointer;
+  color: rgba(255,255,255,.4);
+}

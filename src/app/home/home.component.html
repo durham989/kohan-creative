@@ -1,0 +1,93 @@
+<div class="header-unit">
+  <div class="color-overlay"></div>
+  <div id="video-container">
+    <video autoplay loop class="fillWidth">
+      <source src="https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Office%20-%207269.mp4?alt=media&token=abee2fc4-a937-4046-9f9b-384708dece22"
+        type="video/mp4" />
+    </video>
+  </div>
+  <!-- end video-container -->
+
+  <div class="desc-wrapper-container">
+    <div class="desc-wrapper">
+      <p class="desc-smaller-text">Kohan Creative</p>
+      <h1 class="kohan-header-tagline">Luxurious Digital Design for Your Dental & Medical Practice</h1>
+      <!-- <a class="kohan-header-button" routerLink="/home">Work With Us</a> -->
+      <div class="kohan-header-button" (click)="ngxSmartModalService.getModal('myModal').open()">Work With Us</div>
+      
+      <!-- Work With Us Modal -->
+      <ngx-smart-modal #myModal identifier="myModal">
+        <h1>Work with Kohan Creative</h1>
+        <form style="text-align: left;">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
+            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
+            <input type="password" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name">
+          </div>
+          <button type="submit" class="work-with-us-modal-button">Submit</button>
+        </form>
+      </ngx-smart-modal>
+    
+    </div>
+  </div>
+</div>
+<!-- end .header-unit -->
+
+<div class="container">
+  <div class="row spacing-section">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h2 class="kohan-secondary-statement">
+        Kohan Creative employs the world's best designers, developers, and creators to imbue your private dental and medical practices
+        with digital luxury.
+      </h2>
+    </div>
+  </div>
+  <div class="row services-spacing-section">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('web-design-development')">
+      <div class="service-offering-container">
+        <div class="service-offerings-content">
+          <h3 class="service-offerings-title text-align-center">
+            <a routerLink="/web-design-development" class="link-to-services text-align-center">Website Design & Development</a>
+          </h3>
+          <p class="text-align-center services-paragraph">
+            We design and develop custom websites that mirror the aesthetic and warmth of your dental or medical practice, evoking a
+            consistent emotion across your physical and digital properties.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+      <img src="../assets/img/paper-3146953_1280_darker.jpeg" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('graphic-design-branding')">
+      <div class="service-offering-container">
+        <div class="service-offerings-content">
+          <h3 class="service-offerings-title text-align-center">
+            <a routerLink="/home" class="link-to-services text-align-center">Graphic Design & Branding</a>
+          </h3>
+          <p class="text-align-center services-paragraph">
+            Whether you're starting your own practice or looking to modernize your current one, we specialize in creating custom logos
+            and brand assets that build on your story and set you apart.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+      <img src="../assets/img/paper-3318159_1280_darker.jpeg" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('social-media-marketing')">
+      <div class="service-offering-container">
+        <div class="service-offerings-content">
+          <h3 class="service-offerings-title text-align-center">
+            <a routerLink="/home" class="link-to-services text-align-center">Social Media Marketing</a>
+          </h3>
+          <p class="text-align-center services-paragraph">
+            Extend your brand presence outside the office, at all hours of the day. We engage your patients and anticipate their needs
+            by managing your social accounts with thoughtfulness, attention, and compassion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

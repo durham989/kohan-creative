@@ -1,0 +1,97 @@
+.kohan-navbar-background {
+  background-color: #FFFFFF !important;
+}
+
+.kohan-logo {
+  height: auto;
+  max-height: 100px;
+  width: auto;
+  max-width: 150px;
+}
+
+.kohan-header {
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 1em;
+  background-color: #fff;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  position: relative;
+}
+
+.kohan-inner-header {
+  padding: 16px 0;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+  animation: header-anim 1s ease-in-out;
+}
+
+.kohan-header-nav {
+  text-align: right;
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.main-nav-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+
+.work-with-us-button {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.services-item-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0; 
+}
+
+.services-link {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1em;
+  color: #000000;
+  display: block;
+  padding: 1em 1.5em !important;
+}
+
+.services-link-button {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1em;
+  display: block;
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin-left: 1em !important;
+  padding: 1em 1.5em !important;
+  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;
+}
+
+.services-link-button:hover {
+  background-color: #000000;
+  color: #EFEFEF;
+}
