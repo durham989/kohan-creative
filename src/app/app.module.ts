@@ -12,6 +12,7 @@ import { WebDevelopmentComponent } from './web-development/web-development.compo
 import { GraphicDesignComponent } from './graphic-design/graphic-design.component';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { FooterComponent } from './footer/footer.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
 
@@ -23,7 +24,8 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
     WebDevelopmentComponent,
     GraphicDesignComponent,
     SocialMediaComponent,
-    FooterComponent
+    FooterComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -36,6 +38,7 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
       { path: 'web-design-development', component: WebDevelopmentComponent },
       { path: 'graphic-design-branding', component: GraphicDesignComponent },
       { path: 'social-media-marketing', component: SocialMediaComponent },
+      { path: 'pricing', component: PricingComponent },
       { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
       { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
     ]),

@@ -1,0 +1,135 @@
+<div class="header-unit">
+  <div class="color-overlay"></div>
+  <div id="video-container">
+    <video autoplay loop class="fillWidth">
+      <source src="https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Whiteboard%20-%201658.mp4?alt=media&token=f67b247c-bee6-4f62-a3dc-ce0c6b7dcc77"
+        type="video/mp4" />
+    </video>
+  </div>
+  <!-- end video-container -->
+
+  <div class="desc-wrapper-container">
+    <div class="desc-wrapper">
+      <p class="desc-smaller-text">Kohan Creative</p>
+      <h1 class="kohan-header-tagline">Packages & Pricing</h1>
+      <div class="kohan-header-button" (click)="ngxSmartModalService.getModal('myModal').open()">Work With Us</div>
+
+      <!-- Work With Us Modal -->
+      <ngx-smart-modal #myModal identifier="myModal">
+        <h1>Work with Kohan Creative</h1>
+        <form style="text-align: left;">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
+            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
+            <input type="password" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name">
+          </div>
+          <button type="submit" class="work-with-us-modal-button">Submit</button>
+        </form>
+      </ngx-smart-modal>
+
+    </div>
+  </div>
+</div>
+<!-- end .header-unit -->
+
+
+
+<div class="container">
+
+  <!-- Kohan Secondary Tagline -->
+  <div class="row spacing-section">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h2 class="kohan-secondary-statement">
+        At Kohan Creative, we believe in optionality.
+      </h2>
+      <h2 class="kohan-secondary-statement">
+        Choose the package that's right for your dental or medical practice.
+      </h2>
+    </div>
+  </div>
+
+  <!-- Kohan Pricing Packages -->
+  <div class="row services-spacing-section">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal service-offerings-title red-package">Red</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$600
+            <small class="text-muted">/ mo</small>
+          </h1>
+          <!-- <h4 class="pricing-subsection-title">Web Design & Dev</h4> -->
+          <ul class="list-unstyled mt-3 mb-4 text-align-left">
+            <li class="package-features-paragraph">Pre-designed template</li>
+            <li class="package-features-paragraph">Standard monthly web hosting</li>
+            <li class="package-features-paragraph">Mobile optimized site</li>
+            <li class="package-features-paragraph">Updated logo with full rights</li>
+          </ul>
+          <button type="button" class="sign-up-button">Sign Up Now</button>
+          <div class="package-features-muted">* Additional $200 flat fee for any site changes</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal service-offerings-title">Black</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$1000
+            <small class="text-muted">/ mo</small>
+          </h1>
+          <!-- <h4 class="pricing-subsection-title">Web Design & Dev</h4> -->
+          <ul class="list-unstyled mt-3 mb-4 text-align-left">
+            <li class="package-features-paragraph">Standard monthly web hosting</li>
+            <li class="package-features-paragraph">Mobile optimized site</li>
+            <li class="package-features-paragraph">Complete custom website design and development</li>
+            <li class="package-features-paragraph">Regular monthly maintenance and hosting</li>
+            <li class="package-features-paragraph">Premium services and integrations</li>
+            <li class="package-features-paragraph">Custom logo and suite of brand assets</li>
+          </ul>
+          <button type="button" class="sign-up-button">Sign Up Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal service-offerings-title gold-package">Gold</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$800
+            <small class="text-muted">/ mo</small>
+          </h1>
+          <!-- <h4 class="pricing-subsection-title">Web Design & Dev</h4> -->
+          <ul class="list-unstyled mt-3 mb-4 text-align-left">
+            <li class="package-features-paragraph">Standard monthly web hosting</li>
+            <li class="package-features-paragraph">Mobile optimized site</li>
+            <li class="package-features-paragraph">Pre-designed template w/ 2 custom options</li>
+            <li class="package-features-paragraph">One site edit per month</li>
+            <li class="package-features-paragraph">Newly designed logo and business cards</li>
+          </ul>
+          <button type="button" class="sign-up-button">Sign Up Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What Each Package Includes -->
+  <div class="row services-spacing-section">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h2 class="kohan-secondary-statement">
+        At Kohan Creative, we believe in optionality.
+      </h2>
+      <h2 class="kohan-secondary-statement">
+        Choose the package that's right for your dental or medical practice.
+      </h2>
+    </div>
+  </div>
+
+</div>

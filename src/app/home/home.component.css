@@ -95,7 +95,7 @@ video.fillWidth {
   padding: 1em 1.75em;
   display: inline-block;
   line-height: 1em;
-  margin: 10px 0;
+  margin: 20px 0;
   transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;  
   cursor: pointer;
 }
@@ -215,5 +215,23 @@ video.fillWidth {
     color: #c3c1c1;
     margin: 10px auto;
     text-align: center;
+  }
+
+  .kohan-header-tagline {
+    display: block;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: none;
+    line-height: 1.1em;
+    color: #FFFFFF;
+  }
+
+  .header-unit {
+    height: 375px;
+    border: none;
+    position: relative;
+    padding: 20px;
   }
 }

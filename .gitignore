@@ -8,8 +8,8 @@
 /node_modules/
 /typings/
 /tsd_typings/
-/dist/
-/dist-server/
+#/dist/
+#/dist-server/
 /compiled/
 
 # Node #

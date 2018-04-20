@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { NgxSmartModalService } from 'ngx-smart-modal';
+
 @Component({
   selector: 'kohan-web-development',
   templateUrl: './web-development.component.html',
@@ -10,7 +12,7 @@ import { Router } from '@angular/router';
 export class WebDevelopmentComponent implements OnInit {
   public message: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public ngxSmartModalService: NgxSmartModalService) {}
 
   ngOnInit() {
     this.message = 'Hello';
