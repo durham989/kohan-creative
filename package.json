@@ -63,8 +63,7 @@
     "tslint": "^5.7.0",
     "typescript": "~2.4.2"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": "6.10.0",
     "npm": "3.10.5"
