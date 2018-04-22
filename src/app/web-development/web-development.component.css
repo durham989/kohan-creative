@@ -154,7 +154,7 @@ video.fillWidth {
   text-decoration: none;
   word-wrap: break-word;
   background: transparent;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .text-align-center {
