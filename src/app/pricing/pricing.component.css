@@ -288,6 +288,17 @@ video.fillWidth {
     text-align: center;
   }
 
+  .kohan-header-tagline {
+    display: block;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 0px;
+    text-transform: none;
+    line-height: 1.1em;
+    color: #FFFFFF;
+  }
+
   .header-unit {
     height: 375px;
     border: none;
