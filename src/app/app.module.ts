@@ -2,8 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { AngularFireLite } from 'angularfire-lite';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,7 +18,10 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
 
+import { ContactService } from './services/contact.service';
+
 import { TransferHttpCacheModule } from '@nguniversal/common';
+import { Http } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,11 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
+    AngularFireLite.forRoot(environment.config),
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AngularFontAwesomeModule,
     NgxSmartModalModule.forRoot(),
     RouterModule.forRoot([
@@ -44,7 +55,9 @@ import { TransferHttpCacheModule } from '@nguniversal/common';
     ]),
     TransferHttpCacheModule,
   ],
-  providers: [],
+  providers: [
+    ContactService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

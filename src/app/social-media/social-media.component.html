@@ -12,9 +12,28 @@
     <div class="desc-wrapper">
       <h1 class="kohan-header-tagline">Social Media Marketing</h1>
       <p class="desc-smaller-text">Drive Value Through Engagement</p>
-      <p>
-        <a class="kohan-header-button" routerLink="/home">Work With Us</a>
-      </p>
+      <div class="kohan-header-button" (click)="ngxSmartModalService.getModal('myModal').open()">Work With Us</div>
+
+      <!-- Work With Us Modal -->
+      <ngx-smart-modal #myModal identifier="myModal">
+        <h4>Work with Kohan Creative</h4>
+        <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
+            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+              formControlName="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
+            <input type="text" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name"
+              formControlName="practiceName">
+          </div>
+          <button type="submit" class="work-with-us-modal-button">Submit</button>
+        </form>
+      </ngx-smart-modal>
+
+
     </div>
   </div>
 </div>

@@ -78,17 +78,22 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_font_awesome__ = __webpack_require__("./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__web_development_web_development_component__ = __webpack_require__("./src/app/web-development/web-development.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__graphic_design_graphic_design_component__ = __webpack_require__("./src/app/graphic-design/graphic-design.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__social_media_social_media_component__ = __webpack_require__("./src/app/social-media/social-media.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__ = __webpack_require__("./src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pricing_pricing_component__ = __webpack_require__("./src/app/pricing/pricing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__nguniversal_common__ = __webpack_require__("./node_modules/@nguniversal/common/esm5/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular_font_awesome__ = __webpack_require__("./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__web_development_web_development_component__ = __webpack_require__("./src/app/web-development/web-development.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__graphic_design_graphic_design_component__ = __webpack_require__("./src/app/graphic-design/graphic-design.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__social_media_social_media_component__ = __webpack_require__("./src/app/social-media/social-media.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__footer_footer_component__ = __webpack_require__("./src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pricing_pricing_component__ = __webpack_require__("./src/app/pricing/pricing.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_contact_service__ = __webpack_require__("./src/app/services/contact.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__nguniversal_common__ = __webpack_require__("./node_modules/@nguniversal/common/esm5/common.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -110,40 +115,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__navbar_navbar_component__["a" /* NavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__web_development_web_development_component__["a" /* WebDevelopmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__social_media_social_media_component__["a" /* SocialMediaComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__pricing_pricing_component__["a" /* PricingComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__navbar_navbar_component__["a" /* NavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__web_development_web_development_component__["a" /* WebDevelopmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__social_media_social_media_component__["a" /* SocialMediaComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__pricing_pricing_component__["a" /* PricingComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */].withServerTransition({ appId: 'my-app' }),
+                __WEBPACK_IMPORTED_MODULE_8_angularfire_lite__["a" /* AngularFireLite */].forRoot(__WEBPACK_IMPORTED_MODULE_9__environments_environment__["a" /* environment */].config),
                 __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_4_angular_font_awesome__["a" /* AngularFontAwesomeModule */],
-                __WEBPACK_IMPORTED_MODULE_5_ngx_smart_modal__["a" /* NgxSmartModalModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["c" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_forms__["d" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_6_angular_font_awesome__["a" /* AngularFontAwesomeModule */],
+                __WEBPACK_IMPORTED_MODULE_7_ngx_smart_modal__["a" /* NgxSmartModalModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forRoot([
-                    { path: '', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */], pathMatch: 'full' },
-                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */] },
-                    { path: 'web-design-development', component: __WEBPACK_IMPORTED_MODULE_9__web_development_web_development_component__["a" /* WebDevelopmentComponent */] },
-                    { path: 'graphic-design-branding', component: __WEBPACK_IMPORTED_MODULE_10__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */] },
-                    { path: 'social-media-marketing', component: __WEBPACK_IMPORTED_MODULE_11__social_media_social_media_component__["a" /* SocialMediaComponent */] },
-                    { path: 'pricing', component: __WEBPACK_IMPORTED_MODULE_13__pricing_pricing_component__["a" /* PricingComponent */] },
+                    { path: '', component: __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */], pathMatch: 'full' },
+                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */] },
+                    { path: 'web-design-development', component: __WEBPACK_IMPORTED_MODULE_13__web_development_web_development_component__["a" /* WebDevelopmentComponent */] },
+                    { path: 'graphic-design-branding', component: __WEBPACK_IMPORTED_MODULE_14__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */] },
+                    { path: 'social-media-marketing', component: __WEBPACK_IMPORTED_MODULE_15__social_media_social_media_component__["a" /* SocialMediaComponent */] },
+                    { path: 'pricing', component: __WEBPACK_IMPORTED_MODULE_17__pricing_pricing_component__["a" /* PricingComponent */] },
                     { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' },
                     { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule' }
                 ]),
-                __WEBPACK_IMPORTED_MODULE_14__nguniversal_common__["a" /* TransferHttpCacheModule */],
+                __WEBPACK_IMPORTED_MODULE_19__nguniversal_common__["a" /* TransferHttpCacheModule */],
             ],
-            providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_18__services_contact_service__["a" /* ContactService */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -213,14 +229,14 @@ var FooterComponent = (function () {
 /***/ "./src/app/graphic-design/graphic-design.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position: relative;\n  padding: 20px;\n}\n\n#video-container {\n  position: absolute;\n}\n\n#video-container {\n  top:0%;\n  left:0%;\n  height:100%;\n  width:100%;\n  overflow: hidden;\n}\n\nvideo {\n  position:absolute;\n  z-index:0;\n}\n\nvideo.fillWidth {\n  width: 100%;\n}\n\n.color-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(32,26,22,.5);\n  z-index: 99;\n}\n\n.desc-wrapper-container {\n  min-height: 0;\n  padding: 130px 0;\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n\n.desc-wrapper {\n  -webkit-animation: feature-text-anim .75s ease-in-out;\n          animation: feature-text-anim .75s ease-in-out;\n  z-index: 100;\n  position: relative;\n  width: 100%;\n  max-width: 956px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin: 0 auto;\n  padding: 32px;\n  text-align: center;\n  text-rendering: optimizeLegibility;\n}\n\n.desc-smaller-text {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 28px;\n  letter-spacing: 5px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n  color: #c3c1c1;\n  margin: 20px auto;\n  text-align: center;\n}\n\n.kohan-header-tagline {\n  display: block;\n  font-weight: 300;\n  font-style: normal;\n  font-size: 58px;\n  letter-spacing: 0px;\n  text-transform: none;\n  line-height: 1.1em;\n  color: #FFFFFF;\n}\n\n.kohan-header-button {\n  background-color: transparent;\n  -webkit-font-smoothing: antialiased;\n  border: 2px solid #FFFFFF !important;\n  color: #FFFFFF;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 16px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  text-decoration: none;\n  padding: 1em 1.75em;\n  display: inline-block;\n  line-height: 1em;\n  margin: 10px 0;\n  -webkit-transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;  \n}\n\n.kohan-header-button:hover {\n  background-color: #FFFFFF;\n  color: #181818;\n}\n\n.spacing-section {\n  margin-top: 8%;\n}\n\n.services-spacing-section {\n  margin-top: 8%;\n  margin-bottom: 8%;\n}\n\n.kohan-secondary-statement {\n  text-align: center;\n  font-weight: 300;\n}\n\n.services-image-margins {\n  margin-bottom: 8%;\n}\n\n.service-offering-container {\n  padding-bottom: 20%;\n  padding-top: 20%;\n  padding-left: 17px;\n  padding-right: 17px;\n  position: relative;\n  height: auto;\n  outline: none;\n  -webkit-box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n          box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n  -webkit-transition: -webkit-box-shadow .2s ease-in-out;\n  transition: -webkit-box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;\n}\n\n.service-offerings-content {\n  cursor: auto;\n  outline: none;\n}\n\n.service-offerings-title {\n  color: #1F1F1F;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 20px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n}\n\n.link-to-services {\n  color: rgba(31,31,31,.5);\n  text-decoration: none;\n  word-wrap: break-word;\n  background: transparent;\n  /* cursor: pointer; */\n}\n\n.text-align-center {\n  text-align: center;\n}\n\n.services-paragraph {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 18px;\n  letter-spacing: .5px;\n  line-height: 1.6em;\n  color: #1F1F1F;\n  margin-top: 1em;\n}\n\n@media only screen and (max-width: 640px) {\n  .desc-wrapper-container {\n    min-height: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n  }\n\n  .desc-smaller-text {\n    font-weight: 300;\n    font-style: normal;\n    font-size: 18px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.3em;\n    color: #c3c1c1;\n    margin: 10px auto;\n    text-align: center;\n  }\n}"
+module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position: relative;\n  padding: 20px;\n}\n\n#video-container {\n  position: absolute;\n}\n\n#video-container {\n  top:0%;\n  left:0%;\n  height:100%;\n  width:100%;\n  overflow: hidden;\n}\n\nvideo {\n  position:absolute;\n  z-index:0;\n}\n\nvideo.fillWidth {\n  width: 100%;\n}\n\n.color-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(32,26,22,.5);\n  z-index: 99;\n}\n\n.desc-wrapper-container {\n  min-height: 0;\n  padding: 130px 0;\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n\n.desc-wrapper {\n  -webkit-animation: feature-text-anim .75s ease-in-out;\n          animation: feature-text-anim .75s ease-in-out;\n  z-index: 100;\n  position: relative;\n  width: 100%;\n  max-width: 956px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin: 0 auto;\n  padding: 32px;\n  text-align: center;\n  text-rendering: optimizeLegibility;\n}\n\n.desc-smaller-text {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 28px;\n  letter-spacing: 5px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n  color: #c3c1c1;\n  margin: 20px auto;\n  text-align: center;\n}\n\n.kohan-header-tagline {\n  display: block;\n  font-weight: 300;\n  font-style: normal;\n  font-size: 58px;\n  letter-spacing: 0px;\n  text-transform: none;\n  line-height: 1.1em;\n  color: #FFFFFF;\n}\n\n.kohan-header-button {\n  background-color: transparent;\n  -webkit-font-smoothing: antialiased;\n  border: 2px solid #FFFFFF !important;\n  color: #FFFFFF;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 16px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  text-decoration: none;\n  padding: 1em 1.75em;\n  display: inline-block;\n  line-height: 1em;\n  margin: 10px 0;\n  -webkit-transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  cursor: pointer;\n}\n\n.kohan-header-button:hover {\n  background-color: #FFFFFF;\n  color: #181818;\n  cursor: pointer;\n}\n\n.spacing-section {\n  margin-top: 8%;\n}\n\n.services-spacing-section {\n  margin-top: 8%;\n  margin-bottom: 8%;\n}\n\n.kohan-secondary-statement {\n  text-align: center;\n  font-weight: 300;\n}\n\n.services-image-margins {\n  margin-bottom: 8%;\n}\n\n.service-offering-container {\n  padding-bottom: 20%;\n  padding-top: 20%;\n  padding-left: 17px;\n  padding-right: 17px;\n  position: relative;\n  height: auto;\n  outline: none;\n  -webkit-box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n          box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n  -webkit-transition: -webkit-box-shadow .2s ease-in-out;\n  transition: -webkit-box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;\n}\n\n.service-offerings-content {\n  cursor: auto;\n  outline: none;\n}\n\n.service-offerings-title {\n  color: #1F1F1F;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 20px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n}\n\n.link-to-services {\n  color: rgba(31,31,31,.5);\n  text-decoration: none;\n  word-wrap: break-word;\n  background: transparent;\n  /* cursor: pointer; */\n}\n\n.text-align-center {\n  text-align: center;\n}\n\n.services-paragraph {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 18px;\n  letter-spacing: .5px;\n  line-height: 1.6em;\n  color: #1F1F1F;\n  margin-top: 1em;\n}\n\n.work-with-us-modal-button {\n  color: #000000;\n  border: 2px solid #000000;\n  background-color: transparent;\n  -webkit-font-smoothing: subpixel-antialiased;\n  cursor: pointer;\n}\n\n.work-with-us-modal-button:hover {\n  background-color: #000000;\n  color: #EFEFEF;\n  cursor: pointer;\n}\n\n.lighter-font-weight {\n  font-weight: 300;\n}\n\n@media only screen and (max-width: 640px) {\n  .desc-wrapper-container {\n    min-height: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n  }\n\n  .desc-smaller-text {\n    font-weight: 300;\n    font-style: normal;\n    font-size: 18px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.3em;\n    color: #c3c1c1;\n    margin: 10px auto;\n    text-align: center;\n  }\n}"
 
 /***/ }),
 
 /***/ "./src/app/graphic-design/graphic-design.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Paint%20-%206385.mp4?alt=media&token=5b9f2a64-9350-4aa1-bbf4-c9afb901ff56\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <h1 class=\"kohan-header-tagline\">Graphic Design & Branding</h1>\n      <p class=\"desc-smaller-text\">Craft Your Visually Compelling Story</p>\n      <p>\n        <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a>\n      </p>\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        Utilizing a unique set of design principles, philosophies, and technologies, we elevate your brand and shed light on the true value you deliver.\n      </h2>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Visual Storytelling</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            We work closely with you to get to know the true purpose and story behind your dental practice, with the intent of reimagining your brand and building a foundation that is in harmony with your overall vision.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Purposeful Assets</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Your brand isn't just your logo. From health history and referral forms to appointment and business cards, we create assets specifically tailored to accommodate your growing dental practice's needs.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Lasting Impressions</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            For your dental practice, experience is everything. We extend the comforting, luxurious experience you carefully cultivate by infusing your brand with the same empathy and passion, further strengthening the bond you share with your patients.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Paint%20-%206385.mp4?alt=media&token=5b9f2a64-9350-4aa1-bbf4-c9afb901ff56\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <h1 class=\"kohan-header-tagline\">Graphic Design & Branding</h1>\n      <p class=\"desc-smaller-text\">Craft Your Visually Compelling Story</p>\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h4>Work with Kohan Creative</h4>\n        <form style=\"text-align: left;\" [formGroup]=\"newContactForm\" (ngSubmit)=\"saveContactInformation()\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\"\n              formControlName=\"email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"text\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\"\n              formControlName=\"practiceName\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        Utilizing a unique set of design principles, philosophies, and technologies, we elevate your brand and shed light on the\n        true value you deliver.\n      </h2>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Visual Storytelling</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            We work closely with you to get to know the true purpose and story behind your dental practice, with the intent of reimagining\n            your brand and building a foundation that is in harmony with your overall vision.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Purposeful Assets</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Your brand isn't just your logo. From health history and referral forms to appointment and business cards, we create assets\n            specifically tailored to accommodate your growing dental practice's needs.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Lasting Impressions</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            For your dental practice, experience is everything. We extend the comforting, luxurious experience you carefully cultivate\n            by infusing your brand with the same empathy and passion, further strengthening the bond you share with your\n            patients.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -231,6 +247,9 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GraphicDesignComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -242,9 +261,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var GraphicDesignComponent = (function () {
-    function GraphicDesignComponent(router) {
+    function GraphicDesignComponent(router, ngxSmartModalService, db, auth, fireStore) {
         this.router = router;
+        this.ngxSmartModalService = ngxSmartModalService;
+        this.db = db;
+        this.auth = auth;
+        this.fireStore = fireStore;
+        this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
+        });
     }
     GraphicDesignComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -252,13 +282,30 @@ var GraphicDesignComponent = (function () {
     GraphicDesignComponent.prototype.navigateToPage = function (route) {
         this.router.navigate([route]);
     };
+    GraphicDesignComponent.prototype.saveContactInformation = function () {
+        var _this = this;
+        var contactInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
+            _this.contactData = data;
+            console.log(_this.contactData);
+        }, function (error) {
+            console.error(error);
+        });
+    };
     GraphicDesignComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'kohan-graphic-design',
             template: __webpack_require__("./src/app/graphic-design/graphic-design.component.html"),
             styles: [__webpack_require__("./src/app/graphic-design/graphic-design.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
     ], GraphicDesignComponent);
     return GraphicDesignComponent;
 }());
@@ -277,7 +324,7 @@ module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position:
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Office%20-%207269.mp4?alt=media&token=abee2fc4-a937-4046-9f9b-384708dece22\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <p class=\"desc-smaller-text\">Kohan Creative</p>\n      <h1 class=\"kohan-header-tagline\">Luxurious Digital Design for Your Dental & Medical Practice</h1>\n      <!-- <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a> -->\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h1>Work with Kohan Creative</h1>\n        <form style=\"text-align: left;\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"password\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n\n  <!-- Kohan Secondary Tagline -->\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        Kohan Creative employs the world's best designers, developers, and creators to imbue your private dental and medical practices\n        with digital luxury.\n      </h2>\n    </div>\n  </div>\n\n  <!-- Kohan Service Offerings -->\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins img-cursor\" (click)=\"navigateToPage('web-design-development')\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <a routerLink=\"/web-design-development\" class=\"link-to-services text-align-center\">Website Design & Development</a>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            We design and develop custom websites that mirror the aesthetic and warmth of your dental or medical practice, evoking a\n            consistent emotion across your physical and digital properties.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4\">\n      <img src=\"../assets/img/paper-3146953_1280_darker.jpeg\" class=\"img-fluid services-image-margins img-cursor\" (click)=\"navigateToPage('graphic-design-branding')\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <a routerLink=\"/home\" class=\"link-to-services text-align-center\">Graphic Design & Branding</a>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Whether you're starting your own practice or looking to modernize your current one, we specialize in creating custom logos\n            and brand assets that build on your story and set you apart.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4\">\n      <img src=\"../assets/img/paper-3318159_1280_darker.jpeg\" class=\"img-fluid services-image-margins img-cursor\" (click)=\"navigateToPage('social-media-marketing')\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <a routerLink=\"/home\" class=\"link-to-services text-align-center\">Social Media Marketing</a>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Extend your brand presence outside the office, at all hours of the day. We engage your patients and anticipate their needs\n            by managing your social accounts with thoughtfulness, attention, and compassion.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Kohan Pricing / Plans -->\n  <!-- <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        Kohan Creative employs the world's best designers, developers, and creators to imbue your private dental and medical practices\n        with digital luxury.\n      </h2>\n    </div>\n  </div> -->\n\n</div>"
+module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Office%20-%207269.mp4?alt=media&token=abee2fc4-a937-4046-9f9b-384708dece22\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <p class=\"desc-smaller-text\">Kohan Creative</p>\n      <h1 class=\"kohan-header-tagline\">Luxurious Digital Design for Your Dental & Medical Practice</h1>\n      <!-- <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a> -->\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h4>Work with Kohan Creative</h4>\n        <form style=\"text-align: left;\" [formGroup]=\"newContactForm\" (ngSubmit)=\"saveContactInformation()\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\" formControlName=\"email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"text\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\" formControlName=\"practiceName\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n\n  <!-- Kohan Secondary Tagline -->\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        Kohan Creative employs the world's best designers, developers, and creators to imbue your private dental and medical practices\n        with digital luxury.\n      </h2>\n    </div>\n  </div>\n\n  <!-- Kohan Service Offerings -->\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins img-cursor\" (click)=\"navigateToPage('web-design-development')\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <a routerLink=\"/web-design-development\" class=\"link-to-services text-align-center\">Website Design & Development</a>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            We design and develop custom websites that mirror the aesthetic and warmth of your dental or medical practice, evoking a\n            consistent emotion across your physical and digital properties.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4\">\n      <img src=\"../assets/img/paper-3146953_1280_darker.jpeg\" class=\"img-fluid services-image-margins img-cursor\" (click)=\"navigateToPage('graphic-design-branding')\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <a routerLink=\"/home\" class=\"link-to-services text-align-center\">Graphic Design & Branding</a>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Whether you're starting your own practice or looking to modernize your current one, we specialize in creating custom logos\n            and brand assets that build on your story and set you apart.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4\">\n      <img src=\"../assets/img/paper-3318159_1280_darker.jpeg\" class=\"img-fluid services-image-margins img-cursor\" (click)=\"navigateToPage('social-media-marketing')\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <a routerLink=\"/home\" class=\"link-to-services text-align-center\">Social Media Marketing</a>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Extend your brand presence outside the office, at all hours of the day. We engage your patients and anticipate their needs\n            by managing your social accounts with thoughtfulness, attention, and compassion.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Kohan Pricing / Plans -->\n  <!-- <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        Kohan Creative employs the world's best designers, developers, and creators to imbue your private dental and medical practices\n        with digital luxury.\n      </h2>\n    </div>\n  </div> -->\n\n</div>"
 
 /***/ }),
 
@@ -288,7 +335,9 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -301,6 +350,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var HomeComponent = (function () {
     // animationStarted(event: AnimationEvent) {
     //   console.warn('Animation started: ', event);
@@ -308,15 +359,44 @@ var HomeComponent = (function () {
     // animationDone(event: AnimationEvent) {
     //   console.warn('Animation done: ', event);
     // }
-    function HomeComponent(router, ngxSmartModalService) {
+    function HomeComponent(router, ngxSmartModalService, db, auth, fireStore) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
+        this.db = db;
+        this.auth = auth;
+        this.fireStore = fireStore;
+        this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
+        });
     }
     HomeComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.message = 'Hello';
+        this.auth.signinAnonymously();
+        // this.db.read('contacts').subscribe((data) => {
+        //   this.contactData = data;
+        // });
+        this.fireStore.read('contacts').subscribe(function (data) {
+            _this.fireStoreData = data;
+            console.log(JSON.stringify(_this.fireStoreData));
+        });
     };
     HomeComponent.prototype.navigateToPage = function (route) {
         this.router.navigate([route]);
+    };
+    HomeComponent.prototype.saveContactInformation = function () {
+        var _this = this;
+        var contactInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
+            _this.contactData = data;
+            console.log(_this.contactData);
+        }, function (error) {
+            console.error(error);
+        });
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -324,7 +404,11 @@ var HomeComponent = (function () {
             template: __webpack_require__("./src/app/home/home.component.html"),
             styles: [__webpack_require__("./src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__["b" /* NgxSmartModalService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__["b" /* NgxSmartModalService */],
+            __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["c" /* AngularFireLiteDatabase */],
+            __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["b" /* AngularFireLiteAuth */],
+            __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -400,7 +484,7 @@ module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position:
 /***/ "./src/app/pricing/pricing.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Whiteboard%20-%201658.mp4?alt=media&token=f67b247c-bee6-4f62-a3dc-ce0c6b7dcc77\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <p class=\"desc-smaller-text\">Kohan Creative</p>\n      <h1 class=\"kohan-header-tagline\">Packages & Pricing</h1>\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h1>Work with Kohan Creative</h1>\n        <form style=\"text-align: left;\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"password\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n\n\n<div class=\"container\">\n\n  <!-- Kohan Secondary Tagline -->\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        At Kohan Creative, we believe in optionality.\n      </h2>\n      <h2 class=\"kohan-secondary-statement\">\n        Choose the package that's right for your dental or medical practice.\n      </h2>\n    </div>\n  </div>\n\n  <!-- Kohan Pricing Packages -->\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center\">\n      <div class=\"card mb-4 box-shadow\">\n        <div class=\"card-header\">\n          <h4 class=\"my-0 font-weight-normal service-offerings-title red-package\">Red</h4>\n        </div>\n        <div class=\"card-body\">\n          <h1 class=\"card-title pricing-card-title\">$600\n            <small class=\"text-muted\">/ mo</small>\n          </h1>\n          <!-- <h4 class=\"pricing-subsection-title\">Web Design & Dev</h4> -->\n          <ul class=\"list-unstyled mt-3 mb-4 text-align-left\">\n            <li class=\"package-features-paragraph\">Standard monthly web hosting</li>\n            <li class=\"package-features-paragraph\">Mobile optimized site</li>\n            <li class=\"package-features-paragraph\">Pre-designed template</li>\n            <li class=\"package-features-paragraph\">Updated logo with full rights</li>\n          </ul>\n          <button type=\"button\" class=\"sign-up-button\">Sign Up Now</button>\n          <div class=\"package-features-muted\">* Additional $200 flat fee for any site changes</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center\">\n      <div class=\"card mb-4 box-shadow\">\n        <div class=\"card-header\">\n          <h4 class=\"my-0 font-weight-normal service-offerings-title\">Black</h4>\n        </div>\n        <div class=\"card-body\">\n          <h1 class=\"card-title pricing-card-title\">$1000\n            <small class=\"text-muted\">/ mo</small>\n          </h1>\n          <!-- <h4 class=\"pricing-subsection-title\">Web Design & Dev</h4> -->\n          <ul class=\"list-unstyled mt-3 mb-4 text-align-left\">\n            <li class=\"package-features-paragraph\">Standard monthly web hosting</li>\n            <li class=\"package-features-paragraph\">Mobile optimized site</li>\n            <li class=\"package-features-paragraph\">Complete custom website design and development</li>\n            <li class=\"package-features-paragraph\">Regular monthly maintenance and hosting</li>\n            <li class=\"package-features-paragraph\">Premium services and integrations</li>\n            <li class=\"package-features-paragraph\">Custom logo and suite of brand assets</li>\n          </ul>\n          <button type=\"button\" class=\"sign-up-button\">Sign Up Now</button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center\">\n      <div class=\"card mb-4 box-shadow\">\n        <div class=\"card-header\">\n          <h4 class=\"my-0 font-weight-normal service-offerings-title gold-package\">Gold</h4>\n        </div>\n        <div class=\"card-body\">\n          <h1 class=\"card-title pricing-card-title\">$800\n            <small class=\"text-muted\">/ mo</small>\n          </h1>\n          <!-- <h4 class=\"pricing-subsection-title\">Web Design & Dev</h4> -->\n          <ul class=\"list-unstyled mt-3 mb-4 text-align-left\">\n            <li class=\"package-features-paragraph\">Standard monthly web hosting</li>\n            <li class=\"package-features-paragraph\">Mobile optimized site</li>\n            <li class=\"package-features-paragraph\">Pre-designed template w/ 2 custom options</li>\n            <li class=\"package-features-paragraph\">One site edit per month</li>\n            <li class=\"package-features-paragraph\">Newly designed logo and business cards</li>\n          </ul>\n          <button type=\"button\" class=\"sign-up-button\">Sign Up Now</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- What Each Package Includes -->\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        At Kohan Creative, we believe in optionality.\n      </h2>\n      <h2 class=\"kohan-secondary-statement\">\n        Choose the package that's right for your dental or medical practice.\n      </h2>\n    </div>\n  </div>\n\n</div>"
+module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Whiteboard%20-%201658.mp4?alt=media&token=f67b247c-bee6-4f62-a3dc-ce0c6b7dcc77\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <p class=\"desc-smaller-text\">Kohan Creative</p>\n      <h1 class=\"kohan-header-tagline\">Packages & Pricing</h1>\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h4>Work with Kohan Creative</h4>\n        <form style=\"text-align: left;\" [formGroup]=\"newContactForm\" (ngSubmit)=\"saveContactInformation()\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\"\n              formControlName=\"email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"text\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\"\n              formControlName=\"practiceName\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n\n\n<div class=\"container\">\n\n  <!-- Kohan Secondary Tagline -->\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        At Kohan Creative, we believe in optionality.\n      </h2>\n      <h2 class=\"kohan-secondary-statement\">\n        Choose the package that's right for your dental or medical practice.\n      </h2>\n    </div>\n  </div>\n\n  <!-- Kohan Pricing Packages -->\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center\">\n      <div class=\"card mb-4 box-shadow\">\n        <div class=\"card-header\">\n          <h4 class=\"my-0 font-weight-normal service-offerings-title red-package\">Red</h4>\n        </div>\n        <div class=\"card-body\">\n          <h1 class=\"card-title pricing-card-title\">$600\n            <small class=\"text-muted\">/ mo</small>\n          </h1>\n          <!-- <h4 class=\"pricing-subsection-title\">Web Design & Dev</h4> -->\n          <ul class=\"list-unstyled mt-3 mb-4 text-align-left\">\n            <li class=\"package-features-paragraph\">Standard monthly web hosting</li>\n            <li class=\"package-features-paragraph\">Mobile optimized site</li>\n            <li class=\"package-features-paragraph\">Pre-designed template</li>\n            <li class=\"package-features-paragraph\">Updated logo with full rights</li>\n          </ul>\n          <button type=\"button\" class=\"sign-up-button\">Sign Up Now</button>\n          <div class=\"package-features-muted\">* Additional $200 flat fee for any site changes</div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center\">\n      <div class=\"card mb-4 box-shadow\">\n        <div class=\"card-header\">\n          <h4 class=\"my-0 font-weight-normal service-offerings-title\">Black</h4>\n        </div>\n        <div class=\"card-body\">\n          <h1 class=\"card-title pricing-card-title\">$1000\n            <small class=\"text-muted\">/ mo</small>\n          </h1>\n          <!-- <h4 class=\"pricing-subsection-title\">Web Design & Dev</h4> -->\n          <ul class=\"list-unstyled mt-3 mb-4 text-align-left\">\n            <li class=\"package-features-paragraph\">Standard monthly web hosting</li>\n            <li class=\"package-features-paragraph\">Mobile optimized site</li>\n            <li class=\"package-features-paragraph\">Complete custom website design and development</li>\n            <li class=\"package-features-paragraph\">Regular monthly maintenance and hosting</li>\n            <li class=\"package-features-paragraph\">Premium services and integrations</li>\n            <li class=\"package-features-paragraph\">Custom logo and suite of brand assets</li>\n          </ul>\n          <button type=\"button\" class=\"sign-up-button\">Sign Up Now</button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center\">\n      <div class=\"card mb-4 box-shadow\">\n        <div class=\"card-header\">\n          <h4 class=\"my-0 font-weight-normal service-offerings-title gold-package\">Gold</h4>\n        </div>\n        <div class=\"card-body\">\n          <h1 class=\"card-title pricing-card-title\">$800\n            <small class=\"text-muted\">/ mo</small>\n          </h1>\n          <!-- <h4 class=\"pricing-subsection-title\">Web Design & Dev</h4> -->\n          <ul class=\"list-unstyled mt-3 mb-4 text-align-left\">\n            <li class=\"package-features-paragraph\">Standard monthly web hosting</li>\n            <li class=\"package-features-paragraph\">Mobile optimized site</li>\n            <li class=\"package-features-paragraph\">Pre-designed template w/ 2 custom options</li>\n            <li class=\"package-features-paragraph\">One site edit per month</li>\n            <li class=\"package-features-paragraph\">Newly designed logo and business cards</li>\n          </ul>\n          <button type=\"button\" class=\"sign-up-button\">Sign Up Now</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- What Each Package Includes -->\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        At Kohan Creative, we believe in optionality.\n      </h2>\n      <h2 class=\"kohan-secondary-statement\">\n        Choose the package that's right for your dental or medical practice.\n      </h2>\n    </div>\n  </div>\n\n</div>"
 
 /***/ }),
 
@@ -411,7 +495,9 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PricingComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -424,10 +510,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var PricingComponent = (function () {
-    function PricingComponent(router, ngxSmartModalService) {
+    function PricingComponent(router, ngxSmartModalService, db, auth, fireStore) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
+        this.db = db;
+        this.auth = auth;
+        this.fireStore = fireStore;
+        this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
+        });
     }
     PricingComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -437,15 +532,86 @@ var PricingComponent = (function () {
     PricingComponent.prototype.navigateToPage = function (route) {
         this.router.navigate([route]);
     };
+    PricingComponent.prototype.saveContactInformation = function () {
+        var _this = this;
+        var contactInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
+            _this.contactData = data;
+            console.log(_this.contactData);
+        }, function (error) {
+            console.error(error);
+        });
+    };
     PricingComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'kohan-pricing',
             template: __webpack_require__("./src/app/pricing/pricing.component.html"),
             styles: [__webpack_require__("./src/app/pricing/pricing.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__["b" /* NgxSmartModalService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
     ], PricingComponent);
     return PricingComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/contact.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var ContactService = (function () {
+    function ContactService(http, origin) {
+        this.http = http;
+        this.contactUrl = 'api/contacts'; // URL to web api
+        this.contactUrl = "" + origin + this.contactUrl;
+    }
+    ContactService.prototype.getContacts = function () {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json'
+        });
+        return this.http.get('api/contacts', { headers: apiHeaders });
+    };
+    ContactService.prototype.addFlaggedPost = function (postId, flaggedPost, authToken) {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authToken
+        });
+        return this.http.post('api/v1/posts/' + postId + '/flag', flaggedPost, { headers: apiHeaders });
+    };
+    ContactService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Optional */])()), __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__angular_common__["a" /* APP_BASE_HREF */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */], String])
+    ], ContactService);
+    return ContactService;
 }());
 
 
@@ -455,14 +621,14 @@ var PricingComponent = (function () {
 /***/ "./src/app/social-media/social-media.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position: relative;\n  padding: 20px;\n}\n\n#video-container {\n  position: absolute;\n}\n\n#video-container {\n  top:0%;\n  left:0%;\n  height:100%;\n  width:100%;\n  overflow: hidden;\n}\n\nvideo {\n  position:absolute;\n  z-index:0;\n}\n\nvideo.fillWidth {\n  width: 100%;\n}\n\n.color-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(32,26,22,.5);\n  z-index: 99;\n}\n\n.desc-wrapper-container {\n  min-height: 0;\n  padding: 130px 0;\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n\n.desc-wrapper {\n  -webkit-animation: feature-text-anim .75s ease-in-out;\n          animation: feature-text-anim .75s ease-in-out;\n  z-index: 100;\n  position: relative;\n  width: 100%;\n  max-width: 956px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin: 0 auto;\n  padding: 32px;\n  text-align: center;\n  text-rendering: optimizeLegibility;\n}\n\n.desc-smaller-text {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 28px;\n  letter-spacing: 5px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n  color: #c3c1c1;\n  margin: 20px auto;\n  text-align: center;\n}\n\n.kohan-header-tagline {\n  display: block;\n  font-weight: 300;\n  font-style: normal;\n  font-size: 58px;\n  letter-spacing: 0px;\n  text-transform: none;\n  line-height: 1.1em;\n  color: #FFFFFF;\n}\n\n.kohan-header-button {\n  background-color: transparent;\n  -webkit-font-smoothing: antialiased;\n  border: 2px solid #FFFFFF !important;\n  color: #FFFFFF;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 16px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  text-decoration: none;\n  padding: 1em 1.75em;\n  display: inline-block;\n  line-height: 1em;\n  margin: 10px 0;\n  -webkit-transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;  \n}\n\n.kohan-header-button:hover {\n  background-color: #FFFFFF;\n  color: #181818;\n}\n\n.spacing-section {\n  margin-top: 8%;\n}\n\n.services-spacing-section {\n  margin-top: 8%;\n  margin-bottom: 8%;\n}\n\n.kohan-secondary-statement {\n  text-align: center;\n  font-weight: 300;\n}\n\n.services-image-margins {\n  margin-bottom: 8%;\n}\n\n.service-offering-container {\n  padding-bottom: 20%;\n  padding-top: 20%;\n  padding-left: 17px;\n  padding-right: 17px;\n  position: relative;\n  height: auto;\n  outline: none;\n  -webkit-box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n          box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n  -webkit-transition: -webkit-box-shadow .2s ease-in-out;\n  transition: -webkit-box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;\n}\n\n.service-offerings-content {\n  cursor: auto;\n  outline: none;\n}\n\n.service-offerings-title {\n  color: #1F1F1F;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 20px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n}\n\n.link-to-services {\n  color: rgba(31,31,31,.5);\n  text-decoration: none;\n  word-wrap: break-word;\n  background: transparent;\n  /* cursor: pointer; */\n}\n\n.text-align-center {\n  text-align: center;\n}\n\n.services-paragraph {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 18px;\n  letter-spacing: .5px;\n  line-height: 1.6em;\n  color: #1F1F1F;\n  margin-top: 1em;\n}\n\n@media only screen and (max-width: 640px) {\n  .desc-wrapper-container {\n    min-height: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n  }\n\n  .desc-smaller-text {\n    font-weight: 300;\n    font-style: normal;\n    font-size: 18px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.3em;\n    color: #c3c1c1;\n    margin: 10px auto;\n    text-align: center;\n  }\n}"
+module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position: relative;\n  padding: 20px;\n}\n\n#video-container {\n  position: absolute;\n}\n\n#video-container {\n  top:0%;\n  left:0%;\n  height:100%;\n  width:100%;\n  overflow: hidden;\n}\n\nvideo {\n  position:absolute;\n  z-index:0;\n}\n\nvideo.fillWidth {\n  width: 100%;\n}\n\n.color-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(32,26,22,.5);\n  z-index: 99;\n}\n\n.desc-wrapper-container {\n  min-height: 0;\n  padding: 130px 0;\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n\n.desc-wrapper {\n  -webkit-animation: feature-text-anim .75s ease-in-out;\n          animation: feature-text-anim .75s ease-in-out;\n  z-index: 100;\n  position: relative;\n  width: 100%;\n  max-width: 956px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin: 0 auto;\n  padding: 32px;\n  text-align: center;\n  text-rendering: optimizeLegibility;\n}\n\n.desc-smaller-text {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 28px;\n  letter-spacing: 5px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n  color: #c3c1c1;\n  margin: 20px auto;\n  text-align: center;\n}\n\n.kohan-header-tagline {\n  display: block;\n  font-weight: 300;\n  font-style: normal;\n  font-size: 58px;\n  letter-spacing: 0px;\n  text-transform: none;\n  line-height: 1.1em;\n  color: #FFFFFF;\n}\n\n.kohan-header-button {\n  background-color: transparent;\n  -webkit-font-smoothing: antialiased;\n  border: 2px solid #FFFFFF !important;\n  color: #FFFFFF;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 16px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  text-decoration: none;\n  padding: 1em 1.75em;\n  display: inline-block;\n  line-height: 1em;\n  margin: 10px 0;\n  -webkit-transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  cursor: pointer;\n}\n\n.kohan-header-button:hover {\n  background-color: #FFFFFF;\n  color: #181818;\n  cursor: pointer;\n}\n\n.spacing-section {\n  margin-top: 8%;\n}\n\n.services-spacing-section {\n  margin-top: 8%;\n  margin-bottom: 8%;\n}\n\n.kohan-secondary-statement {\n  text-align: center;\n  font-weight: 300;\n}\n\n.services-image-margins {\n  margin-bottom: 8%;\n}\n\n.service-offering-container {\n  padding-bottom: 20%;\n  padding-top: 20%;\n  padding-left: 17px;\n  padding-right: 17px;\n  position: relative;\n  height: auto;\n  outline: none;\n  -webkit-box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n          box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n  -webkit-transition: -webkit-box-shadow .2s ease-in-out;\n  transition: -webkit-box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;\n}\n\n.service-offerings-content {\n  cursor: auto;\n  outline: none;\n}\n\n.service-offerings-title {\n  color: #1F1F1F;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 20px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n}\n\n.link-to-services {\n  color: rgba(31,31,31,.5);\n  text-decoration: none;\n  word-wrap: break-word;\n  background: transparent;\n  /* cursor: pointer; */\n}\n\n.text-align-center {\n  text-align: center;\n}\n\n.services-paragraph {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 18px;\n  letter-spacing: .5px;\n  line-height: 1.6em;\n  color: #1F1F1F;\n  margin-top: 1em;\n}\n\n.work-with-us-modal-button {\n  color: #000000;\n  border: 2px solid #000000;\n  background-color: transparent;\n  -webkit-font-smoothing: subpixel-antialiased;\n  cursor: pointer;\n}\n\n.work-with-us-modal-button:hover {\n  background-color: #000000;\n  color: #EFEFEF;\n  cursor: pointer;\n}\n\n.lighter-font-weight {\n  font-weight: 300;\n}\n\n@media only screen and (max-width: 640px) {\n  .desc-wrapper-container {\n    min-height: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n  }\n\n  .desc-smaller-text {\n    font-weight: 300;\n    font-style: normal;\n    font-size: 18px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.3em;\n    color: #c3c1c1;\n    margin: 10px auto;\n    text-align: center;\n  }\n}"
 
 /***/ }),
 
 /***/ "./src/app/social-media/social-media.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Ipad%20-%202988.mp4?alt=media&token=b33a1352-94b1-4346-98b0-7a23eef19e74\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <h1 class=\"kohan-header-tagline\">Social Media Marketing</h1>\n      <p class=\"desc-smaller-text\">Drive Value Through Engagement</p>\n      <p>\n        <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a>\n      </p>\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        We help you enhance your carefully constructed patient relationships in a way that extends beyond your office walls.\n      </h2>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Create & Cultivate</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Whether you're starting completely from scratch or are looking for an added boost, we create and maintain your most vital\n            social media acounts, allowing you to focus on what you do best.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Build a Community</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            From creative posts and crisp videos to engaging polls and interactive digital experiences, we don't just help you connect\n            with your patients - we help you build a lasting community.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Your Brand Ambassadors</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Drawing on the pervasiveness of crowd-sourcing and the \"review economy,\" we employ unique tactics that work towards transforming\n            your patients into your brand ambassadors.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Ipad%20-%202988.mp4?alt=media&token=b33a1352-94b1-4346-98b0-7a23eef19e74\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <h1 class=\"kohan-header-tagline\">Social Media Marketing</h1>\n      <p class=\"desc-smaller-text\">Drive Value Through Engagement</p>\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h4>Work with Kohan Creative</h4>\n        <form style=\"text-align: left;\" [formGroup]=\"newContactForm\" (ngSubmit)=\"saveContactInformation()\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\"\n              formControlName=\"email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"text\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\"\n              formControlName=\"practiceName\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        We help you enhance your carefully constructed patient relationships in a way that extends beyond your office walls.\n      </h2>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Create & Cultivate</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Whether you're starting completely from scratch or are looking for an added boost, we create and maintain your most vital\n            social media acounts, allowing you to focus on what you do best.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Build a Community</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            From creative posts and crisp videos to engaging polls and interactive digital experiences, we don't just help you connect\n            with your patients - we help you build a lasting community.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Your Brand Ambassadors</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Drawing on the pervasiveness of crowd-sourcing and the \"review economy,\" we employ unique tactics that work towards transforming\n            your patients into your brand ambassadors.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -473,6 +639,9 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SocialMediaComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -484,9 +653,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var SocialMediaComponent = (function () {
-    function SocialMediaComponent(router) {
+    function SocialMediaComponent(router, ngxSmartModalService, db, auth, fireStore) {
         this.router = router;
+        this.ngxSmartModalService = ngxSmartModalService;
+        this.db = db;
+        this.auth = auth;
+        this.fireStore = fireStore;
+        this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
+        });
     }
     SocialMediaComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -494,13 +674,30 @@ var SocialMediaComponent = (function () {
     SocialMediaComponent.prototype.navigateToPage = function (route) {
         this.router.navigate([route]);
     };
+    SocialMediaComponent.prototype.saveContactInformation = function () {
+        var _this = this;
+        var contactInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
+            _this.contactData = data;
+            console.log(_this.contactData);
+        }, function (error) {
+            console.error(error);
+        });
+    };
     SocialMediaComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'kohan-social-media',
             template: __webpack_require__("./src/app/social-media/social-media.component.html"),
             styles: [__webpack_require__("./src/app/social-media/social-media.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
     ], SocialMediaComponent);
     return SocialMediaComponent;
 }());
@@ -512,14 +709,14 @@ var SocialMediaComponent = (function () {
 /***/ "./src/app/web-development/web-development.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position: relative;\n  padding: 20px;\n}\n\n#video-container {\n  position: absolute;\n}\n\n#video-container {\n  top:0%;\n  left:0%;\n  height:100%;\n  width:100%;\n  overflow: hidden;\n}\n\nvideo {\n  position:absolute;\n  z-index:0;\n}\n\nvideo.fillWidth {\n  width: 100%;\n}\n\n.color-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(32,26,22,.5);\n  z-index: 99;\n}\n\n.desc-wrapper-container {\n  min-height: 0;\n  padding: 130px 0;\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n\n.desc-wrapper {\n  -webkit-animation: feature-text-anim .75s ease-in-out;\n          animation: feature-text-anim .75s ease-in-out;\n  z-index: 100;\n  position: relative;\n  width: 100%;\n  max-width: 956px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin: 0 auto;\n  padding: 32px;\n  text-align: center;\n  text-rendering: optimizeLegibility;\n}\n\n.desc-smaller-text {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 28px;\n  letter-spacing: 5px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n  color: #c3c1c1;\n  margin: 20px auto;\n  text-align: center;\n}\n\n.kohan-header-tagline {\n  display: block;\n  font-weight: 300;\n  font-style: normal;\n  font-size: 58px;\n  letter-spacing: 0px;\n  text-transform: none;\n  line-height: 1.1em;\n  color: #FFFFFF;\n}\n\n.kohan-header-button {\n  background-color: transparent;\n  -webkit-font-smoothing: antialiased;\n  border: 2px solid #FFFFFF !important;\n  color: #FFFFFF;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 16px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  text-decoration: none;\n  padding: 1em 1.75em;\n  display: inline-block;\n  line-height: 1em;\n  margin: 10px 0;\n  -webkit-transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;  \n}\n\n.kohan-header-button:hover {\n  background-color: #FFFFFF;\n  color: #181818;\n}\n\n.spacing-section {\n  margin-top: 8%;\n}\n\n.services-spacing-section {\n  margin-top: 8%;\n  margin-bottom: 8%;\n}\n\n.kohan-secondary-statement {\n  text-align: center;\n  font-weight: 300;\n}\n\n.services-image-margins {\n  margin-bottom: 8%;\n}\n\n.service-offering-container {\n  padding-bottom: 20%;\n  padding-top: 20%;\n  padding-left: 17px;\n  padding-right: 17px;\n  position: relative;\n  height: auto;\n  outline: none;\n  -webkit-box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n          box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n  -webkit-transition: -webkit-box-shadow .2s ease-in-out;\n  transition: -webkit-box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;\n}\n\n.service-offerings-content {\n  cursor: auto;\n  outline: none;\n}\n\n.service-offerings-title {\n  color: #1F1F1F;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 20px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n}\n\n.link-to-services {\n  color: rgba(31,31,31,.5);\n  text-decoration: none;\n  word-wrap: break-word;\n  background: transparent;\n  /* cursor: pointer; */\n}\n\n.text-align-center {\n  text-align: center;\n}\n\n.services-paragraph {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 18px;\n  letter-spacing: .5px;\n  line-height: 1.6em;\n  color: #1F1F1F;\n  margin-top: 1em;\n}\n\n@media only screen and (max-width: 640px) {\n  .desc-wrapper-container {\n    min-height: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n  }\n\n  .desc-smaller-text {\n    font-weight: 300;\n    font-style: normal;\n    font-size: 18px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.3em;\n    color: #c3c1c1;\n    margin: 10px auto;\n    text-align: center;\n  }\n}"
+module.exports = ".header-unit {\n  height: 638px;\n  border: none;\n  position: relative;\n  padding: 20px;\n}\n\n#video-container {\n  position: absolute;\n}\n\n#video-container {\n  top:0%;\n  left:0%;\n  height:100%;\n  width:100%;\n  overflow: hidden;\n}\n\nvideo {\n  position:absolute;\n  z-index:0;\n}\n\nvideo.fillWidth {\n  width: 100%;\n}\n\n.color-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(32,26,22,.5);\n  z-index: 99;\n}\n\n.desc-wrapper-container {\n  min-height: 0;\n  padding: 130px 0;\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n\n.desc-wrapper {\n  -webkit-animation: feature-text-anim .75s ease-in-out;\n          animation: feature-text-anim .75s ease-in-out;\n  z-index: 100;\n  position: relative;\n  width: 100%;\n  max-width: 956px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  margin: 0 auto;\n  padding: 32px;\n  text-align: center;\n  text-rendering: optimizeLegibility;\n}\n\n.desc-smaller-text {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 28px;\n  letter-spacing: 5px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n  color: #c3c1c1;\n  margin: 20px auto;\n  text-align: center;\n}\n\n.kohan-header-tagline {\n  display: block;\n  font-weight: 300;\n  font-style: normal;\n  font-size: 58px;\n  letter-spacing: 0px;\n  text-transform: none;\n  line-height: 1.1em;\n  color: #FFFFFF;\n}\n\n.kohan-header-button {\n  background-color: transparent;\n  -webkit-font-smoothing: antialiased;\n  border: 2px solid #FFFFFF !important;\n  color: #FFFFFF;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 16px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  text-decoration: none;\n  padding: 1em 1.75em;\n  display: inline-block;\n  line-height: 1em;\n  margin: 10px 0;\n  -webkit-transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;\n  transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;  \n  cursor: pointer;\n}\n\n.kohan-header-button:hover {\n  background-color: #FFFFFF;\n  color: #181818;\n  cursor: pointer;\n}\n\n.spacing-section {\n  margin-top: 8%;\n}\n\n.services-spacing-section {\n  margin-top: 8%;\n  margin-bottom: 8%;\n}\n\n.kohan-secondary-statement {\n  text-align: center;\n  font-weight: 300;\n}\n\n.services-image-margins {\n  margin-bottom: 8%;\n}\n\n.service-offering-container {\n  padding-bottom: 20%;\n  padding-top: 20%;\n  padding-left: 17px;\n  padding-right: 17px;\n  position: relative;\n  height: auto;\n  outline: none;\n  -webkit-box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n          box-shadow: inset 0 0 0 1px rgba(128,128,128,0);\n  -webkit-transition: -webkit-box-shadow .2s ease-in-out;\n  transition: -webkit-box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out;\n  transition: box-shadow .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;\n}\n\n.service-offerings-content {\n  cursor: auto;\n  outline: none;\n}\n\n.service-offerings-title {\n  color: #1F1F1F;\n  font-weight: 400;\n  font-style: normal;\n  font-size: 20px;\n  letter-spacing: 4px;\n  text-transform: uppercase;\n  line-height: 1.3em;\n}\n\n.link-to-services {\n  color: rgba(31,31,31,.5);\n  text-decoration: none;\n  word-wrap: break-word;\n  background: transparent;\n  /* cursor: pointer; */\n}\n\n.text-align-center {\n  text-align: center;\n}\n\n.services-paragraph {\n  font-weight: 300;\n  font-style: normal;\n  font-size: 18px;\n  letter-spacing: .5px;\n  line-height: 1.6em;\n  color: #1F1F1F;\n  margin-top: 1em;\n}\n\n.work-with-us-modal-button {\n  color: #000000;\n  border: 2px solid #000000;\n  background-color: transparent;\n  -webkit-font-smoothing: subpixel-antialiased;\n  cursor: pointer;\n}\n\n.work-with-us-modal-button:hover {\n  background-color: #000000;\n  color: #EFEFEF;\n  cursor: pointer;\n}\n\n.lighter-font-weight {\n  font-weight: 300;\n}\n\n@media only screen and (max-width: 640px) {\n  .desc-wrapper-container {\n    min-height: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n  }\n\n  .desc-smaller-text {\n    font-weight: 300;\n    font-style: normal;\n    font-size: 18px;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.3em;\n    color: #c3c1c1;\n    margin: 10px auto;\n    text-align: center;\n  }\n}"
 
 /***/ }),
 
 /***/ "./src/app/web-development/web-development.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/563397345.mp4?alt=media&token=5c400ba8-c1e2-4864-904e-e5b1d5e15765\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <h1 class=\"kohan-header-tagline\">Web Design & Development</h1>\n      <p class=\"desc-smaller-text\">Where Our Passions and Expertise Meet</p>\n      <!-- <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a> -->\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h1>Work with Kohan Creative</h1>\n        <form style=\"text-align: left;\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"password\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        At Kohan Creative, we design beautiful, luxurious websites with high-performance technologies and advanced capabilities to modernize your dental and medical practice.\n      </h2>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Holistic Design & Development</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Similar to how you provide your patients with thorough, holistic dental care in a luxurious, comfortable environment, we design and develop your website with the same intent - embedding your digital property and presence with the same harmonious feel as your physical one.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Built for Maximum Optimization</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            We employ cutting-edge web development practices and frameworks, optimized for search engines and across all mobile devices, to ensure the highest perceived performance and speed with an enhanced user experience to match.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Your Digital Dental Office</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Your website is the digital extension of your physical dental office. Therefore, we build your site with a focus on purpose, employing proprietary and third-party technologies that allow you to connect with your patients, process payments, schedule appointments, and more.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></div>\n  <div id=\"video-container\">\n    <video autoplay loop class=\"fillWidth\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/563397345.mp4?alt=media&token=5c400ba8-c1e2-4864-904e-e5b1d5e15765\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <div class=\"desc-wrapper-container\">\n    <div class=\"desc-wrapper\">\n      <h1 class=\"kohan-header-tagline\">Web Design & Development</h1>\n      <p class=\"desc-smaller-text\">Where Our Passions and Expertise Meet</p>\n      <!-- <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a> -->\n      <div class=\"kohan-header-button\" (click)=\"ngxSmartModalService.getModal('myModal').open()\">Work With Us</div>\n\n      <!-- Work With Us Modal -->\n      <ngx-smart-modal #myModal identifier=\"myModal\">\n        <h4>Work with Kohan Creative</h4>\n        <form style=\"text-align: left;\" [formGroup]=\"newContactForm\" (ngSubmit)=\"saveContactInformation()\">\n          <div class=\"form-group\">\n            <label for=\"exampleInputEmail1\" class=\"lighter-font-weight\">Email address</label>\n            <input type=\"email\" class=\"form-control lighter-font-weight\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\"\n              formControlName=\"email\">\n            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"exampleInputPassword1\" class=\"lighter-font-weight\">Name of Practice</label>\n            <input type=\"text\" class=\"form-control lighter-font-weight\" id=\"exampleInputPassword1\" placeholder=\"Dental or Medical Practice Name\"\n              formControlName=\"practiceName\">\n          </div>\n          <button type=\"submit\" class=\"work-with-us-modal-button\">Submit</button>\n        </form>\n      </ngx-smart-modal>\n\n    </div>\n  </div>\n</div>\n<!-- end .header-unit -->\n\n<div class=\"container\">\n  <div class=\"row spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n      <h2 class=\"kohan-secondary-statement\">\n        At Kohan Creative, we design beautiful, luxurious websites with high-performance technologies and advanced capabilities to\n        modernize your dental and medical practice.\n      </h2>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Holistic Design & Development</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Similar to how you provide your patients with thorough, holistic dental care in a luxurious, comfortable environment, we\n            design and develop your website with the same intent - embedding your digital property and presence with the\n            same harmonious feel as your physical one.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Built for Maximum Optimization</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            We employ cutting-edge web development practices and frameworks, optimized for search engines and across all mobile devices,\n            to ensure the highest perceived performance and speed with an enhanced user experience to match.\n          </p>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n  </div>\n  <div class=\"row services-spacing-section\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <img src=\"../assets/img/composition-3326183_1280_Darker.jpeg\" class=\"img-fluid services-image-margins\">\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n      <div class=\"service-offering-container\">\n        <div class=\"service-offerings-content\">\n          <h3 class=\"service-offerings-title text-align-center\">\n            <div class=\"link-to-services text-align-center\">Your Digital Dental Office</div>\n          </h3>\n          <p class=\"text-align-center services-paragraph\">\n            Your website is the digital extension of your physical dental office. Therefore, we build your site with a focus on purpose,\n            employing proprietary and third-party technologies that allow you to connect with your patients, process payments,\n            schedule appointments, and more.\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -530,7 +727,9 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WebDevelopmentComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -543,10 +742,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var WebDevelopmentComponent = (function () {
-    function WebDevelopmentComponent(router, ngxSmartModalService) {
+    function WebDevelopmentComponent(router, ngxSmartModalService, db, auth, fireStore) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
+        this.db = db;
+        this.auth = auth;
+        this.fireStore = fireStore;
+        this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
+            practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
+        });
     }
     WebDevelopmentComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -554,13 +762,30 @@ var WebDevelopmentComponent = (function () {
     WebDevelopmentComponent.prototype.navigateToPage = function (route) {
         this.router.navigate([route]);
     };
+    WebDevelopmentComponent.prototype.saveContactInformation = function () {
+        var _this = this;
+        var contactInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
+            _this.contactData = data;
+            console.log(JSON.stringify(_this.contactData));
+        }, function (error) {
+            console.error(error);
+        });
+    };
     WebDevelopmentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'kohan-web-development',
             template: __webpack_require__("./src/app/web-development/web-development.component.html"),
             styles: [__webpack_require__("./src/app/web-development/web-development.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__["b" /* NgxSmartModalService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
     ], WebDevelopmentComponent);
     return WebDevelopmentComponent;
 }());
@@ -579,7 +804,15 @@ var WebDevelopmentComponent = (function () {
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: false
+    production: false,
+    config: {
+        apiKey: "AIzaSyBaRCvNQhZCld2-LW5UgG1Et6Pu5ZCAtIw",
+        authDomain: "kohan-creative.firebaseapp.com",
+        databaseURL: "https://kohan-creative.firebaseio.com",
+        projectId: "kohan-creative",
+        storageBucket: "",
+        mesagingSenderId: "561699807802"
+    }
 };
 
 
@@ -599,7 +832,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
 }
 document.addEventListener('DOMContentLoaded', function () {
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);

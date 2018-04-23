@@ -33,7 +33,10 @@ app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'browser'));
 
 // Example Express Rest API endpoints
-// app.get('/api/**', (req, res) => { });
+app.get('/api/*', (req, res) => {
+  res.status(404).send('data requests are not supported');
+  // res.json({text:"Get request for contacts"});
+});
 
 // Server static files from /browser
 app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {

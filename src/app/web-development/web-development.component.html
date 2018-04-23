@@ -17,16 +17,18 @@
 
       <!-- Work With Us Modal -->
       <ngx-smart-modal #myModal identifier="myModal">
-        <h1>Work with Kohan Creative</h1>
-        <form style="text-align: left;">
+        <h4>Work with Kohan Creative</h4>
+        <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
           <div class="form-group">
             <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
-            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+              formControlName="email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
-            <input type="password" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name">
+            <input type="text" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name"
+              formControlName="practiceName">
           </div>
           <button type="submit" class="work-with-us-modal-button">Submit</button>
         </form>
@@ -41,7 +43,8 @@
   <div class="row spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
-        At Kohan Creative, we design beautiful, luxurious websites with high-performance technologies and advanced capabilities to modernize your dental and medical practice.
+        At Kohan Creative, we design beautiful, luxurious websites with high-performance technologies and advanced capabilities to
+        modernize your dental and medical practice.
       </h2>
     </div>
   </div>
@@ -56,7 +59,9 @@
             <div class="link-to-services text-align-center">Holistic Design & Development</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            Similar to how you provide your patients with thorough, holistic dental care in a luxurious, comfortable environment, we design and develop your website with the same intent - embedding your digital property and presence with the same harmonious feel as your physical one.
+            Similar to how you provide your patients with thorough, holistic dental care in a luxurious, comfortable environment, we
+            design and develop your website with the same intent - embedding your digital property and presence with the
+            same harmonious feel as your physical one.
           </p>
         </div>
       </div>
@@ -70,7 +75,8 @@
             <div class="link-to-services text-align-center">Built for Maximum Optimization</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            We employ cutting-edge web development practices and frameworks, optimized for search engines and across all mobile devices, to ensure the highest perceived performance and speed with an enhanced user experience to match.
+            We employ cutting-edge web development practices and frameworks, optimized for search engines and across all mobile devices,
+            to ensure the highest perceived performance and speed with an enhanced user experience to match.
           </p>
         </div>
       </div>
@@ -90,7 +96,9 @@
             <div class="link-to-services text-align-center">Your Digital Dental Office</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            Your website is the digital extension of your physical dental office. Therefore, we build your site with a focus on purpose, employing proprietary and third-party technologies that allow you to connect with your patients, process payments, schedule appointments, and more.
+            Your website is the digital extension of your physical dental office. Therefore, we build your site with a focus on purpose,
+            employing proprietary and third-party technologies that allow you to connect with your patients, process payments,
+            schedule appointments, and more.
           </p>
         </div>
       </div>

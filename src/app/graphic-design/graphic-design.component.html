@@ -12,9 +12,27 @@
     <div class="desc-wrapper">
       <h1 class="kohan-header-tagline">Graphic Design & Branding</h1>
       <p class="desc-smaller-text">Craft Your Visually Compelling Story</p>
-      <p>
-        <a class="kohan-header-button" routerLink="/home">Work With Us</a>
-      </p>
+      <div class="kohan-header-button" (click)="ngxSmartModalService.getModal('myModal').open()">Work With Us</div>
+
+      <!-- Work With Us Modal -->
+      <ngx-smart-modal #myModal identifier="myModal">
+        <h4>Work with Kohan Creative</h4>
+        <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
+            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+              formControlName="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
+            <input type="text" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name"
+              formControlName="practiceName">
+          </div>
+          <button type="submit" class="work-with-us-modal-button">Submit</button>
+        </form>
+      </ngx-smart-modal>
+
     </div>
   </div>
 </div>
@@ -24,7 +42,8 @@
   <div class="row spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
-        Utilizing a unique set of design principles, philosophies, and technologies, we elevate your brand and shed light on the true value you deliver.
+        Utilizing a unique set of design principles, philosophies, and technologies, we elevate your brand and shed light on the
+        true value you deliver.
       </h2>
     </div>
   </div>
@@ -39,7 +58,8 @@
             <div class="link-to-services text-align-center">Visual Storytelling</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            We work closely with you to get to know the true purpose and story behind your dental practice, with the intent of reimagining your brand and building a foundation that is in harmony with your overall vision.
+            We work closely with you to get to know the true purpose and story behind your dental practice, with the intent of reimagining
+            your brand and building a foundation that is in harmony with your overall vision.
           </p>
         </div>
       </div>
@@ -53,7 +73,8 @@
             <div class="link-to-services text-align-center">Purposeful Assets</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            Your brand isn't just your logo. From health history and referral forms to appointment and business cards, we create assets specifically tailored to accommodate your growing dental practice's needs.
+            Your brand isn't just your logo. From health history and referral forms to appointment and business cards, we create assets
+            specifically tailored to accommodate your growing dental practice's needs.
           </p>
         </div>
       </div>
@@ -73,7 +94,9 @@
             <div class="link-to-services text-align-center">Lasting Impressions</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            For your dental practice, experience is everything. We extend the comforting, luxurious experience you carefully cultivate by infusing your brand with the same empathy and passion, further strengthening the bond you share with your patients.
+            For your dental practice, experience is everything. We extend the comforting, luxurious experience you carefully cultivate
+            by infusing your brand with the same empathy and passion, further strengthening the bond you share with your
+            patients.
           </p>
         </div>
       </div>

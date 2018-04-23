@@ -97,11 +97,13 @@ video.fillWidth {
   line-height: 1em;
   margin: 10px 0;
   transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;  
+  cursor: pointer;
 }
 
 .kohan-header-button:hover {
   background-color: #FFFFFF;
   color: #181818;
+  cursor: pointer;
 }
 
 .spacing-section {
@@ -169,6 +171,24 @@ video.fillWidth {
   line-height: 1.6em;
   color: #1F1F1F;
   margin-top: 1em;
+}
+
+.work-with-us-modal-button {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+}
+
+.work-with-us-modal-button:hover {
+  background-color: #000000;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+
+.lighter-font-weight {
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 640px) {
