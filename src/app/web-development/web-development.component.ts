@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
 import { AngularFireLiteAuth, AngularFireLiteDatabase, AngularFireLiteFirestore } from 'angularfire-lite';
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { fadeInAnimation } from '../animations/fade-in.animation';
 
 @Component({
   selector: 'kohan-web-development',
   templateUrl: './web-development.component.html',
-  styleUrls: ['./web-development.component.css']
+  styleUrls: ['./web-development.component.css'],
+  animations: [ fadeInAnimation ],
+  host: { '[@fadeInAnimation]': '' }
 })
 
 export class WebDevelopmentComponent implements OnInit {

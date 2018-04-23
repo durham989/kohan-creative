@@ -36,7 +36,7 @@ var LazyModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [LazyComponent],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forChild([
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild([
                     { path: '', component: LazyComponent, pathMatch: 'full' }
                 ])
             ]
