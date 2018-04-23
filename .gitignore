@@ -6,6 +6,7 @@
 /__build__/
 /__server_build__/
 /node_modules/
+/functions/node_modules/
 /typings/
 /tsd_typings/
 #/dist/

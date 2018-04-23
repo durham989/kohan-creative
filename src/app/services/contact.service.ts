@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 export class ContactService {
   
   private contactUrl = 'api/contacts';  // URL to web api
+  endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
   
   constructor(
     private http: HttpClient,
@@ -27,6 +28,15 @@ export class ContactService {
       'Authorization': 'Bearer ' + authToken
     });
     return this.http.post('api/v1/posts/' + postId + '/flag', flaggedPost, {headers: apiHeaders});
+  }
+
+  sendKohanEmail() {
+    const data = {
+      toEmail: 'sabina@kohaninc.com',
+      toName: 'Sabina Farrugia'
+    }
+
+    this.http.post(this.endpoint, data);
   }
   
 }

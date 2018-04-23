@@ -284,6 +284,7 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -298,17 +299,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var GraphicDesignComponent = (function () {
-    function GraphicDesignComponent(router, ngxSmartModalService, db, auth, fireStore) {
+    function GraphicDesignComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
+        this.httpClient = httpClient;
         this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
         });
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
     }
     GraphicDesignComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -325,9 +329,28 @@ var GraphicDesignComponent = (function () {
         this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
             _this.contactData = data;
             console.log(_this.contactData);
+            _this.sendEmailToKohan();
+            _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
+            _this.ngxSmartModalService.getModal('myModal').close();
         });
+    };
+    GraphicDesignComponent.prototype.sendEmailToKohan = function () {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json'
+        });
+        var signUpInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        var data = {
+            toEmail: 'ethan.durham3692@gmail.com',
+            toName: 'Ethan Durham',
+            leadEmailAddress: signUpInfo.email,
+            leadPracticeName: signUpInfo.practiceName
+        };
+        this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
     GraphicDesignComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -339,7 +362,8 @@ var GraphicDesignComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
-            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClient */]])
     ], GraphicDesignComponent);
     return GraphicDesignComponent;
 }());
@@ -371,7 +395,8 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -386,17 +411,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomeComponent = (function () {
-    function HomeComponent(router, ngxSmartModalService, db, auth, fireStore) {
+    function HomeComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
+        this.httpClient = httpClient;
         this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
         });
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -422,9 +450,28 @@ var HomeComponent = (function () {
         this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
             _this.contactData = data;
             console.log(_this.contactData);
+            _this.sendEmailToKohan();
+            _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
+            _this.ngxSmartModalService.getModal('myModal').close();
         });
+    };
+    HomeComponent.prototype.sendEmailToKohan = function () {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json'
+        });
+        var signUpInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        var data = {
+            toEmail: 'ethan.durham3692@gmail.com',
+            toName: 'Ethan Durham',
+            leadEmailAddress: signUpInfo.email,
+            leadPracticeName: signUpInfo.practiceName
+        };
+        this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -434,9 +481,10 @@ var HomeComponent = (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__["b" /* NgxSmartModalService */],
-            __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["c" /* AngularFireLiteDatabase */],
-            __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["b" /* AngularFireLiteAuth */],
-            __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
+            __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["c" /* AngularFireLiteDatabase */],
+            __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["b" /* AngularFireLiteAuth */],
+            __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["d" /* AngularFireLiteFirestore */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -526,6 +574,7 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -540,17 +589,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PricingComponent = (function () {
-    function PricingComponent(router, ngxSmartModalService, db, auth, fireStore) {
+    function PricingComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
+        this.httpClient = httpClient;
         this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
         });
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
     }
     PricingComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -569,9 +621,28 @@ var PricingComponent = (function () {
         this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
             _this.contactData = data;
             console.log(_this.contactData);
+            _this.sendEmailToKohan();
+            _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
+            _this.ngxSmartModalService.getModal('myModal').close();
         });
+    };
+    PricingComponent.prototype.sendEmailToKohan = function () {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json'
+        });
+        var signUpInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        var data = {
+            toEmail: 'ethan.durham3692@gmail.com',
+            toName: 'Ethan Durham',
+            leadEmailAddress: signUpInfo.email,
+            leadPracticeName: signUpInfo.practiceName
+        };
+        this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
     PricingComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -583,7 +654,8 @@ var PricingComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
-            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClient */]])
     ], PricingComponent);
     return PricingComponent;
 }());
@@ -619,6 +691,7 @@ var ContactService = (function () {
     function ContactService(http, origin) {
         this.http = http;
         this.contactUrl = 'api/contacts'; // URL to web api
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
         this.contactUrl = "" + origin + this.contactUrl;
     }
     ContactService.prototype.getContacts = function () {
@@ -633,6 +706,13 @@ var ContactService = (function () {
             'Authorization': 'Bearer ' + authToken
         });
         return this.http.post('api/v1/posts/' + postId + '/flag', flaggedPost, { headers: apiHeaders });
+    };
+    ContactService.prototype.sendKohanEmail = function () {
+        var data = {
+            toEmail: 'sabina@kohaninc.com',
+            toName: 'Sabina Farrugia'
+        };
+        this.http.post(this.endpoint, data);
     };
     ContactService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
@@ -670,6 +750,7 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -684,17 +765,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SocialMediaComponent = (function () {
-    function SocialMediaComponent(router, ngxSmartModalService, db, auth, fireStore) {
+    function SocialMediaComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
+        this.httpClient = httpClient;
         this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
         });
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
     }
     SocialMediaComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -711,9 +795,28 @@ var SocialMediaComponent = (function () {
         this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
             _this.contactData = data;
             console.log(_this.contactData);
+            _this.sendEmailToKohan();
+            _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
+            _this.ngxSmartModalService.getModal('myModal').close();
         });
+    };
+    SocialMediaComponent.prototype.sendEmailToKohan = function () {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json'
+        });
+        var signUpInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        var data = {
+            toEmail: 'ethan.durham3692@gmail.com',
+            toName: 'Ethan Durham',
+            leadEmailAddress: signUpInfo.email,
+            leadPracticeName: signUpInfo.practiceName
+        };
+        this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
     SocialMediaComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -725,7 +828,8 @@ var SocialMediaComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
-            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClient */]])
     ], SocialMediaComponent);
     return SocialMediaComponent;
 }());
@@ -759,6 +863,7 @@ module.exports = "<div class=\"header-unit\">\n  <div class=\"color-overlay\"></
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__animations_fade_in_animation__ = __webpack_require__("./src/app/animations/fade-in.animation.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -774,17 +879,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WebDevelopmentComponent = (function () {
-    function WebDevelopmentComponent(router, ngxSmartModalService, db, auth, fireStore) {
+    function WebDevelopmentComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
+        this.httpClient = httpClient;
         this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
         });
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
     }
     WebDevelopmentComponent.prototype.ngOnInit = function () {
         this.message = 'Hello';
@@ -801,9 +909,28 @@ var WebDevelopmentComponent = (function () {
         this.fireStore.push('contacts', contactInfo).subscribe(function (data) {
             _this.contactData = data;
             console.log(JSON.stringify(_this.contactData));
+            _this.sendEmailToKohan();
+            _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
+            _this.ngxSmartModalService.getModal('myModal').close();
         });
+    };
+    WebDevelopmentComponent.prototype.sendEmailToKohan = function () {
+        var apiHeaders = new __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["d" /* HttpHeaders */]({
+            'Content-Type': 'application/json'
+        });
+        var signUpInfo = {
+            email: this.newContactForm.get('email').value,
+            practiceName: this.newContactForm.get('practiceName').value
+        };
+        var data = {
+            toEmail: 'ethan.durham3692@gmail.com',
+            toName: 'Ethan Durham',
+            leadEmailAddress: signUpInfo.email,
+            leadPracticeName: signUpInfo.practiceName
+        };
+        this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
     WebDevelopmentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -817,7 +944,8 @@ var WebDevelopmentComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4_ngx_smart_modal__["b" /* NgxSmartModalService */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["b" /* AngularFireLiteAuth */],
-            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */]])
+            __WEBPACK_IMPORTED_MODULE_3_angularfire_lite__["d" /* AngularFireLiteFirestore */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClient */]])
     ], WebDevelopmentComponent);
     return WebDevelopmentComponent;
 }());
