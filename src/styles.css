@@ -8,5 +8,5 @@ body {
 }
 
 body.dialog-open ngx-smart-modal {
-  top: 20% !important;
+  top: 15% !important;
 }
