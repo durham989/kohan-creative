@@ -1,0 +1,32 @@
+<div class="container">
+  <h4 style="text-align: center;">Contact Kohan Creative</h4>
+  <form [formGroup]="contactUsForm" (ngSubmit)="saveContactInformation()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="firstName" class="lighter-font-weight">First Name</label>
+        <input type="text" class="form-control lighter-font-weight" id="firstName" placeholder="First Name" formControlName="firstName">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lastName" class="lighter-font-weight">Last Name</label>
+        <input type="text" class="form-control lighter-font-weight" id="lastName" placeholder="Last Name" formControlName="lastName">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
+        <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+          formControlName="email">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group col-md-6">
+        <label for="practiceName" class="lighter-font-weight">Name of Practice</label>
+        <input type="text" class="form-control lighter-font-weight" id="practiceName" placeholder="Dental or Medical Practice" formControlName="practiceName">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1" class="lighter-font-weight">Message or Question</label>
+      <textarea class="form-control lighter-font-weight" id="exampleFormControlTextarea1" rows="3" placeholder="Have a message or question? Type it in here!"></textarea>
+    </div>
+    <button type="submit" class="work-with-us-modal-button">Submit</button>
+  </form>
+</div>

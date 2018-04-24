@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularFireLiteAuth, AngularFireLiteDatabase, AngularFireLiteFirestore } from 'angularfire-lite';
 import { NgxSmartModalService } from 'ngx-smart-modal';
@@ -78,5 +78,10 @@ export class PricingComponent implements OnInit {
     }
 
     this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
+  }
+
+  openContactUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('contactUsModal').open();
   }
 }

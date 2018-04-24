@@ -17,6 +17,7 @@ import { GraphicDesignComponent } from './graphic-design/graphic-design.componen
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { ContactUsComponent } from './contact/contact.component';
 
 import { ContactService } from './services/contact.service';
 
@@ -32,7 +33,8 @@ import { Http } from '@angular/http';
     GraphicDesignComponent,
     SocialMediaComponent,
     FooterComponent,
-    PricingComponent
+    PricingComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

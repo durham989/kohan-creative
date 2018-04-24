@@ -9,30 +9,35 @@
   <!-- end video-container -->
 
   <div class="desc-wrapper-container">
+    <!-- Work With Us Modal -->
+    <ngx-smart-modal #myModal identifier="myModal">
+      <h4>Work with Kohan Creative</h4>
+      <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
+          <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+            formControlName="email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
+          <input type="text" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name"
+            formControlName="practiceName">
+        </div>
+        <button type="submit" class="work-with-us-modal-button">Submit</button>
+      </form>
+    </ngx-smart-modal>
+
+    <!-- Contact Us Modal -->
+    <ngx-smart-modal #contactUsModal identifier="contactUsModal">
+      <kohan-contact-us></kohan-contact-us>
+    </ngx-smart-modal>
+
+
     <div class="desc-wrapper">
       <p class="desc-smaller-text">Kohan Creative</p>
       <h1 class="kohan-header-tagline">Packages & Pricing</h1>
       <div class="kohan-header-button" (click)="ngxSmartModalService.getModal('myModal').open()">Work With Us</div>
-
-      <!-- Work With Us Modal -->
-      <ngx-smart-modal #myModal identifier="myModal">
-        <h4>Work with Kohan Creative</h4>
-        <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
-          <div class="form-group">
-            <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
-            <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
-              formControlName="email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice</label>
-            <input type="text" class="form-control lighter-font-weight" id="exampleInputPassword1" placeholder="Dental or Medical Practice Name"
-              formControlName="practiceName">
-          </div>
-          <button type="submit" class="work-with-us-modal-button">Submit</button>
-        </form>
-      </ngx-smart-modal>
-
     </div>
   </div>
 </div>
@@ -72,7 +77,7 @@
             <li class="package-features-paragraph">Pre-designed template</li>
             <li class="package-features-paragraph">Updated logo with full rights</li>
           </ul>
-          <button type="button" class="sign-up-button">Sign Up Now</button>
+          <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
           <div class="package-features-muted">* Additional $200 flat fee for any site changes</div>
         </div>
       </div>
@@ -95,7 +100,7 @@
             <li class="package-features-paragraph">Premium services and integrations</li>
             <li class="package-features-paragraph">Custom logo and suite of brand assets</li>
           </ul>
-          <button type="button" class="sign-up-button">Sign Up Now</button>
+          <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
         </div>
       </div>
     </div>
@@ -116,14 +121,14 @@
             <li class="package-features-paragraph">One site edit per month</li>
             <li class="package-features-paragraph">Newly designed logo and business cards</li>
           </ul>
-          <button type="button" class="sign-up-button">Sign Up Now</button>
+          <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- What Each Package Includes -->
-  <div class="row services-spacing-section">
+  <div class="row services-spacing-section" id="contactUsForm">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
         At Kohan Creative, we believe in optionality.
