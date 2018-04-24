@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
     // });
     this.fireStore.read('contacts').subscribe((data) => {
       this.fireStoreData = data;
-      console.log(JSON.stringify(this.fireStoreData));
+      // console.log(JSON.stringify(this.fireStoreData));
     });
   }
 
@@ -75,8 +75,8 @@ export class HomeComponent implements OnInit {
     }
     
     const data = {
-      toEmail: 'ethan.durham3692@gmail.com',
-      toName: 'Ethan Durham',
+      toEmail: 'sfarrugia@kohaninc.com',
+      toName: 'Sabina Farrugia',
       leadEmailAddress: signUpInfo.email,
       leadPracticeName: signUpInfo.practiceName
     }
