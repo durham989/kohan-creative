@@ -22,7 +22,7 @@ export class ContactUsComponent implements OnInit {
     practiceName: new FormControl('', Validators.required),
     contactUsMessage: new FormControl('')
   });
-  public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+  public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/contactUsEmail';
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,

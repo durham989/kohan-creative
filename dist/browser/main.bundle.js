@@ -261,7 +261,7 @@ var ContactUsComponent = (function () {
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             contactUsMessage: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]('')
         });
-        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+        this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/contactUsEmail';
     }
     ContactUsComponent.prototype.ngOnInit = function () {
         var _this = this;
