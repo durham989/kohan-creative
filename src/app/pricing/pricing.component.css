@@ -287,7 +287,7 @@ video.fillWidth {
   .desc-smaller-text {
     font-weight: 300;
     font-style: normal;
-    font-size: 18px;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 1.3em;
@@ -300,7 +300,7 @@ video.fillWidth {
     display: block;
     font-weight: 300;
     font-style: normal;
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 0px;
     text-transform: none;
     line-height: 1.1em;
@@ -312,6 +312,19 @@ video.fillWidth {
     border: none;
     position: relative;
     padding: 20px;
+  }
+
+  .kohan-secondary-statement {
+    font-size: 26px;
+  }
+
+  video {
+    position:absolute;
+    top: 80px;
+  }
+
+  .desc-wrapper {
+    padding: 84px 32px 64px 32px;
   }
 }
 

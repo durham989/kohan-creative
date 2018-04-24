@@ -250,6 +250,15 @@ video.fillWidth {
     position: relative;
     padding: 20px;
   }
+
+  .kohan-secondary-statement {
+    font-size: 26px;
+  }
+
+  video {
+    position:absolute;
+    top: 80px;
+  }
 }
 
 @keyframes feature-text-anim {

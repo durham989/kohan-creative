@@ -95,3 +95,16 @@
   background-color: #000000;
   color: #EFEFEF;
 }
+
+@media only screen and (max-width: 640px) {
+  .mobile-padding {
+    padding: 24px 36px;
+  }
+  .services-link-button {
+    text-align: center;
+  }
+
+  .services-link {
+    text-align: center;
+  }
+}
