@@ -12,7 +12,7 @@
 
     <!-- Work With Us Modal -->
     <ngx-smart-modal #myModal identifier="myModal">
-      <h4>Work with Kohan Creative</h4>
+      <h4 style="text-align: center;">Work with Kohan Creative</h4>
       <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
         <div class="form-group">
           <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
@@ -27,6 +27,11 @@
         </div>
         <button type="submit" class="work-with-us-modal-button">Submit</button>
       </form>
+    </ngx-smart-modal>
+
+    <!-- Contact Us Modal -->
+    <ngx-smart-modal #contactUsModal identifier="contactUsModal">
+      <kohan-contact-us></kohan-contact-us>
     </ngx-smart-modal>
 
     <div class="desc-wrapper">
@@ -48,7 +53,7 @@
   </div>
   <div class="row services-spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins">
+      <img src="../assets/img/ladder.jpeg" class="img-fluid services-image-margins">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -57,9 +62,12 @@
             <div class="link-to-services text-align-center">Create & Cultivate</div>
           </h3>
           <p class="text-align-center services-paragraph">
-            Whether you're starting completely from scratch or are looking for an added boost, we create and maintain your most vital
+            Whether you're starting completely from scratch or are looking for an added boost, we create, maintain, and grow your most vital
             social media acounts, allowing you to focus on what you do best.
           </p>
+          <h3 class="learn-more-title text-align-center">
+            <div class="contact-link text-align-center" (click)="openContactUsModal()">Get Started</div>
+          </h3>
         </div>
       </div>
     </div>
@@ -75,16 +83,19 @@
             From creative posts and crisp videos to engaging polls and interactive digital experiences, we don't just help you connect
             with your patients - we help you build a lasting community.
           </p>
+          <h3 class="learn-more-title text-align-center">
+            <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div>
+          </h3>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 order-first order-md-2">
-      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins">
+      <img src="../assets/img/victoria-station-busy-people-victoria-735795.jpeg" class="img-fluid services-image-margins">
     </div>
   </div>
   <div class="row services-spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins">
+      <img src="../assets/img/business_black_white.jpeg" class="img-fluid services-image-margins">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -96,8 +107,24 @@
             Drawing on the pervasiveness of crowd-sourcing and the "review economy," we employ unique tactics that work towards transforming
             your patients into your brand ambassadors.
           </p>
+          <h3 class="learn-more-title text-align-center">
+            <div class="contact-link text-align-center" (click)="openContactUsModal()">Learn More</div>
+          </h3>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Bottom tagline -->
+  <div class="row services-spacing-section" id="contactUsForm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+      <h2 class="kohan-secondary-statement">
+        Build your community and realize your ultimate vision with Kohan Creative.
+      </h2>
+      <div class="button-spacing">
+        <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Work With Us</button>
+      </div>
+    </div>
+  </div>
+
 </div>

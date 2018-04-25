@@ -77,4 +77,14 @@ export class WebDevelopmentComponent implements OnInit {
 
     this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
   }
+
+  openContactUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('contactUsModal').open();
+  }
+
+  openWorkWithUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('myModal').open();
+  }
 }

@@ -12,7 +12,7 @@
 
     <!-- Work With Us Modal -->
     <ngx-smart-modal #myModal identifier="myModal">
-      <h4>Work with Kohan Creative</h4>
+      <h4 style="text-align: center;">Work with Kohan Creative</h4>
       <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
         <div class="form-group">
           <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
@@ -27,6 +27,11 @@
         </div>
         <button type="submit" class="work-with-us-modal-button">Submit</button>
       </form>
+    </ngx-smart-modal>
+
+    <!-- Contact Us Modal -->
+    <ngx-smart-modal #contactUsModal identifier="contactUsModal">
+      <kohan-contact-us></kohan-contact-us>
     </ngx-smart-modal>
 
     <div class="desc-wrapper">
@@ -49,7 +54,7 @@
   </div>
   <div class="row services-spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins">
+      <img src="../assets/img/extraordinary_smile_branding.jpg" class="img-fluid services-image-margins">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -61,6 +66,9 @@
             We work closely with you to get to know the true purpose and story behind your dental practice, with the intent of reimagining
             your brand and building a foundation that is in harmony with your overall vision.
           </p>
+          <h3 class="learn-more-title text-align-center">
+            <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div>
+          </h3>
         </div>
       </div>
     </div>
@@ -76,16 +84,19 @@
             Your brand isn't just your logo. From health history and referral forms to appointment and business cards, we create assets
             specifically tailored to accommodate your growing dental practice's needs.
           </p>
+          <h3 class="learn-more-title text-align-center">
+            <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div>
+          </h3>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 order-first order-md-2">
-      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins">
+      <img src="../assets/img/endocare-2.jpg" class="img-fluid services-image-margins">
     </div>
   </div>
   <div class="row services-spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins">
+      <img src="../assets/img/martin_family_dentistry.jpg" class="img-fluid services-image-margins">
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -98,8 +109,24 @@
             by infusing your brand with the same empathy and passion, further strengthening the bond you share with your
             patients.
           </p>
+          <h3 class="learn-more-title text-align-center">
+            <div class="contact-link text-align-center" (click)="openContactUsModal()">Find Out More</div>
+          </h3>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Bottom tagline -->
+  <div class="row services-spacing-section" id="contactUsForm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+      <h2 class="kohan-secondary-statement">
+        Emphasize your presence and establish your voice with Kohan Creative.
+      </h2>
+      <div class="button-spacing">
+        <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Get In Touch</button>
+      </div>
+    </div>
+  </div>
+
 </div>

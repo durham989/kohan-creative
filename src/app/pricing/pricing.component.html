@@ -11,7 +11,7 @@
   <div class="desc-wrapper-container">
     <!-- Work With Us Modal -->
     <ngx-smart-modal #myModal identifier="myModal">
-      <h4>Work with Kohan Creative</h4>
+      <h4 style="text-align: center;">Work with Kohan Creative</h4>
       <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()">
         <div class="form-group">
           <label for="exampleInputEmail1" class="lighter-font-weight">Email address</label>
@@ -76,6 +76,7 @@
             <li class="package-features-paragraph">Mobile optimized site</li>
             <li class="package-features-paragraph">Pre-designed template</li>
             <li class="package-features-paragraph">Updated logo with full rights</li>
+            <li class="package-features-paragraph">Setup of one social media account and one post per month</li>
           </ul>
           <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
           <div class="package-features-muted">* Additional $200 flat fee for any site changes</div>
@@ -99,6 +100,8 @@
             <li class="package-features-paragraph">Regular monthly maintenance and hosting</li>
             <li class="package-features-paragraph">Premium services and integrations</li>
             <li class="package-features-paragraph">Custom logo and suite of brand assets</li>
+            <li class="package-features-paragraph">Setup of four social media accounts</li>
+            <li class="package-features-paragraph">One post per week across four social media accounts</li>
           </ul>
           <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
         </div>
@@ -120,6 +123,7 @@
             <li class="package-features-paragraph">Pre-designed template w/ 2 custom options</li>
             <li class="package-features-paragraph">One site edit per month</li>
             <li class="package-features-paragraph">Newly designed logo and business cards</li>
+            <li class="package-features-paragraph">Setup of two social media accounts and two posts per month per account</li>
           </ul>
           <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
         </div>
@@ -131,10 +135,7 @@
   <div class="row services-spacing-section" id="contactUsForm">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
-        At Kohan Creative, we believe in optionality.
-      </h2>
-      <h2 class="kohan-secondary-statement">
-        Choose the package that's right for your dental or medical practice.
+        Ready to get started? Get in touch with us today!
       </h2>
     </div>
   </div>

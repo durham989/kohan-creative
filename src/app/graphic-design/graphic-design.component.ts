@@ -58,14 +58,14 @@ export class GraphicDesignComponent implements OnInit {
 
   sendEmailToKohan() {
     const apiHeaders = new HttpHeaders({
-      'Content-Type':  'application/json'
+      'Content-Type': 'application/json'
     });
 
     const signUpInfo = {
       email: this.newContactForm.get('email').value,
       practiceName: this.newContactForm.get('practiceName').value
     }
-    
+
     const data = {
       toEmail: 'sfarrugia@kohaninc.com',
       toName: 'Sabina Farrugia',
@@ -73,6 +73,16 @@ export class GraphicDesignComponent implements OnInit {
       leadPracticeName: signUpInfo.practiceName
     }
 
-    this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
+    this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
+  }
+
+  openContactUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('contactUsModal').open();
+  }
+
+  openWorkWithUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('myModal').open();
   }
 }

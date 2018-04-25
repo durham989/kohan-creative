@@ -191,6 +191,46 @@ video.fillWidth {
   font-weight: 300;
 }
 
+.sign-up-button {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 1.75em;
+}
+
+.sign-up-button:hover {
+  background-color: #000000;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+
+.button-spacing {
+  margin-top: 5%;
+}
+
+.learn-more-title {
+  color: #1F1F1F;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  margin-top: 10%;
+}
+
+.contact-link {
+  color: rgba(31,31,31,.5);
+  text-decoration: none;
+  word-wrap: break-word;
+  background: transparent;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 640px) {
   .desc-wrapper-container {
     min-height: 0;
