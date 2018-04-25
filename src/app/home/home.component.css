@@ -211,6 +211,36 @@ video.fillWidth {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
+.about-us-background {
+  background: url('../../assets/img/cad_7.jpg') no-repeat center center, #222;
+  background-size: 100%;
+  padding: 10%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sign-up-button {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 1.75em;
+}
+
+.sign-up-button:hover {
+  background-color: #000000;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+
+.button-spacing {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 @media only screen and (max-width: 640px) {
   .desc-wrapper-container {
     min-height: 0;
@@ -258,6 +288,11 @@ video.fillWidth {
   video {
     position:absolute;
     top: 80px;
+  }
+
+  .button-spacing {
+    margin-top: 10%;
+    margin-bottom: 5%;
   }
 }
 

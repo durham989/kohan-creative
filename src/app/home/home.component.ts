@@ -83,4 +83,9 @@ export class HomeComponent implements OnInit {
 
     this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
   }
+
+  openWorkWithUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('myModal').open();
+  }
 }
