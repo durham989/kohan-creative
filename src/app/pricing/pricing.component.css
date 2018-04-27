@@ -279,6 +279,22 @@ video.fillWidth {
   color: #dc3545;
 }
 
+.work-with-us-modal-button-disabled {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: not-allowed;
+}
+
+.work-with-us-modal-button-disabled:hover {
+  /* background-color: #000000; */
+  /* color: #EFEFEF; */
+  color: #000000;
+  background-color: #CCCCCC;
+  cursor: not-allowed;
+}
+
 @media only screen and (max-width: 640px) {
   .desc-wrapper-container {
     min-height: 0;

@@ -5,10 +5,12 @@
       <div class="form-group col-md-6">
         <label for="firstName" class="lighter-font-weight">First Name *</label>
         <input type="text" class="form-control lighter-font-weight" id="firstName" placeholder="First Name" formControlName="firstName">
+        <small *ngIf="contactUsForm.controls['firstName'].errors && (contactUsForm.controls['firstName'].dirty || contactUsForm.controls['firstName'].touched)" class="form-text invalid-text">Please enter your first name.</small>
       </div>
       <div class="form-group col-md-6">
         <label for="lastName" class="lighter-font-weight">Last Name *</label>
         <input type="text" class="form-control lighter-font-weight" id="lastName" placeholder="Last Name" formControlName="lastName">
+        <small *ngIf="contactUsForm.controls['lastName'].errors && (contactUsForm.controls['lastName'].dirty || contactUsForm.controls['lastName'].touched)" class="form-text invalid-text">Please enter your last name.</small>
       </div>
     </div>
     <div class="form-row">
@@ -16,18 +18,20 @@
         <label for="exampleInputEmail1" class="lighter-font-weight">Email address *</label>
         <input type="email" class="form-control lighter-font-weight" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address"
           formControlName="email">
+        <small *ngIf="contactUsForm.controls['email'].errors && (contactUsForm.controls['email'].dirty || contactUsForm.controls['email'].touched)" class="form-text invalid-text">Please enter your email address.</small>
         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
       <div class="form-group col-md-6">
         <label for="practiceName" class="lighter-font-weight">Name of Practice *</label>
         <input type="text" class="form-control lighter-font-weight" id="practiceName" placeholder="Dental or Medical Practice" formControlName="practiceName">
+        <small *ngIf="contactUsForm.controls['practiceName'].errors && (contactUsForm.controls['practiceName'].dirty || contactUsForm.controls['practiceName'].touched)" class="form-text invalid-text">Please provide the name of your practice.</small>
       </div>
     </div>
     <div class="form-group">
       <label for="exampleFormControlTextarea1" class="lighter-font-weight">Message or Question</label>
       <textarea class="form-control lighter-font-weight" id="exampleFormControlTextarea1" rows="3" placeholder="Have a message or question? Type it in here!"></textarea>
     </div>
-    <button type="submit" class="work-with-us-modal-button">Submit</button>
-    <small *ngIf="contactUsForm.invalid && (contactUsForm.dirty || contactUsForm.touched)" class="form-text invalid-text">Please fill out all required fields.</small>
+    <button type="submit" [class.work-with-us-modal-button-disabled]="contactUsForm.invalid" class="work-with-us-modal-button" [disabled]="contactUsForm.invalid">Submit</button>
+    <!-- <small *ngIf="contactUsForm.invalid && (contactUsForm.dirty || contactUsForm.touched)" class="form-text invalid-text">Please fill out all required fields.</small> -->
   </form>
 </div>

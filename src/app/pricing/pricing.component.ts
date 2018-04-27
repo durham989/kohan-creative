@@ -21,6 +21,7 @@ export class PricingComponent implements OnInit {
     email: new FormControl(null, Validators.required),
     practiceName: new FormControl(null, Validators.required)
   });
+  public contactUsModalOpen: Boolean;
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
 
   constructor(private router: Router,
@@ -81,7 +82,13 @@ export class PricingComponent implements OnInit {
   }
 
   openContactUsModal() {
+    this.contactUsModalOpen = true;
     window.scrollTo(0, 0);
     this.ngxSmartModalService.getModal('contactUsModal').open();
+  }
+
+  openWorkWithUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('myModal').open();
   }
 }
