@@ -57,7 +57,7 @@ exports.contactUsEmail = functions.https.onRequest((req, res) => {
       to: toEmail,
       from: 'thanks@kohancreative.com',
       subject: 'Contact Us Form Submitted - Kohan Creative',
-      html: `<p>Someone wants to work with Kohan Creative! Here's the information they provided:<ul><li>Email Address: ${leadEmailAddress}</li><li>Name of their Practice: ${leadPracticeName}</li></ul></p><p>Thanks!</p>`,
+      html: `<p>Someone wants to work with Kohan Creative! Here's the information they provided:<ul><li>First Name: ${leadFirstName}</li><li>Last Name: ${leadLastName}</li><li>Email Address: ${leadEmailAddress}</li><li>Name of their Practice: ${leadPracticeName}</li><li>Message: ${contactUsMessage}</li></ul></p><p>Thanks!</p>`,
       // text: `This is a test email`,
       // html: `<strong>Hey ${toName}. You have a new follower!!!</strong>`,
     };
