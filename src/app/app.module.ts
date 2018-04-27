@@ -18,6 +18,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ContactUsComponent } from './contact/contact.component';
+import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 
 import { ContactService } from './services/contact.service';
 
@@ -34,7 +35,8 @@ import { Http } from '@angular/http';
     SocialMediaComponent,
     FooterComponent,
     PricingComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    WorkWithUsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),

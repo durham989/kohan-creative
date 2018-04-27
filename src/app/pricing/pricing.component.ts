@@ -17,10 +17,6 @@ export class PricingComponent implements OnInit {
   public brandingTooltip: string;
   public fireStoreData: any;
   public contactData: any;
-  public newContactForm = new FormGroup({
-    email: new FormControl(null, Validators.required),
-    practiceName: new FormControl(null, Validators.required)
-  });
   public contactUsModalOpen: Boolean;
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
 
@@ -39,46 +35,6 @@ export class PricingComponent implements OnInit {
 
   navigateToPage(route) {
     this.router.navigate([route]);
-  }
-
-  saveContactInformation() {
-    var contactInfo = {
-      email: this.newContactForm.get('email').value,
-      practiceName: this.newContactForm.get('practiceName').value
-    };
-
-    this.fireStore.push('contacts', contactInfo).subscribe(
-      data => {
-        this.contactData = data;
-        console.log(this.contactData);
-        this.sendEmailToKohan();
-        this.ngxSmartModalService.getModal('myModal').close();
-      },
-      error => {
-        console.error(error);
-        this.ngxSmartModalService.getModal('myModal').close();
-      }
-    );
-  }
-
-  sendEmailToKohan() {
-    const apiHeaders = new HttpHeaders({
-      'Content-Type':  'application/json'
-    });
-
-    const signUpInfo = {
-      email: this.newContactForm.get('email').value,
-      practiceName: this.newContactForm.get('practiceName').value
-    }
-    
-    const data = {
-      toEmail: 'sfarrugia@kohaninc.com',
-      toName: 'Sabina Farrugia',
-      leadEmailAddress: signUpInfo.email,
-      leadPracticeName: signUpInfo.practiceName
-    }
-
-    this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
   }
 
   openContactUsModal() {

@@ -33,7 +33,7 @@
               <a class="services-link" href="#">About</a>
             </li> -->
             <li class="services-item-container">
-              <a class="services-link-button" href="#">Work With Us</a>
+              <div class="services-link-button" (click)="openWorkWithUsModal()">Work With Us</div>
             </li>
           </ul>
         </div>
@@ -41,3 +41,8 @@
     </div>
   </div>
 </div>
+
+<!-- Work With Us Modal -->
+<ngx-smart-modal #myModal identifier="myModal">
+  <kohan-work-with-us></kohan-work-with-us>
+</ngx-smart-modal>

@@ -1,0 +1,38 @@
+.work-with-us-modal-button {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: pointer;
+}
+
+.work-with-us-modal-button:hover {
+  background-color: #000000;
+  color: #EFEFEF;
+  cursor: pointer;
+}
+
+.work-with-us-modal-button-disabled {
+  color: #000000;
+  border: 2px solid #000000;
+  background-color: transparent;
+  -webkit-font-smoothing: subpixel-antialiased;
+  cursor: not-allowed;
+}
+
+.work-with-us-modal-button-disabled:hover {
+  /* background-color: #000000; */
+  /* color: #EFEFEF; */
+  color: #000000;
+  background-color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+.lighter-font-weight {
+  font-weight: 300;
+}
+
+.invalid-text {
+  font-weight: 300;
+  color: #dc3545;
+}

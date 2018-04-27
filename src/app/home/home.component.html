@@ -12,23 +12,7 @@
 
     <!-- Work With Us Modal -->
     <ngx-smart-modal #myModal identifier="myModal">
-      <h4 style="text-align: center;">Work with Kohan Creative</h4>
-      <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()" novalidate>
-        <div class="form-group">
-          <label for="exampleInputEmail1" class="lighter-font-weight">Email address *</label>
-          <input type="email" class="form-control lighter-font-weight" id="email" aria-describedby="emailHelp" placeholder="Enter email"
-            formControlName="email">
-          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-          <small *ngIf="newContactForm.controls['email'].errors && (newContactForm.controls['email'].dirty || newContactForm.controls['email'].touched)" class="form-text invalid-text">Please provide your email address!</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice *</label>
-          <input type="text" class="form-control lighter-font-weight" id="practiceName" placeholder="Dental or Medical Practice Name"
-            formControlName="practiceName">
-          <small *ngIf="newContactForm.controls['practiceName'].errors && (newContactForm.controls['practiceName'].dirty || newContactForm.controls['practiceName'].touched)" class="form-text invalid-text">Please provide the name of your practice!</small>
-        </div>
-        <button type="submit" [class.work-with-us-modal-button-disabled]="newContactForm.invalid" class="work-with-us-modal-button" [disabled]="newContactForm.invalid">Submit</button>
-      </form>
+      <kohan-work-with-us></kohan-work-with-us>
     </ngx-smart-modal>
 
     <div class="desc-wrapper">

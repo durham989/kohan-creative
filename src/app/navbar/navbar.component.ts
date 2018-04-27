@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgxSmartModalService } from 'ngx-smart-modal';
 
 @Component({
   selector: 'kohan-navbar',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   public message: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, 
+    private ngxSmartModalService: NgxSmartModalService) {}
 
   ngOnInit() {
     this.message = 'Hello';
@@ -17,5 +19,10 @@ export class NavbarComponent implements OnInit {
 
   navigateHome() {
     this.router.navigate(['home']);
+  }
+
+  openWorkWithUsModal() {
+    window.scrollTo(0, 0);
+    this.ngxSmartModalService.getModal('myModal').open();
   }
 }
