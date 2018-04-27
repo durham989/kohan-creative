@@ -274,6 +274,11 @@ video.fillWidth {
   top: 50% !important;
 }
 
+.invalid-text {
+  font-weight: 300;
+  color: #dc3545;
+}
+
 @media only screen and (max-width: 640px) {
   .desc-wrapper-container {
     min-height: 0;

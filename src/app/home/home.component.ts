@@ -16,8 +16,8 @@ export class HomeComponent implements OnInit {
   public fireStoreData: any;
   public contactData: any;
   public newContactForm = new FormGroup({
-    email: new FormControl('', Validators.required),
-    practiceName: new FormControl('', Validators.required)
+    email: new FormControl(null, Validators.required),
+    practiceName: new FormControl(null, Validators.required)
   });
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
 
@@ -75,8 +75,10 @@ export class HomeComponent implements OnInit {
     }
     
     const data = {
-      toEmail: 'sfarrugia@kohaninc.com',
-      toName: 'Sabina Farrugia',
+      // toEmail: 'sfarrugia@kohaninc.com',
+      // toName: 'Sabina Farrugia',
+      toEmail: 'ethan.durham3692@gmail.com',
+      toName: 'Ethan Durham',
       leadEmailAddress: signUpInfo.email,
       leadPracticeName: signUpInfo.practiceName
     }

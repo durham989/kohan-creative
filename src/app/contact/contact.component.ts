@@ -16,11 +16,11 @@ export class ContactUsComponent implements OnInit {
   public fireStoreData: any;
   public contactData: any;
   public contactUsForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    practiceName: new FormControl('', Validators.required),
-    contactUsMessage: new FormControl('')
+    firstName: new FormControl(null, Validators.required),
+    lastName: new FormControl(null, Validators.required),
+    email: new FormControl(null, Validators.required),
+    practiceName: new FormControl(null, Validators.required),
+    contactUsMessage: new FormControl(null)
   });
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/contactUsEmail';
 

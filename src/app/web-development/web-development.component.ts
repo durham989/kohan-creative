@@ -18,8 +18,8 @@ export class WebDevelopmentComponent implements OnInit {
   public message: string;
   public contactData: any;
   public newContactForm = new FormGroup({
-    email: new FormControl('', Validators.required),
-    practiceName: new FormControl('', Validators.required)
+    email: new FormControl(null, Validators.required),
+    practiceName: new FormControl(null, Validators.required)
   });
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
 

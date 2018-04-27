@@ -15,3 +15,8 @@
 .lighter-font-weight {
   font-weight: 300;
 }
+
+.invalid-text {
+  font-weight: 300;
+  color: #dc3545;
+}
