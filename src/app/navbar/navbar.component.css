@@ -88,12 +88,14 @@
   -webkit-font-smoothing: subpixel-antialiased;
   margin-left: 1em !important;
   padding: 1em 1.5em !important;
+  cursor: pointer;
   transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out;
 }
 
 .services-link-button:hover {
   background-color: #000000;
   color: #EFEFEF;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 640px) {
