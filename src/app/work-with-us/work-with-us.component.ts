@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgxSmartModalService } from 'ngx-smart-modal';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AngularFireLiteAuth, AngularFireLiteDatabase, AngularFireLiteFirestore } from 'angularfire-lite';
+import { SharingService } from '../services/sharing.service';
 
 @Component({
   selector: 'kohan-work-with-us',
@@ -20,13 +21,15 @@ export class WorkWithUsComponent implements OnInit {
     practiceName: new FormControl(null, Validators.required)
   });
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+  public previouslySubmittedEmail: any;
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,
     public db: AngularFireLiteDatabase,
     public auth: AngularFireLiteAuth,
     public fireStore: AngularFireLiteFirestore,
-    private httpClient: HttpClient) { }
+    private httpClient: HttpClient,
+    private sharingService: SharingService) { }
 
   ngOnInit() {
     this.message = 'Hello';
@@ -34,6 +37,14 @@ export class WorkWithUsComponent implements OnInit {
     this.fireStore.read('contacts').subscribe((data) => {
       this.fireStoreData = data;
     });
+    this.sharingService.currentEmailAddress.subscribe(
+      emailAddress => {
+        this.previouslySubmittedEmail = emailAddress;
+        this.newContactForm.patchValue({
+          email: this.previouslySubmittedEmail
+        });
+      }
+    );
   }
 
   saveContactInformation() {
@@ -47,6 +58,7 @@ export class WorkWithUsComponent implements OnInit {
         this.contactData = data;
         console.log(this.contactData);
         this.sendEmailToKohan();
+        this.sendEmailToSharedService(contactInfo.email);
         this.ngxSmartModalService.getModal('myModal').close();
       },
       error => {
@@ -74,5 +86,10 @@ export class WorkWithUsComponent implements OnInit {
     }
 
     this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
+  }
+
+  sendEmailToSharedService(emailAddress) {
+    this.sharingService.changeEmailAddress(emailAddress);
+    console.log('storing email address for other forms: ' + emailAddress);
   }
 }

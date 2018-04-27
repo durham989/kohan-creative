@@ -123,13 +123,15 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__contact_contact_component__ = __webpack_require__("./src/app/contact/contact.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__work_with_us_work_with_us_component__ = __webpack_require__("./src/app/work-with-us/work-with-us.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_contact_service__ = __webpack_require__("./src/app/services/contact.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__nguniversal_common__ = __webpack_require__("./node_modules/@nguniversal/common/esm5/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_sharing_service__ = __webpack_require__("./src/app/services/sharing.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__nguniversal_common__ = __webpack_require__("./node_modules/@nguniversal/common/esm5/common.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -188,10 +190,11 @@ var AppModule = (function () {
                     { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' },
                     { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule' }
                 ]),
-                __WEBPACK_IMPORTED_MODULE_21__nguniversal_common__["a" /* TransferHttpCacheModule */],
+                __WEBPACK_IMPORTED_MODULE_22__nguniversal_common__["a" /* TransferHttpCacheModule */],
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_20__services_contact_service__["a" /* ContactService */]
+                __WEBPACK_IMPORTED_MODULE_20__services_contact_service__["a" /* ContactService */],
+                __WEBPACK_IMPORTED_MODULE_21__services_sharing_service__["a" /* SharingService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
         })
@@ -228,6 +231,7 @@ module.exports = "<div class=\"container\">\n  <h4 style=\"text-align: center;\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_sharing_service__ = __webpack_require__("./src/app/services/sharing.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -243,14 +247,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ContactUsComponent = (function () {
-    function ContactUsComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
+    function ContactUsComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient, sharingService) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
         this.httpClient = httpClient;
+        this.sharingService = sharingService;
         this.contactUsForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             firstName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             lastName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
@@ -266,6 +272,12 @@ var ContactUsComponent = (function () {
         this.auth.signinAnonymously();
         this.fireStore.read('contacts').subscribe(function (data) {
             _this.fireStoreData = data;
+        });
+        this.sharingService.currentEmailAddress.subscribe(function (emailAddress) {
+            _this.previouslySubmittedEmail = emailAddress;
+            _this.contactUsForm.patchValue({
+                email: _this.previouslySubmittedEmail
+            });
         });
     };
     ContactUsComponent.prototype.navigateToPage = function (route) {
@@ -284,6 +296,7 @@ var ContactUsComponent = (function () {
             _this.contactData = data;
             console.log(_this.contactData);
             _this.sendEmailToKohan();
+            _this.sendEmailToSharedService(contactInfo.email);
             _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
@@ -312,6 +325,10 @@ var ContactUsComponent = (function () {
         };
         this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
+    ContactUsComponent.prototype.sendEmailToSharedService = function (emailAddress) {
+        this.sharingService.changeEmailAddress(emailAddress);
+        console.log('storing email address for other forms: ' + emailAddress);
+    };
     ContactUsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'kohan-contact-us',
@@ -323,7 +340,8 @@ var ContactUsComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["b" /* AngularFireLiteAuth */],
             __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["d" /* AngularFireLiteFirestore */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */]])
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_6__services_sharing_service__["a" /* SharingService */]])
     ], ContactUsComponent);
     return ContactUsComponent;
 }());
@@ -804,6 +822,48 @@ var ContactService = (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/sharing.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SharingService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SharingService = (function () {
+    function SharingService() {
+        this.emailAddressSource = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]('');
+        this.currentEmailAddress = this.emailAddressSource.asObservable();
+        this.practiceNameSource = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["a" /* BehaviorSubject */]('');
+        this.currentPracticeName = this.practiceNameSource.asObservable();
+    }
+    SharingService.prototype.changeEmailAddress = function (emailAddress) {
+        this.emailAddressSource.next(emailAddress);
+    };
+    SharingService.prototype.changePracticeName = function (practiceName) {
+        this.practiceNameSource.next(practiceName);
+    };
+    SharingService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], SharingService);
+    return SharingService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/social-media/social-media.component.css":
 /***/ (function(module, exports) {
 
@@ -993,6 +1053,7 @@ module.exports = "<h4 style=\"text-align: center;\">Work with Kohan Creative</h4
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_smart_modal__ = __webpack_require__("./node_modules/ngx-smart-modal/esm5/ngx-smart-modal.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_sharing_service__ = __webpack_require__("./src/app/services/sharing.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1008,14 +1069,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WorkWithUsComponent = (function () {
-    function WorkWithUsComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient) {
+    function WorkWithUsComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient, sharingService) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
         this.auth = auth;
         this.fireStore = fireStore;
         this.httpClient = httpClient;
+        this.sharingService = sharingService;
         this.newContactForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
             email: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required),
             practiceName: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */](null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["e" /* Validators */].required)
@@ -1029,6 +1092,12 @@ var WorkWithUsComponent = (function () {
         this.fireStore.read('contacts').subscribe(function (data) {
             _this.fireStoreData = data;
         });
+        this.sharingService.currentEmailAddress.subscribe(function (emailAddress) {
+            _this.previouslySubmittedEmail = emailAddress;
+            _this.newContactForm.patchValue({
+                email: _this.previouslySubmittedEmail
+            });
+        });
     };
     WorkWithUsComponent.prototype.saveContactInformation = function () {
         var _this = this;
@@ -1040,6 +1109,7 @@ var WorkWithUsComponent = (function () {
             _this.contactData = data;
             console.log(_this.contactData);
             _this.sendEmailToKohan();
+            _this.sendEmailToSharedService(contactInfo.email);
             _this.ngxSmartModalService.getModal('myModal').close();
         }, function (error) {
             console.error(error);
@@ -1062,6 +1132,10 @@ var WorkWithUsComponent = (function () {
         };
         this.httpClient.post(this.endpoint, data, { headers: apiHeaders }).subscribe();
     };
+    WorkWithUsComponent.prototype.sendEmailToSharedService = function (emailAddress) {
+        this.sharingService.changeEmailAddress(emailAddress);
+        console.log('storing email address for other forms: ' + emailAddress);
+    };
     WorkWithUsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'kohan-work-with-us',
@@ -1073,7 +1147,8 @@ var WorkWithUsComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["b" /* AngularFireLiteAuth */],
             __WEBPACK_IMPORTED_MODULE_5_angularfire_lite__["d" /* AngularFireLiteFirestore */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */]])
+            __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["b" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_6__services_sharing_service__["a" /* SharingService */]])
     ], WorkWithUsComponent);
     return WorkWithUsComponent;
 }());

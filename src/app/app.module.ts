@@ -21,6 +21,7 @@ import { ContactUsComponent } from './contact/contact.component';
 import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
 
 import { ContactService } from './services/contact.service';
+import { SharingService } from './services/sharing.service';
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { Http } from '@angular/http';
@@ -60,7 +61,8 @@ import { Http } from '@angular/http';
     TransferHttpCacheModule,
   ],
   providers: [
-    ContactService
+    ContactService,
+    SharingService
   ],
   bootstrap: [AppComponent]
 })
