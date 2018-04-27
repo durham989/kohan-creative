@@ -618,10 +618,8 @@ var HomeComponent = (function () {
             practiceName: this.newContactForm.get('practiceName').value
         };
         var data = {
-            // toEmail: 'sfarrugia@kohaninc.com',
-            // toName: 'Sabina Farrugia',
-            toEmail: 'ethan.durham3692@gmail.com',
-            toName: 'Ethan Durham',
+            toEmail: 'sfarrugia@kohaninc.com',
+            toName: 'Sabina Farrugia',
             leadEmailAddress: signUpInfo.email,
             leadPracticeName: signUpInfo.practiceName
         };
