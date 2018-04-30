@@ -1,8 +1,11 @@
+<div id="header-unit"></div>
+<kohan-navbar></kohan-navbar>
+
 <div class="header-unit">
-  <div class="color-overlay"></div>
+  <!-- <div class="color-overlay"></div> -->
   <div id="video-container">
     <video autoplay loop muted playsinline class="fillWidth">
-      <source src="https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Whiteboard%20-%201658.mp4?alt=media&token=f67b247c-bee6-4f62-a3dc-ce0c6b7dcc77"
+      <source src="https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/Cliff%20-%201890.mp4?alt=media&token=b288f83d-5c4c-4ab3-a0e0-963291b675f5"
         type="video/mp4" />
     </video>
   </div>
@@ -22,8 +25,20 @@
 
     <div class="desc-wrapper">
       <p class="desc-smaller-text">Kohan Creative</p>
-      <h1 class="kohan-header-tagline">Packages & Pricing</h1>
-      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Work With Us</div>
+      <h1 class="kohan-header-tagline">Design & Creative Packages</h1>
+      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Get Started Now</div>
+    </div>
+
+    <!-- Scroll Down Container -->
+    <div class="scroll-down-container container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+          <div class="kohan-header-more-link" (click)="scrollToPageSection('packages')">More</div>
+          <div class="scroll-down-animation" (click)="scrollToPageSection('packages')">
+            <fa name="chevron-down" class="scroll-down-animation" style="color: #FFFFFF;"></fa>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -34,7 +49,7 @@
 <div class="container">
 
   <!-- Kohan Secondary Tagline -->
-  <div class="row spacing-section">
+  <!-- <div class="row spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
         At Kohan Creative, we believe in optionality.
@@ -43,10 +58,10 @@
         Choose the package that's right for your dental or medical practice.
       </h2>
     </div>
-  </div>
+  </div> -->
 
   <!-- Kohan Pricing Packages -->
-  <div class="row services-spacing-section">
+  <div class="row services-spacing-section" id="packages">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-align-center">
       <div class="card mb-4 box-shadow hover-shadow">
         <div class="card-header">
@@ -118,12 +133,12 @@
   </div>
 
   <!-- What Each Package Includes -->
-  <div class="row services-spacing-section" id="contactUsForm">
+  <!-- <div class="row services-spacing-section" id="contactUsForm">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
         Ready to get started? Get in touch with us today!
       </h2>
     </div>
-  </div>
+  </div> -->
 
 </div>

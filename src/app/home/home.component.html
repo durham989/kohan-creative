@@ -1,8 +1,11 @@
+<div id="header-unit"></div>
+<kohan-navbar></kohan-navbar>
+
 <div class="header-unit">
-  <div class="color-overlay"></div>
+  <!-- <div class="color-overlay"></div> -->
   <div id="video-container">
     <video autoplay loop muted playsinline class="fillWidth">
-      <source src="https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Office%20-%207269.mp4?alt=media&token=abee2fc4-a937-4046-9f9b-384708dece22"
+      <source src="https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/aerial_city_video.mp4?alt=media&token=f87c686b-b9dd-4c11-aeca-5c5ded1451cc"
         type="video/mp4" />
     </video>
   </div>
@@ -17,9 +20,19 @@
 
     <div class="desc-wrapper">
       <p class="desc-smaller-text">Kohan Creative</p>
-      <h1 class="kohan-header-tagline">Luxurious Digital Design for Your Dental & Medical Practice</h1>
+      <h1 class="kohan-header-tagline">Luxurious Web Design for Your Dental & Medical Practice</h1>
       <!-- <a class="kohan-header-button" routerLink="/home">Work With Us</a> -->
-      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Work With Us</div>
+      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Get Started Now</div>
+    </div>
+    <div class="scroll-down-container container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+          <div class="kohan-header-more-link" (click)="scrollToPageSection('web-design-development')">More</div>
+          <div class="scroll-down-animation" (click)="scrollToPageSection('web-design-development')">
+            <fa name="chevron-down" class="scroll-down-animation" style="color: #FFFFFF;"></fa>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -28,17 +41,17 @@
 <div class="container">
 
   <!-- Kohan Secondary Tagline -->
-  <div class="row spacing-section">
+  <!-- <div class="row spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
         Kohan Creative employs the world's best designers, developers, and creators to imbue your private dental and medical practices
         with digital luxury.
       </h2>
     </div>
-  </div>
+  </div> -->
 
   <!-- Kohan Service Offerings -->
-  <div class="row services-spacing-section">
+  <!-- <div class="row services-spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
       <img src="../assets/img/composition-3326183_1280_Darker.jpeg" class="img-fluid services-image-margins img-cursor hover-shadow"
         (click)="navigateToPage('web-design-development')">
@@ -93,47 +106,112 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-</div>
-
-<!-- Kohan About Us -->
-<div class="row spacing-section about-us-background">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <p class="desc-smaller-text">Kohan Creative</p>
-    <h1 class="kohan-header-tagline">Who We Are</h1>
-  </div>
-</div>
-
-<div class="container">
-  <!-- Kohan Secondary Tagline -->
-  <div class="row spacing-section">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <h2 class="kohan-secondary-statement">
-        Kohan Creative is the sister company to the <a class="link-to-services" href="http://kohaninc.com/" target="_blank">Kohan Group</a>, the leader in healthcare, dental, orthodontic, and dental speciality
-        office design in North America.
-      </h2>
-      <!-- <h2 class="kohan-secondary-statement">
-        We are the foremost industry leaders in dental, healthcare, orthodontic, and dental speciality web design and branding.
-      </h2> -->
+  <div class="row services-spacing-section" id="web-design-development">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+      <img src="../assets/img/design_graphic.png" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('web-design-development')">
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-2"></div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
         <div class="service-offerings-content">
+          <h3 class="service-offerings-title text-align-center">
+            <a routerLink="/web-design-development" class="link-to-services text-align-center">Website Design & Development</a>
+          </h3>
           <p class="text-align-center services-paragraph">
-            We provide a comprehensive suite of services, starting the moment you have a grander vision of your dental practice. From
-            architectural and interior design, to construction, to building your website and digital presence, we offer a
-            unique set of services tailored specifically to the dental industry.
+            We design and develop custom websites that mirror the aesthetic and warmth of your dental or medical practice, evoking a
+            consistent emotion across your physical and digital properties.
           </p>
-          <div class="button-spacing text-align-center">
-            <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Work With Us</button>
+          <h3 class="learn-more-title text-align-center">
+            <!-- <a routerLink="/web-design-development" class="link-to-services text-align-center">Learn More</a> -->
+            <button type="button" class="sign-up-button" (click)="navigateToPage('web-design-development')">Learn More</button>
+          </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('graphic-design-branding')">More Services</div>
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('graphic-design-branding')">
+            <fa name="chevron-down" class="scroll-down-animation"></fa>
           </div>
         </div>
       </div>
-      <div class="col-lg-2"></div>
     </div>
   </div>
+  <div class="row services-spacing-section" id="graphic-design-branding">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+      <img src="../assets/img/branding_graphic.png" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('graphic-design-branding')">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <div class="service-offering-container">
+        <div class="service-offerings-content">
+          <h3 class="service-offerings-title text-align-center">
+            <a routerLink="/graphic-design-branding" class="link-to-services text-align-center">Graphic Design & Branding</a>
+          </h3>
+          <p class="text-align-center services-paragraph">
+            Whether you're starting your own practice or looking to modernize your current one, we specialize in creating custom logos
+            and brand assets that build on your story and set you apart.
+          </p>
+          <h3 class="learn-more-title text-align-center">
+            <!-- <a routerLink="/graphic-design-branding" class="link-to-services text-align-center">Learn More</a> -->
+            <button type="button" class="sign-up-button" (click)="navigateToPage('graphic-design-branding')">Learn More</button>
+          </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('social-media-marketing')">More Services</div>
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('social-media-marketing')">
+            <fa name="chevron-down" class="scroll-down-animation"></fa>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row services-spacing-section" id="social-media-marketing">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+      <img src="../assets/img/social_graphic.png" class="img-fluid services-image-margins img-cursor hover-shadow" (click)="navigateToPage('social-media-marketing')">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <div class="service-offering-container">
+        <div class="service-offerings-content">
+          <h3 class="service-offerings-title text-align-center">
+            <a routerLink="/social-media-marketing" class="link-to-services text-align-center">Social Media Marketing</a>
+          </h3>
+          <p class="text-align-center services-paragraph">
+            Extend your brand presence outside the office, at all hours of the day. We engage your patients and anticipate their needs
+            by managing your social accounts with thoughtfulness, attention, and compassion.
+          </p>
+          <h3 class="learn-more-title text-align-center">
+            <!-- <a routerLink="/social-media-marketing" class="link-to-services text-align-center">Learn More</a> -->
+            <button type="button" class="sign-up-button" (click)="navigateToPage('social-media-marketing')">Learn More</button>
+          </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('header-unit')">
+            <fa name="chevron-up" class="scroll-down-animation"></fa>
+          </div>
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('header-unit')">Back To Top</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<!-- Fixed site navigation -->
+<!-- <div class="site-side-nav">
+  <ul>
+    <li class="site-side-nav-item">
+      <div>Web Design & Dev</div>
+    </li>
+    <li class="site-side-nav-item">
+      <div>Graphics & Branding</div>
+    </li>
+    <li class="site-side-nav-item">
+      <div>Social Media Marketing</div>
+    </li>
+  </ul>
+</div> -->

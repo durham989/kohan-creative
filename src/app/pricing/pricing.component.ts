@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularFireLiteAuth, AngularFireLiteDatabase, AngularFireLiteFirestore } from 'angularfire-lite';
 import { NgxSmartModalService } from 'ngx-smart-modal';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'kohan-pricing',
@@ -25,7 +26,8 @@ export class PricingComponent implements OnInit {
     public db: AngularFireLiteDatabase,
     public auth: AngularFireLiteAuth,
     public fireStore: AngularFireLiteFirestore,
-    private httpClient: HttpClient) { }
+    private httpClient: HttpClient,
+    private scrollService: ScrollService) { }
 
   ngOnInit() {
     this.message = 'Hello';
@@ -46,5 +48,9 @@ export class PricingComponent implements OnInit {
   openWorkWithUsModal() {
     window.scrollTo(0, 0);
     this.ngxSmartModalService.getModal('myModal').open();
+  }
+
+  scrollToPageSection(target) {
+    this.scrollService.triggerScrollTo(target);
   }
 }

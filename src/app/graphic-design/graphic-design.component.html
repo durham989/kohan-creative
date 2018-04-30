@@ -1,8 +1,11 @@
+<div id="header-unit"></div>
+<kohan-navbar></kohan-navbar>
+
 <div class="header-unit">
-  <div class="color-overlay"></div>
+  <!-- <div class="color-overlay"></div> -->
   <div id="video-container">
     <video autoplay loop muted playsinline class="fillWidth">
-      <source src="https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/Paint%20-%206385.mp4?alt=media&token=5b9f2a64-9350-4aa1-bbf4-c9afb901ff56"
+      <source src="https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/Snowy%20Trees%20-%207328.mp4?alt=media&token=b5685916-8af2-4ac0-9aee-b9f8be221e08"
         type="video/mp4" />
     </video>
   </div>
@@ -10,25 +13,9 @@
 
   <div class="desc-wrapper-container">
 
-    <!-- Work With Us Modal -->
+    <!-- Get Started Now Modal -->
     <ngx-smart-modal #myModal identifier="myModal">
-      <h4 style="text-align: center;">Work with Kohan Creative</h4>
-      <form style="text-align: left;" [formGroup]="newContactForm" (ngSubmit)="saveContactInformation()" novalidate>
-        <div class="form-group">
-          <label for="exampleInputEmail1" class="lighter-font-weight">Email address *</label>
-          <input type="email" class="form-control lighter-font-weight" id="email" aria-describedby="emailHelp" placeholder="Enter email"
-            formControlName="email">
-          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-          <small *ngIf="newContactForm.controls['email'].errors && (newContactForm.controls['email'].dirty || newContactForm.controls['email'].touched)" class="form-text invalid-text">Please provide your email address!</small>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1" class="lighter-font-weight">Name of Practice *</label>
-          <input type="text" class="form-control lighter-font-weight" id="practiceName" placeholder="Dental or Medical Practice Name"
-            formControlName="practiceName">
-          <small *ngIf="newContactForm.controls['practiceName'].errors && (newContactForm.controls['practiceName'].dirty || newContactForm.controls['practiceName'].touched)" class="form-text invalid-text">Please provide the name of your practice!</small>
-        </div>
-        <button type="submit" [class.work-with-us-modal-button-disabled]="newContactForm.invalid" class="work-with-us-modal-button" [disabled]="newContactForm.invalid">Submit</button>
-      </form>
+      <kohan-work-with-us></kohan-work-with-us>
     </ngx-smart-modal>
 
     <!-- Contact Us Modal -->
@@ -39,24 +26,36 @@
     <div class="desc-wrapper">
       <h1 class="kohan-header-tagline">Graphic Design & Branding</h1>
       <p class="desc-smaller-text">Craft Your Visually Compelling Story</p>
-      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Work With Us</div>
+      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Get Started Now</div>
+    </div>
+    <div class="scroll-down-container container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+          <div class="kohan-header-more-link" (click)="scrollToPageSection('visual-storytelling')">More</div>
+          <div class="scroll-down-animation" (click)="scrollToPageSection('visual-storytelling')">
+            <fa name="chevron-down" class="scroll-down-animation" style="color: #FFFFFF;"></fa>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <!-- end .header-unit -->
 
 <div class="container">
-  <div class="row spacing-section">
+  <!-- <div class="row spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
         Utilizing a unique set of design principles, philosophies, and technologies, we elevate your brand and shed light on the
         true value you deliver.
       </h2>
     </div>
-  </div>
-  <div class="row services-spacing-section">
+  </div> -->
+  <div class="row services-spacing-section" id="visual-storytelling">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/extraordinary_smile_branding.jpg" class="img-fluid services-image-margins">
+      <div class="service-offering-container">
+        <img src="../assets/img/extraordinary_smile_branding.jpg" class="img-fluid services-image-margins">
+      </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -69,13 +68,22 @@
             your brand and building a foundation that is in harmony with your overall vision.
           </p>
           <h3 class="learn-more-title text-align-center">
-            <div class="contact-link text-align-center" (click)="openContactUsModal()">Learn More</div>
+            <!-- <div class="contact-link text-align-center" (click)="openContactUsModal()">Learn More</div> -->
+            <button type="button" class="sign-up-button" (click)="openContactUsModal()">Learn More</button>
           </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('purposeful-assets')">More</div>
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('purposeful-assets')">
+            <fa name="chevron-down" class="scroll-down-animation"></fa>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row services-spacing-section">
+  <div class="row services-spacing-section" id="purposeful-assets">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
         <div class="service-offerings-content">
@@ -87,18 +95,31 @@
             specifically tailored to accommodate your growing dental practice's needs.
           </p>
           <h3 class="learn-more-title text-align-center">
-            <div class="contact-link text-align-center" (click)="openContactUsModal()">Get In Touch</div>
+            <!-- <div class="contact-link text-align-center" (click)="openContactUsModal()">Get In Touch</div> -->
+            <button type="button" class="sign-up-button" (click)="openContactUsModal()">Get In Touch</button>
           </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('lasting-impressions')">More</div>
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('lasting-impressions')">
+            <fa name="chevron-down" class="scroll-down-animation"></fa>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 order-first order-md-2">
-      <img src="../assets/img/endocare-2.jpg" class="img-fluid services-image-margins">
+      <div class="service-offering-container">
+        <img src="../assets/img/endocare-2.jpg" class="img-fluid services-image-margins">
+      </div>
     </div>
   </div>
-  <div class="row services-spacing-section">
+  <div class="row services-spacing-section" id="lasting-impressions">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/martin_family_dentistry.jpg" class="img-fluid services-image-margins">
+      <div class="service-offering-container">
+        <img src="../assets/img/martin_family_dentistry.jpg" class="img-fluid services-image-margins">
+      </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -112,23 +133,32 @@
             patients.
           </p>
           <h3 class="learn-more-title text-align-center">
-            <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div>
+            <!-- <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div> -->
+            <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
           </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('header-unit')">
+            <fa name="chevron-up" class="scroll-down-animation"></fa>
+          </div>
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('header-unit')">Back To Top</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bottom tagline -->
-  <div class="row services-spacing-section" id="contactUsForm">
+  <!-- <div class="row services-spacing-section" id="contactUsForm">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
       <h2 class="kohan-secondary-statement">
         Emphasize your presence and establish your voice with Kohan Creative.
       </h2>
       <div class="button-spacing">
-        <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Work With Us</button>
+        <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Get Started Now</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>

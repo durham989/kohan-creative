@@ -42,6 +42,7 @@
     "@nguniversal/common": "^5.0.0-beta.8",
     "@nguniversal/express-engine": "^5.0.0-beta.8",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.8",
+    "@nicky-lenaers/ngx-scroll-to": "^0.6.0",
     "@types/node": "^8.0.30",
     "angular-font-awesome": "^3.1.2",
     "angularfire-lite": "^5.2.0",

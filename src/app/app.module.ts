@@ -8,6 +8,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AngularFireLite } from 'angularfire-lite';
 import { environment } from '../environments/environment';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -19,9 +20,11 @@ import { FooterComponent } from './footer/footer.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ContactUsComponent } from './contact/contact.component';
 import { WorkWithUsComponent } from './work-with-us/work-with-us.component';
+import { AboutUsComponent } from './about/about.component';
 
 import { ContactService } from './services/contact.service';
 import { SharingService } from './services/sharing.service';
+import { ScrollService } from './services/scroll.service';
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { Http } from '@angular/http';
@@ -37,7 +40,8 @@ import { Http } from '@angular/http';
     FooterComponent,
     PricingComponent,
     ContactUsComponent,
-    WorkWithUsComponent
+    WorkWithUsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
@@ -48,6 +52,7 @@ import { Http } from '@angular/http';
     ReactiveFormsModule,
     AngularFontAwesomeModule,
     NgxSmartModalModule.forRoot(),
+    ScrollToModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'home', component: HomeComponent },
@@ -55,6 +60,7 @@ import { Http } from '@angular/http';
       { path: 'graphic-design-branding', component: GraphicDesignComponent },
       { path: 'social-media-marketing', component: SocialMediaComponent },
       { path: 'pricing', component: PricingComponent },
+      { path: 'about-us', component: AboutUsComponent },
       { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
       { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
     ]),
@@ -62,7 +68,8 @@ import { Http } from '@angular/http';
   ],
   providers: [
     ContactService,
-    SharingService
+    SharingService,
+    ScrollService
   ],
   bootstrap: [AppComponent]
 })

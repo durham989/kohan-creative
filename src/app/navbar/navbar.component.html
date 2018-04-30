@@ -17,24 +17,29 @@
                 aria-expanded="false">
                 Services
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="border-color: transparent;">
-                <a class="dropdown-item" routerLink="web-design-development">Web Design & Development</a>
-                <a class="dropdown-item" routerLink="graphic-design-branding">Graphic Design & Branding</a>
+              <div class="dropdown-menu dropdown-container" aria-labelledby="navbarDropdown">
+                <a class="dropdown-link services-link" routerLink="/web-design-development">Web Design & Development</a>
+                <a class="dropdown-link services-link" routerLink="/graphic-design-branding">Graphic Design & Branding</a>
                 <!-- <div class="dropdown-divider"></div> -->
-                <a class="dropdown-item" routerLink="social-media-marketing">Social Media Marketing</a>
+                <a class="dropdown-link services-link" routerLink="/social-media-marketing">Social Media Marketing</a>
               </div>
             </li>
             <li class="services-item-container">
-              <a class="services-link" routerLink="pricing">Pricing
+              <a class="services-link" routerLink="/pricing">Packages
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="services-item-container">
+              <a class="services-link" routerLink="/about-us">About Us
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <!-- <li class="services-item-container">
               <a class="services-link" href="#">About</a>
             </li> -->
-            <li class="services-item-container">
+            <!-- <li class="services-item-container">
               <div class="services-link-button" (click)="openWorkWithUsModal()">Work With Us</div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>

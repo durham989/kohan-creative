@@ -1,0 +1,73 @@
+<div id="header-unit"></div>
+<kohan-navbar></kohan-navbar>
+
+<div class="header-unit">
+  <!-- <div class="color-overlay"></div> -->
+  <div id="video-container">
+    <video autoplay loop muted playsinline class="fillWidth">
+      <source src="https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/City%20-%203249.mp4?alt=media&token=04841c9c-82dd-4ce5-92d4-c74feeeeabcb"
+        type="video/mp4" />
+    </video>
+  </div>
+  <!-- end video-container -->
+
+  <div class="desc-wrapper-container">
+
+    <!-- Work With Us Modal -->
+    <ngx-smart-modal #myModal identifier="myModal">
+      <kohan-work-with-us></kohan-work-with-us>
+    </ngx-smart-modal>
+
+    <div class="desc-wrapper">
+      <p class="desc-smaller-text">Kohan Creative</p>
+      <h1 class="kohan-header-tagline">Who We Are</h1>
+      <!-- <a class="kohan-header-button" routerLink="/home">Work With Us</a> -->
+      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Get Started Now</div>
+    </div>
+
+    <div class="scroll-down-container container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+          <div class="kohan-header-more-link" (click)="scrollToPageSection('who-we-are')">More</div>
+          <div class="scroll-down-animation" (click)="scrollToPageSection('who-we-are')">
+            <fa name="chevron-down" class="scroll-down-animation" style="color: #FFFFFF;"></fa>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end .header-unit -->
+
+<div class="container">
+  <!-- Kohan Secondary Tagline -->
+  <div class="row spacing-section" id="who-we-are">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h2 class="kohan-secondary-statement">
+        Kohan Creative is the sister company to the
+        <a class="link-to-services" href="http://kohaninc.com/" target="_blank">Kohan Group</a>, the leader in healthcare, dental, orthodontic, and dental speciality office design in North America.
+      </h2>
+      <!-- <h2 class="kohan-secondary-statement">
+          We are the foremost industry leaders in dental, healthcare, orthodontic, and dental speciality web design and branding.
+        </h2> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+      <div class="service-offering-container">
+        <div class="service-offerings-content">
+          <p class="text-align-center services-paragraph">
+            We provide a comprehensive suite of services, starting the moment you have a grander vision of your dental practice. From
+            architectural and interior design, to construction, to building your website and digital presence, we offer a
+            unique set of services tailored specifically to the dental industry.
+          </p>
+          <div class="button-spacing text-align-center">
+            <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Get Started Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</div>

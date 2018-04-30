@@ -1,8 +1,11 @@
+<div id="header-unit"></div>
+<kohan-navbar></kohan-navbar>
+
 <div class="header-unit">
-  <div class="color-overlay"></div>
+  <!-- <div class="color-overlay"></div> -->
   <div id="video-container">
     <video autoplay loop muted playsinline class="fillWidth">
-      <source src="https://firebasestorage.googleapis.com/v0/b/wav-studios.appspot.com/o/563397345.mp4?alt=media&token=5c400ba8-c1e2-4864-904e-e5b1d5e15765"
+      <source src="https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/Islands%20-%202119.mp4?alt=media&token=7125fd63-0495-47f6-81b1-3912a80fab3c"
         type="video/mp4" />
     </video>
   </div>
@@ -24,24 +27,36 @@
       <h1 class="kohan-header-tagline">Web Design & Development</h1>
       <p class="desc-smaller-text">Where Our Passions and Expertise Meet</p>
       <!-- <a class="kohan-header-button" routerLink="/home">Work With Us</a> -->
-      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Work With Us</div>
+      <div class="kohan-header-button" (click)="openWorkWithUsModal()">Get Started Now</div>
+    </div>
+    <div class="scroll-down-container container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+          <div class="kohan-header-more-link" (click)="scrollToPageSection('holistic-design')">More</div>
+          <div class="scroll-down-animation" (click)="scrollToPageSection('holistic-design')">
+            <fa name="chevron-down" class="scroll-down-animation" style="color: #FFFFFF;"></fa>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <!-- end .header-unit -->
 
 <div class="container">
-  <div class="row spacing-section">
+  <!-- <div class="row spacing-section">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h2 class="kohan-secondary-statement">
         At Kohan Creative, we design beautiful, luxurious websites with high-performance technologies and advanced capabilities to
         modernize your dental and medical practice.
       </h2>
     </div>
-  </div>
-  <div class="row services-spacing-section">
+  </div> -->
+  <div class="row services-spacing-section" id="holistic-design">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/brigher_dental_in_laptop.png" class="img-fluid services-image-margins">
+      <div class="service-offering-container">
+        <img src="../assets/img/brigher_dental_in_laptop.png" class="img-fluid services-image-margins">
+      </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -55,13 +70,22 @@
             same harmonious feel as your physical one.
           </p>
           <h3 class="learn-more-title text-align-center">
-            <div class="contact-link text-align-center" (click)="openContactUsModal()">Learn More</div>
+            <!-- <div class="contact-link text-align-center" (click)="openContactUsModal()">Learn More</div> -->
+            <button type="button" class="sign-up-button" (click)="openContactUsModal()">Learn More</button>
           </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('optimization')">More</div>
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('optimization')">
+            <fa name="chevron-down" class="scroll-down-animation"></fa>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row services-spacing-section">
+  <div class="row services-spacing-section" id="optimization">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
         <div class="service-offerings-content">
@@ -73,18 +97,31 @@
             to ensure the highest perceived performance and speed with an enhanced user experience to match.
           </p>
           <h3 class="learn-more-title text-align-center">
-            <div class="contact-link text-align-center" (click)="openContactUsModal()">Get In Touch</div>
+            <!-- <div class="contact-link text-align-center" (click)="openContactUsModal()">Get In Touch</div> -->
+            <button type="button" class="sign-up-button" (click)="openContactUsModal()">Get In Touch</button>
           </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('digital-office')">More</div>
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('digital-office')">
+            <fa name="chevron-down" class="scroll-down-animation"></fa>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 order-first order-md-2">
-      <img src="../assets/img/Endodontic_Desktop.png" class="img-fluid services-image-margins">
+      <div class="service-offering-container">
+        <img src="../assets/img/Endodontic_Desktop.png" class="img-fluid services-image-margins">
+      </div>
     </div>
   </div>
-  <div class="row services-spacing-section">
+  <div class="row services-spacing-section" id="digital-office">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-      <img src="../assets/img/iphone_example.png" class="img-fluid services-image-margins">
+      <div class="service-offering-container">
+        <img src="../assets/img/iphone_example.png" class="img-fluid services-image-margins">
+      </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
       <div class="service-offering-container">
@@ -98,15 +135,24 @@
             schedule appointments, and more.
           </p>
           <h3 class="learn-more-title text-align-center">
-            <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div>
+            <!-- <div class="contact-link text-align-center" (click)="openContactUsModal()">Contact Us</div> -->
+            <button type="button" class="sign-up-button" (click)="openContactUsModal()">Contact Us</button>
           </h3>
+        </div>
+      </div>
+      <div class="scroll-down-container">
+        <div class="text-align-center">
+          <div class="scroll-down-animation text-align-center" (click)="scrollToPageSection('header-unit')">
+            <fa name="chevron-up" class="scroll-down-animation"></fa>
+          </div>
+          <div class="kohan-section-more-link text-align-center" (click)="scrollToPageSection('header-unit')">Back To Top</div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bottom tagline -->
-  <div class="row services-spacing-section" id="contactUsForm">
+  <!-- <div class="row services-spacing-section" id="contactUsForm">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
       <h2 class="kohan-secondary-statement">
         Build a beautiful, high-performing website with Kohan Creative today.
@@ -115,6 +161,6 @@
         <button type="button" class="sign-up-button" (click)="openWorkWithUsModal()">Work With Us</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </div>

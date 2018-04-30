@@ -1,5 +1,5 @@
 .kohan-navbar-background {
-  background-color: #FFFFFF !important;
+  background-color: transparent !important;
 }
 
 .kohan-logo {
@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   line-height: 1em;
-  background-color: #fff;
+  /* background-color: #fff; */
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: subpixel-antialiased;
   position: relative;
@@ -67,7 +67,8 @@
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1em;
-  color: #000000;
+  /* color: #000000; */
+  color: #FFFFFF;
   display: block;
   padding: 1em 1.5em !important;
 }
@@ -82,7 +83,8 @@
   text-decoration: none;
   line-height: 1em;
   display: block;
-  color: #000000;
+  /* color: #000000; */
+  color: #FFFFFF;
   border: 2px solid #000000;
   background-color: transparent;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -96,6 +98,24 @@
   background-color: #000000;
   color: #EFEFEF;
   cursor: pointer;
+}
+
+.dropdown-container {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.dropdown-link {
+  width: 100%;
+  clear: both;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 @media only screen and (max-width: 640px) {
