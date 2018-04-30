@@ -59,7 +59,7 @@ import { Http } from '@angular/http';
       { path: 'web-design-development', component: WebDevelopmentComponent },
       { path: 'graphic-design-branding', component: GraphicDesignComponent },
       { path: 'social-media-marketing', component: SocialMediaComponent },
-      { path: 'pricing', component: PricingComponent },
+      { path: 'packages', component: PricingComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
       { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
