@@ -154,3 +154,25 @@
   </div> -->
 
 </div>
+
+<!-- Fixed site navigation -->
+<div class="site-side-nav">
+  <ul>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'header-unit' ? 600 : 400" (click)="scrollToPageSection('header-unit')">
+      <!-- <fa name="angle-double-up" (click)="scrollToPageSection('header-unit')"></fa> -->
+      <div (click)="scrollToPageSection('header-unit')">TOP</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'create-cultivate' ? 600 : 400" (click)="scrollToPageSection('create-cultivate')">
+      <!-- <fa name="expand" (click)="scrollToPageSection('create-cultivate')"></fa> -->
+      <div (click)="scrollToPageSection('create-cultivate')">CULTIVATE</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'build-community' ? 600 : 400" (click)="scrollToPageSection('build-community')">
+      <!-- <fa name="building" (click)="scrollToPageSection('build-community')"></fa> -->
+      <div (click)="scrollToPageSection('build-community')">COMMUNITY</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'brand-ambassadors' ? 600 : 400" (click)="scrollToPageSection('brand-ambassadors')">
+      <!-- <fa name="users" (click)="scrollToPageSection('brand-ambassadors')"></fa> -->
+      <div (click)="scrollToPageSection('brand-ambassadors')">AMBASSADORS</div>
+    </li>
+  </ul>
+</div>

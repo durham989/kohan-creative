@@ -62,9 +62,52 @@ body.dialog-open ngx-smart-modal {
   color: rgba(31,31,31,.5);
 }
 
+.site-side-nav {
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+  top: auto;
+  bottom: 65px;
+  left: 2px;
+  color: #c3c1c1;
+}
+
+.site-side-nav-item {
+  width: auto;
+  margin: 7px 0;
+  height: auto;
+  display: block;
+  position: relative;
+  color: #c3c1c1;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 640px) {
   .scroll-down-container {
     display: none;
+  }
+
+  .site-side-nav {
+    display: none;
+  }
+
+  .site-side-nav-item {
+    display: none;
+  }
+}
+
+@media (min-width: 1441px) {
+  .services-spacing-section {
+    margin-top: 35%;
+    margin-bottom: 35%;
+  }
+
+  .site-side-nav {
+    bottom: 20%;
+  }
+
+  .image-padding {
+    padding-top: 10%;
   }
 }
 

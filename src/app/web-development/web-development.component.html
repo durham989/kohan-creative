@@ -164,3 +164,25 @@
   </div> -->
 
 </div>
+
+<!-- Fixed site navigation -->
+<div class="site-side-nav">
+  <ul>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'header-unit' ? 600 : 400" (click)="scrollToPageSection('header-unit')">
+      <!-- <fa name="angle-double-up" (click)="scrollToPageSection('header-unit')"></fa> -->
+      <div (click)="scrollToPageSection('header-unit')">TOP</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'holistic-design' ? 600 : 400" (click)="scrollToPageSection('holistic-design')">
+      <!-- <fa name="balance-scale" (click)="scrollToPageSection('holistic-design')"></fa> -->
+      <div (click)="scrollToPageSection('holistic-design')">HOLISTIC</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'optimization' ? 600 : 400" (click)="scrollToPageSection('optimization')">
+      <!-- <fa name="trophy" (click)="scrollToPageSection('optimization')"></fa> -->
+      <div (click)="scrollToPageSection('optimization')">OPTIMIZE</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'digital-office' ? 600 : 400" (click)="scrollToPageSection('digital-office')">
+      <!-- <fa name="stethoscope" (click)="scrollToPageSection('digital-office')"></fa> -->
+      <div (click)="scrollToPageSection('digital-office')">EXTEND</div>
+    </li>
+  </ul>
+</div>

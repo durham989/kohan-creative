@@ -17,6 +17,7 @@ export class SocialMediaComponent implements OnInit {
   public fireStoreData: any;
   public contactData: any;
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+  public pageSection: any;
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,
@@ -28,6 +29,7 @@ export class SocialMediaComponent implements OnInit {
 
   ngOnInit() {
     this.message = 'Hello';
+    this.pageSection = 'header-unit';
   }
 
   navigateToPage(route) {
@@ -45,6 +47,7 @@ export class SocialMediaComponent implements OnInit {
   }
 
   scrollToPageSection(target) {
+    this.pageSection = target;
     this.scrollService.triggerScrollTo(target);
   }
 }

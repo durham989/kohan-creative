@@ -321,23 +321,6 @@ video.fillWidth {
   color: rgba(31,31,31,.5);
 }
 
-.site-side-nav {
-  position: fixed;
-  z-index: 100;
-  opacity: 1;
-  top: auto;
-  bottom: 80px;
-  right: 10px;
-}
-
-.site-side-nav-item {
-  width: auto;
-  margin: 7px 0;
-  height: auto;
-  display: block;
-  position: relative;
-}
-
 .bottom-column {
   float: none;
   display: table-cell;
@@ -401,10 +384,6 @@ video.fillWidth {
   .service-offering-container {
     padding-top: 17px;
     padding-bottom: 17px;
-  }
-
-  .scroll-down-container {
-    display: none;
   }
 }
 

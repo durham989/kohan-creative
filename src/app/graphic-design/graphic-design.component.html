@@ -162,3 +162,25 @@
   </div> -->
 
 </div>
+
+<!-- Fixed site navigation -->
+<div class="site-side-nav">
+  <ul>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'header-unit' ? 600 : 400" (click)="scrollToPageSection('header-unit')">
+      <!-- <fa name="angle-double-up" (click)="scrollToPageSection('header-unit')"></fa> -->
+      <div (click)="scrollToPageSection('header-unit')">TOP</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'visual-storytelling' ? 600 : 400" (click)="scrollToPageSection('visual-storytelling')">
+      <!-- <fa name="eye" (click)="scrollToPageSection('visual-storytelling')"></fa> -->
+      <div (click)="scrollToPageSection('visual-storytelling')">STORY</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'purposeful-assets' ? 600 : 400" (click)="scrollToPageSection('purposeful-assets')">
+      <!-- <fa name="copyright" (click)="scrollToPageSection('purposeful-assets')"></fa> -->
+      <div (click)="scrollToPageSection('purposeful-assets')">PURPOSE</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'lasting-impressions' ? 600 : 400" (click)="scrollToPageSection('lasting-impressions')">
+      <!-- <fa name="star" (click)="scrollToPageSection('lasting-impressions')"></fa> -->
+      <div (click)="scrollToPageSection('lasting-impressions')">LASTING</div>
+    </li>
+  </ul>
+</div>

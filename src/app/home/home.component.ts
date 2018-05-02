@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   public fireStoreData: any;
   public contactData: any;
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+  public pageSection: any;
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,
@@ -28,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.message = 'Hello';
+    this.pageSection = 'header-unit';
     this.auth.signinAnonymously();
     this.fireStore.read('contacts').subscribe((data) => {
       this.fireStoreData = data;
@@ -44,6 +46,7 @@ export class HomeComponent implements OnInit {
   }
 
   scrollToPageSection(target) {
+    this.pageSection = target;
     this.scrollService.triggerScrollTo(target);
   }
 }

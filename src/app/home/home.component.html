@@ -109,10 +109,10 @@
   </div> -->
 
   <div class="row services-spacing-section" id="web-design-development">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center image-padding">
       <img src="../assets/img/design_graphic.png" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('web-design-development')">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 image-padding">
       <div class="service-offering-container">
         <div class="service-offerings-content">
           <h3 class="service-offerings-title text-align-center">
@@ -139,10 +139,10 @@
     </div>
   </div>
   <div class="row services-spacing-section" id="graphic-design-branding">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center image-padding">
       <img src="../assets/img/branding_graphic.png" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('graphic-design-branding')">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 image-padding">
       <div class="service-offering-container">
         <div class="service-offerings-content">
           <h3 class="service-offerings-title text-align-center">
@@ -169,10 +169,10 @@
     </div>
   </div>
   <div class="row services-spacing-section" id="social-media-marketing">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
-      <img src="../assets/img/social_graphic.png" class="img-fluid services-image-margins img-cursor hover-shadow" (click)="navigateToPage('social-media-marketing')">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center image-padding">
+      <img src="../assets/img/social_graphic.png" class="img-fluid services-image-margins img-cursor" (click)="navigateToPage('social-media-marketing')">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 image-padding">
       <div class="service-offering-container">
         <div class="service-offerings-content">
           <h3 class="service-offerings-title text-align-center">
@@ -202,16 +202,23 @@
 </div>
 
 <!-- Fixed site navigation -->
-<!-- <div class="site-side-nav">
+<div class="site-side-nav">
   <ul>
-    <li class="site-side-nav-item">
-      <div>Web Design & Dev</div>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'header-unit' ? 600 : 400" (click)="scrollToPageSection('header-unit')">
+      <!-- <fa name="angle-double-up" (click)="scrollToPageSection('header-unit')"></fa> -->
+      <div (click)="scrollToPageSection('header-unit')">TOP</div>
     </li>
-    <li class="site-side-nav-item">
-      <div>Graphics & Branding</div>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'web-design-development' ? 600 : 400" (click)="scrollToPageSection('web-design-development')">
+      <!-- <fa name="code" (click)="scrollToPageSection('web-design-development')"></fa> -->
+      <div (click)="scrollToPageSection('web-design-development')">DESIGN</div>
     </li>
-    <li class="site-side-nav-item">
-      <div>Social Media Marketing</div>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'graphic-design-branding' ? 600 : 400" (click)="scrollToPageSection('graphic-design-branding')">
+      <!-- <fa name="trademark" (click)="scrollToPageSection('graphic-design-branding')"></fa> -->
+      <div (click)="scrollToPageSection('graphic-design-branding')">BRANDING</div>
+    </li>
+    <li class="site-side-nav-item" [style.font-weight]="pageSection == 'social-media-marketing' ? 600 : 400" (click)="scrollToPageSection('social-media-marketing')">
+      <!-- <fa name="mobile" (click)="scrollToPageSection('social-media-marketing')"></fa> -->
+      <div (click)="scrollToPageSection('social-media-marketing')">SOCIAL</div>
     </li>
   </ul>
-</div> -->
+</div>

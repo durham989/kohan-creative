@@ -16,6 +16,7 @@ export class WebDevelopmentComponent implements OnInit {
   public message: string;
   public contactData: any;
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+  public pageSection: any;
 
   constructor(private router: Router, 
     public ngxSmartModalService: NgxSmartModalService,
@@ -27,6 +28,7 @@ export class WebDevelopmentComponent implements OnInit {
 
   ngOnInit() {
     this.message = 'Hello';
+    this.pageSection = 'header-unit';
   }
 
   navigateToPage(route) {
@@ -44,6 +46,7 @@ export class WebDevelopmentComponent implements OnInit {
   }
 
   scrollToPageSection(target) {
+    this.pageSection = target;
     this.scrollService.triggerScrollTo(target);
   }
 }
