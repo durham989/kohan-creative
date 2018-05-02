@@ -151,7 +151,7 @@ video.fillWidth {
   color: #1F1F1F;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
+  font-size: 28px;
   letter-spacing: 4px;
   text-transform: uppercase;
   line-height: 1.3em;
@@ -245,10 +245,12 @@ video.fillWidth {
   font-style: normal;
   font-size: 80%;
   letter-spacing: .5px;
-  line-height: .5em;
+  line-height: 1em;
   color: #1F1F1F;
   margin-top: 10%;
   text-align: left;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .sign-up-button {
@@ -272,7 +274,7 @@ video.fillWidth {
   cursor: help;
 }
 
-.hover-shadow:hover {
+.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
@@ -299,6 +301,20 @@ video.fillWidth {
   color: #000000;
   background-color: #CCCCCC;
   cursor: not-allowed;
+}
+
+.iphone-background {
+  background-image: url('../../assets/img/iPhone.png');
+  background-size: 100% 100%;
+  min-height: 800px;
+}
+
+.iphone-padding {
+  padding: 6% 10% 10% 10%;
+}
+
+.iphone-margins {
+  margin-top: 35%;
 }
 
 @media only screen and (max-width: 640px) {
@@ -352,6 +368,10 @@ video.fillWidth {
 
   .desc-wrapper {
     padding: 84px 32px 64px 32px;
+  }
+
+  .service-offerings-title {
+    font-size: 20px;
   }
 }
 
