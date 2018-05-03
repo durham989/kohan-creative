@@ -261,7 +261,9 @@ video.fillWidth {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 1em 1.75em;
+  /* padding: 1em 1.75em; */
+  padding: 16px 28px;
+  font-size: 16px;
 }
 
 .sign-up-button:hover {
@@ -316,6 +318,41 @@ video.fillWidth {
 .iphone-margins {
   margin-top: 35%;
 }
+
+.red-stripes {
+  display: grid !important;
+  grid: repeat(5, 70px) / repeat(10, 1fr);
+  transform: skewY(-12deg);
+  transform-origin: 0;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #EF3B36);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #EF3B36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+
+.red-stripes :nth-child(1) {
+  grid-column: span 3;
+}
+
+.red-stripes :nth-child(2) {
+  grid-area: 3 / span 3 / auto / -1;
+}
+
+.red-stripes :nth-child(3) {
+  grid-row: 4;
+  grid-column: span 5;
+}
+
+.responsive-iphone-container {
+  /* font-size: 0.85px; */
+  display: none;
+}
+
+.individual-iphone-margins {
+  margin: 2%;
+}
+
 
 @media only screen and (max-width: 640px) {
   .desc-wrapper-container {
@@ -372,6 +409,20 @@ video.fillWidth {
 
   .service-offerings-title {
     font-size: 20px;
+  }
+
+  .responsive-iphone-container {
+    font-size: 0.65px;
+    display: block;
+  }
+  
+  .individual-iphone-margins {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .package-features-paragraph {
+    font-size: 12px;
   }
 }
 
