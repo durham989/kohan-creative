@@ -224,6 +224,11 @@ video.fillWidth {
   cursor: pointer;
 }
 
+.img-cursor:hover {
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition:         all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 .work-with-us-modal-button {
   color: #000000;
   border: 2px solid #000000;
@@ -271,13 +276,6 @@ video.fillWidth {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
-
-.about-us-background {
-  background: url('../../assets/img/cad_7.jpg') no-repeat center center, #222;
-  background-size: 100%;
-  padding: 10%;
-  text-align: center;
 }
 
 .sign-up-button {

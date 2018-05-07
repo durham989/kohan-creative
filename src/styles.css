@@ -2,6 +2,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url("https://use.typekit.net/pkn6hzc.css");
 @import './devices.min.css';
+@import './apple_devices.css';
 
 body {
   font-family: futura-pt, sans-serif;
@@ -83,6 +84,14 @@ body.dialog-open ngx-smart-modal {
   cursor: pointer;
 }
 
+.app-background {
+  background-image: url("assets/img/gray_background.png");
+  /* background-image: url("assets/img/Geodesic_Artboard.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 /* iPhone rendering */
 
@@ -106,6 +115,8 @@ body.dialog-open ngx-smart-modal {
   /* transform: rotate3d(0.5,-0.866,0,19deg) translateZ(30px); */
   transform: translateZ(15px);
   box-shadow: 38.4px 70px 140px -28px rgba(50,50,93,.47),23px 42px 84px -42px rgba(0,0,0,.57);
+  -webkit-transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition:         all 600ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .iphone-top {
@@ -225,6 +236,7 @@ body.dialog-open ngx-smart-modal {
   left: 4px;
   top: 4px;
 }
+
 
 @media only screen and (max-width: 640px) {
   .scroll-down-container {
