@@ -85,8 +85,8 @@ body.dialog-open ngx-smart-modal {
 }
 
 .app-background {
-  background-image: url("assets/img/gray_background.png");
-  /* background-image: url("assets/img/Geodesic_Artboard.png"); */
+  /* background-image: url("assets/img/gray_background.png"); */
+  background-image: url("assets/img/Geodesic_Artboard.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
