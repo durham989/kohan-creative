@@ -161,10 +161,6 @@ var AppComponent = (function () {
             { name: 'description', content: 'Kohan Creative is a website design and development firm specializing in creating beautiful websites and branding for dental practices.' }
         ]);
     }
-    AppComponent.prototype.onResize = function (event) {
-        this.screenHeight = event.target.innerHeight;
-        this.screenWidth = event.target.innerWidth;
-    };
     AppComponent.prototype.ngOnInit = function () {
         // Scroll to top on route change
         this.router.events.subscribe(function (evt) {
@@ -174,12 +170,6 @@ var AppComponent = (function () {
             window.scrollTo(0, 0);
         });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])('window:resize', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", void 0)
-    ], AppComponent.prototype, "onResize", null);
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',

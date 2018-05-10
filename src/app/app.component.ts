@@ -9,14 +9,6 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class AppComponent {
 
-  public screenHeight: any;
-  public screenWidth: any;
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.screenHeight = event.target.innerHeight;
-    this.screenWidth = event.target.innerWidth;
-  }
-
   constructor(private router: Router,
     public pageMeta: Meta,
     public pageTitle: Title) {
