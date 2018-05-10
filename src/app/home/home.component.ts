@@ -28,11 +28,7 @@ export class HomeComponent implements OnInit {
     public fireStore: AngularFireLiteFirestore,
     private httpClient: HttpClient,
     private scrollService: ScrollService,
-    private sharingService: SharingService) {
-      this.sharingService.currentScreenHeight.subscribe(
-        screenHeight => this.screenHeight = screenHeight
-      );
-    }
+    private sharingService: SharingService) {}
 
   ngOnInit() {
     this.message = 'Hello';

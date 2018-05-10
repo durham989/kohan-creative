@@ -137,7 +137,6 @@ module.exports = "<!-- <kohan-navbar></kohan-navbar> -->\n<router-outlet></route
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_sharing_service__ = __webpack_require__("./src/app/services/sharing.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -150,22 +149,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var AppComponent = (function () {
-    function AppComponent(router, pageMeta, pageTitle, sharingService) {
+    function AppComponent(router, pageMeta, pageTitle) {
         this.router = router;
         this.pageMeta = pageMeta;
         this.pageTitle = pageTitle;
-        this.sharingService = sharingService;
         pageTitle.setTitle('Kohan Creative: Dental Website Design & Development');
         pageMeta.addTags([
             { name: 'author', content: 'https://www.kasuriagroup.com/' },
             { name: 'keywords', content: 'dental website design, dental website development, dental branding, dental graphic design, dental social media, social media marketing, graphic design, website development, website design' },
             { name: 'description', content: 'Kohan Creative is a website design and development firm specializing in creating beautiful websites and branding for dental practices.' }
         ]);
-        this.screenHeight = window.screen.height;
-        this.screenWidth = window.screen.width;
-        this.sharingService.changeScreenHeight(this.screenHeight);
     }
     AppComponent.prototype.onResize = function (event) {
         this.screenHeight = event.target.innerHeight;
@@ -194,8 +188,7 @@ var AppComponent = (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["d" /* Meta */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["e" /* Title */],
-            __WEBPACK_IMPORTED_MODULE_3__services_sharing_service__["a" /* SharingService */]])
+            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["e" /* Title */]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -681,7 +674,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HomeComponent = (function () {
     function HomeComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient, scrollService, sharingService) {
-        var _this = this;
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
@@ -691,7 +683,6 @@ var HomeComponent = (function () {
         this.scrollService = scrollService;
         this.sharingService = sharingService;
         this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
-        this.sharingService.currentScreenHeight.subscribe(function (screenHeight) { return _this.screenHeight = screenHeight; });
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
