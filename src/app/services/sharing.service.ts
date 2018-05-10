@@ -10,6 +10,9 @@ export class SharingService {
   private practiceNameSource = new BehaviorSubject<any>('');
   currentPracticeName = this.practiceNameSource.asObservable();
 
+  private screenHeightSource = new BehaviorSubject<any>('');
+  currentScreenHeight = this.screenHeightSource.asObservable();
+
   constructor() {}
 
   changeEmailAddress(emailAddress) {
@@ -18,5 +21,9 @@ export class SharingService {
 
   changePracticeName(practiceName) {
     this.practiceNameSource.next(practiceName);
+  }
+
+  changeScreenHeight(screenHeight) {
+    this.screenHeightSource.next(screenHeight);
   }
 }

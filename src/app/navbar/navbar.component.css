@@ -2,13 +2,6 @@
   background-color: transparent !important;
 }
 
-.kohan-logo {
-  height: auto;
-  max-height: 100px;
-  width: auto;
-  max-width: 150px;
-}
-
 .kohan-header {
   padding: 0 20px;
   -webkit-box-sizing: border-box;
@@ -22,7 +15,8 @@
   /* background-color: #fff; */
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: subpixel-antialiased;
-  position: relative;
+  /* position: relative; */
+  position: absolute;
 }
 
 .kohan-inner-header {
@@ -34,7 +28,7 @@
 }
 
 .kohan-header-nav {
-  text-align: right;
+  text-align: left;
   box-sizing: border-box;
   display: table-cell;
   vertical-align: middle;
@@ -120,7 +114,9 @@
 
 @media only screen and (max-width: 640px) {
   .mobile-padding {
-    padding: 24px 36px;
+    /* padding: 24px 36px; */
+    padding: 0px 0px;
+    background-color: #FFFFFF;
   }
   .services-link-button {
     text-align: center;

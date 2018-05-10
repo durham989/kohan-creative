@@ -22,7 +22,8 @@
 
 .footer-section {
   color: rgba(255,255,255,.4);
-  background-color: #201a16;
+  /* background-color: #201a16; */
+  background-color: transparent;
   -webkit-font-smoothing: antialiased;
   padding-top: 3%;
   padding-bottom: 3%;
@@ -43,4 +44,14 @@
   background: transparent;
   cursor: pointer;
   color: rgba(255,255,255,.4);
+}
+
+.all-rights-reserved {
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .5px;
+  line-height: 1.6em;
+  margin-top: 1em;
+  color: #888888;
 }

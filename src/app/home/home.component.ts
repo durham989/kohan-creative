@@ -5,6 +5,7 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AngularFireLiteAuth, AngularFireLiteDatabase, AngularFireLiteFirestore } from 'angularfire-lite';
 import { ScrollService } from '../services/scroll.service';
+import { SharingService } from '../services/sharing.service';
 
 @Component({
   selector: 'kohan-home',
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
   public contactData: any;
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
   public pageSection: any;
+  public screenHeight: any;
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,
@@ -25,7 +27,12 @@ export class HomeComponent implements OnInit {
     public auth: AngularFireLiteAuth,
     public fireStore: AngularFireLiteFirestore,
     private httpClient: HttpClient,
-    private scrollService: ScrollService) { }
+    private scrollService: ScrollService,
+    private sharingService: SharingService) {
+      this.sharingService.currentScreenHeight.subscribe(
+        screenHeight => this.screenHeight = screenHeight
+      );
+    }
 
   ngOnInit() {
     this.message = 'Hello';

@@ -36,3 +36,18 @@
   background-color: #CCCCCC;
   cursor: not-allowed;
 }
+
+.stripes-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  display: grid;
+  -webkit-transform: skewY(-12deg);
+  transform: skewY(-12deg);
+  top: 0;
+  grid: repeat(4,100px)/repeat(10,1fr);
+  -webkit-transform-origin: 0;
+  transform-origin: 0;
+  background: -webkit-gradient(linear,left top,left bottom,from(#507eb1),color-stop(10%,#709dc7),color-stop(38%,#dde9f5),color-stop(48%,#eaf2f9),color-stop(62%,#f6f9fc));
+  background: linear-gradient(#507eb1,#709dc7 10%,#dde9f5 38%,#eaf2f9 48%,#f6f9fc 62%);
+}
