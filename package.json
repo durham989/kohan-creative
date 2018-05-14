@@ -47,6 +47,7 @@
     "@types/node": "^8.0.30",
     "@types/three": "^0.91.13",
     "angular-font-awesome": "^3.1.2",
+    "angular-particle": "^1.0.4",
     "angularfire-lite": "^5.2.0",
     "animateplus": "^2.1.0",
     "bootstrap": "^4.1.0",

@@ -35,7 +35,7 @@ module.exports = ".desc-wrapper-container {\n  min-height: 0;\n  /* padding: 130
 /***/ "./src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"header-unit\"></div>\n<kohan-navbar></kohan-navbar>\n\n<section class=\"full-individual-section\">\n  <!-- <div class=\"header-unit\"> -->\n  <!-- <div class=\"color-overlay\"></div> -->\n  <div id=\"video-container\">\n    <video autoplay loop muted playsinline class=\"fillWidth\" style=\"object-fit: cover;\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/City%20-%203249.mp4?alt=media&token=04841c9c-82dd-4ce5-92d4-c74feeeeabcb\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <!-- <div class=\"desc-wrapper-container\"> -->\n\n  <!-- Work With Us Modal -->\n  <ngx-smart-modal #myModal identifier=\"myModal\" customClass=\"nsm-dialog-animation-btt\">\n    <kohan-work-with-us></kohan-work-with-us>\n  </ngx-smart-modal>\n\n  <div class=\"outer\">\n    <div class=\"middle\">\n      <div class=\"inner\">\n        <p class=\"desc-smaller-text text-align-center\">Kohan Creative</p>\n        <h1 class=\"kohan-header-tagline text-align-center\">Who We Are</h1>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"scroll-down-header-arrow-container scroll-down-arrow-center hide-on-mobile\">\n    <div class=\"text-align-center\">\n      <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('tagline')\">\n        <fa name=\"chevron-down\" size=\"2x\" class=\"scroll-down-animation\" (click)=\"scrollToPageSection('tagline')\"></fa>\n      </div>\n    </div>\n  </div>\n\n  <!-- <div class=\"desc-wrapper\">\n        <p class=\"desc-smaller-text\">Kohan Creative</p>\n        <h1 class=\"kohan-header-tagline\">Who We Are</h1> -->\n  <!-- <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a> -->\n  <!-- <div class=\"kohan-header-button\" (click)=\"openWorkWithUsModal()\">Get Started Now</div> -->\n  <!-- </div> -->\n\n  <!-- <div class=\"scroll-down-container container\">\n        <div class=\"row\">\n          <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center\">\n            <div class=\"kohan-header-more-link\" (click)=\"scrollToPageSection('who-we-are')\">More</div>\n            <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('who-we-are')\">\n              <fa name=\"chevron-down\" class=\"scroll-down-animation\" style=\"color: #FFFFFF;\"></fa>\n            </div>\n          </div>\n        </div>\n      </div> -->\n  <!-- </div> -->\n  <!-- </div> -->\n  <!-- end .header-unit -->\n</section>\n\n<div class=\"app-background\">\n  <div class=\"container\">\n    <section id=\"tagline\" class=\"full-individual-section\">\n      <!-- <div class=\"sphere-scene\">\n        <div class=\"sphere-wrapper\">\n          <div class=\"ball\">\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n          </div>\n        </div>\n      </div> -->\n      <div class=\"row align-items-center align-content-center\">\n        <!-- <div class=\"col-lg-1\"></div> -->\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center\">\n          <img src=\"../../assets/img/AboutUsImage.png\" class=\"img-fluid\">\n        </div>\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n          <h2 class=\"kohan-secondary-statement py-2\">\n            Born from the <a class=\"link-to-services\" href=\"http://kohaninc.com/\" target=\"_blank\">KOHAN Group</a>, a leader in healthcare and dental specialty office design, KOHAN Creative is comprised of a group of young programmers, designers, and arists who came together from their prospective fields for the sole purpose of producting trend-forward, enticing, and beautiful websites, marketing material, and full branding assets for the Dental Community.\n          </h2>\n          <h2 class=\"kohan-secondary-statement py-2\">\n            Dedicated to a fresh take on the industry, we provide a comprehensive suite of services, starting the moment you have a grander vision of your Dental Practice. From branding to building your website and digital presence, we offer a unique set of services tailored specifically to the Dental industry.\n          </h2>\n          <div class=\"button-spacing text-align-center\">\n            <button type=\"button\" class=\"sign-up-button\" (click)=\"openWorkWithUsModal()\">Get Started Now</button>\n          </div>\n        </div>\n        <!-- <div class=\"col-lg-1\"></div> -->\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center hide-on-mobile\">\n          <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\">\n            <fa name=\"chevron-up\" size=\"2x\" class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\"></fa>\n          </div>\n        </div>\n      </div>\n    </section>\n    <!-- <section id=\"who-we-are\" class=\"full-individual-section\">\n      <div class=\"row align-items-center align-content-center\">\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n          <h2 class=\"kohan-secondary-statement\">\n            We provide a comprehensive suite of services, starting the moment you have a grander vision of your dental practice.\n            <br>\n            <br>From architectural and interior design, to construction, to building your website and digital presence, we offer\n            a unique set of services tailored specifically to the dental industry.\n          </h2>\n          <div class=\"button-spacing text-align-center\">\n            <button type=\"button\" class=\"sign-up-button\" (click)=\"openWorkWithUsModal()\">Get Started Now</button>\n          </div>\n        </div>\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center hide-on-mobile\">\n          <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\">\n            <fa name=\"chevron-up\" size=\"2x\" class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\"></fa>\n          </div>\n        </div>\n      </div>\n    </section> -->\n    <!-- <section id=\"sphere-animation\" class=\"full-individual-section\">\n      <div class=\"sphere-scene\">\n        <div class=\"sphere-wrapper\">\n          <div class=\"ball\">\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n          </div>\n        </div>\n      </div>\n    </section> -->\n  </div>\n  <kohan-footer></kohan-footer>\n</div>"
+module.exports = "<div id=\"header-unit\"></div>\n<kohan-navbar></kohan-navbar>\n\n<section class=\"full-individual-section\">\n  <!-- <div class=\"header-unit\"> -->\n  <!-- <div class=\"color-overlay\"></div> -->\n  <div id=\"video-container\">\n    <video autoplay loop muted playsinline class=\"fillWidth\" style=\"object-fit: cover;\">\n      <source src=\"https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/City%20-%203249.mp4?alt=media&token=04841c9c-82dd-4ce5-92d4-c74feeeeabcb\"\n        type=\"video/mp4\" />\n    </video>\n  </div>\n  <!-- end video-container -->\n\n  <!-- <div class=\"desc-wrapper-container\"> -->\n\n  <!-- Work With Us Modal -->\n  <ngx-smart-modal #myModal identifier=\"myModal\" customClass=\"nsm-dialog-animation-btt\">\n    <kohan-work-with-us></kohan-work-with-us>\n  </ngx-smart-modal>\n\n  <div class=\"outer\">\n    <div class=\"middle\">\n      <div class=\"inner\">\n        <p class=\"desc-smaller-text text-align-center\">Kohan Creative</p>\n        <h1 class=\"kohan-header-tagline text-align-center\">Who We Are</h1>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"scroll-down-header-arrow-container scroll-down-arrow-center hide-on-mobile\">\n    <div class=\"text-align-center\">\n      <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('tagline')\">\n        <fa name=\"chevron-down\" size=\"2x\" class=\"scroll-down-animation\" (click)=\"scrollToPageSection('tagline')\"></fa>\n      </div>\n    </div>\n  </div>\n\n  <!-- <div class=\"desc-wrapper\">\n        <p class=\"desc-smaller-text\">Kohan Creative</p>\n        <h1 class=\"kohan-header-tagline\">Who We Are</h1> -->\n  <!-- <a class=\"kohan-header-button\" routerLink=\"/home\">Work With Us</a> -->\n  <!-- <div class=\"kohan-header-button\" (click)=\"openWorkWithUsModal()\">Get Started Now</div> -->\n  <!-- </div> -->\n\n  <!-- <div class=\"scroll-down-container container\">\n        <div class=\"row\">\n          <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center\">\n            <div class=\"kohan-header-more-link\" (click)=\"scrollToPageSection('who-we-are')\">More</div>\n            <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('who-we-are')\">\n              <fa name=\"chevron-down\" class=\"scroll-down-animation\" style=\"color: #FFFFFF;\"></fa>\n            </div>\n          </div>\n        </div>\n      </div> -->\n  <!-- </div> -->\n  <!-- </div> -->\n  <!-- end .header-unit -->\n</section>\n\n<div class=\"app-background\">\n  <particles [params]=\"myParams\" [style]=\"myStyle\" [width]=\"width\" [height]=\"height\"></particles>\n  <div class=\"container\">\n    <section id=\"tagline\" class=\"full-individual-section\">\n      <!-- <div class=\"sphere-scene\">\n        <div class=\"sphere-wrapper\">\n          <div class=\"ball\">\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n          </div>\n        </div>\n      </div> -->\n      <div class=\"row align-items-center align-content-center\">\n        <!-- <div class=\"col-lg-1\"></div> -->\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center\">\n          <img src=\"../../assets/img/AboutUsImage.png\" class=\"img-fluid\">\n        </div>\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-6\">\n          <h2 class=\"kohan-secondary-statement py-2\">\n            Born from the <a class=\"link-to-services\" href=\"http://kohaninc.com/\" target=\"_blank\">KOHAN Group</a>, a leader in healthcare and dental specialty office design, KOHAN Creative is comprised of a group of young programmers, designers, and arists who came together from their prospective fields for the sole purpose of producting trend-forward, enticing, and beautiful websites, marketing material, and full branding assets for the Dental Community.\n          </h2>\n          <h2 class=\"kohan-secondary-statement py-2\">\n            Dedicated to a fresh take on the industry, we provide a comprehensive suite of services, starting the moment you have a grander vision of your Dental Practice. From branding to building your website and digital presence, we offer a unique set of services tailored specifically to the Dental industry.\n          </h2>\n          <div class=\"button-spacing text-align-center\">\n            <button type=\"button\" class=\"sign-up-button\" (click)=\"openWorkWithUsModal()\">Get Started Now</button>\n          </div>\n        </div>\n        <!-- <div class=\"col-lg-1\"></div> -->\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center hide-on-mobile\">\n          <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\">\n            <fa name=\"chevron-up\" size=\"2x\" class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\"></fa>\n          </div>\n        </div>\n      </div>\n    </section>\n    <!-- <section id=\"who-we-are\" class=\"full-individual-section\">\n      <div class=\"row align-items-center align-content-center\">\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n          <h2 class=\"kohan-secondary-statement\">\n            We provide a comprehensive suite of services, starting the moment you have a grander vision of your dental practice.\n            <br>\n            <br>From architectural and interior design, to construction, to building your website and digital presence, we offer\n            a unique set of services tailored specifically to the dental industry.\n          </h2>\n          <div class=\"button-spacing text-align-center\">\n            <button type=\"button\" class=\"sign-up-button\" (click)=\"openWorkWithUsModal()\">Get Started Now</button>\n          </div>\n        </div>\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center hide-on-mobile\">\n          <div class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\">\n            <fa name=\"chevron-up\" size=\"2x\" class=\"scroll-down-animation\" (click)=\"scrollToPageSection('header-unit')\"></fa>\n          </div>\n        </div>\n      </div>\n    </section> -->\n    <!-- <section id=\"sphere-animation\" class=\"full-individual-section\">\n      <div class=\"sphere-scene\">\n        <div class=\"sphere-wrapper\">\n          <div class=\"ball\">\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n            <div class=\"ring\"></div>\n          </div>\n        </div>\n      </div>\n    </section> -->\n  </div>\n  <kohan-footer></kohan-footer>\n</div>\n<!-- <particles [params]=\"myParams\" [style]=\"myStyle\" [width]=\"width\" [height]=\"height\"></particles> -->"
 
 /***/ }),
 
@@ -50,6 +50,7 @@ module.exports = "<div id=\"header-unit\"></div>\n<kohan-navbar></kohan-navbar>\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_scroll_service__ = __webpack_require__("./src/app/services/scroll.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_window_service__ = __webpack_require__("./src/app/services/window.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,6 +60,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 
 
@@ -66,7 +71,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var AboutUsComponent = (function () {
-    function AboutUsComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient, scrollService) {
+    function AboutUsComponent(router, ngxSmartModalService, db, auth, fireStore, httpClient, scrollService, window) {
         this.router = router;
         this.ngxSmartModalService = ngxSmartModalService;
         this.db = db;
@@ -74,7 +79,13 @@ var AboutUsComponent = (function () {
         this.fireStore = fireStore;
         this.httpClient = httpClient;
         this.scrollService = scrollService;
+        this.window = window;
         this.endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
+        // particles variables
+        this.myStyle = {};
+        this.myParams = {};
+        this.width = 100;
+        this.height = 100;
     }
     AboutUsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -83,6 +94,8 @@ var AboutUsComponent = (function () {
         this.fireStore.read('contacts').subscribe(function (data) {
             _this.fireStoreData = data;
         });
+        console.log(window);
+        this.configureParticles();
     };
     AboutUsComponent.prototype.navigateToPage = function (route) {
         this.router.navigate([route]);
@@ -92,7 +105,35 @@ var AboutUsComponent = (function () {
         this.ngxSmartModalService.getModal('myModal').open();
     };
     AboutUsComponent.prototype.scrollToPageSection = function (target) {
-        this.scrollService.triggerScrollTo(target);
+        // this.scrollService.triggerScrollTo(target);
+        this.scrollService.triggerScrollToWithSpeed(target);
+    };
+    AboutUsComponent.prototype.configureParticles = function () {
+        this.myStyle = {
+            'position': "absolute",
+            "width": '100%',
+            'height': "100vh",
+        };
+        this.myParams = {
+            particles: {
+                number: {
+                    value: 200,
+                },
+                color: {
+                    value: '#20bad2'
+                },
+                shape: {
+                    type: 'circle',
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#0574ac",
+                    opacity: 0.4,
+                    width: 1
+                },
+            }
+        };
     };
     AboutUsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -100,13 +141,15 @@ var AboutUsComponent = (function () {
             template: __webpack_require__("./src/app/about/about.component.html"),
             styles: [__webpack_require__("./src/app/about/about.component.css")]
         }),
+        __param(7, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */])(__WEBPACK_IMPORTED_MODULE_6__services_window_service__["a" /* WINDOW */])),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2_ngx_smart_modal__["b" /* NgxSmartModalService */],
             __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["c" /* AngularFireLiteDatabase */],
             __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["b" /* AngularFireLiteAuth */],
             __WEBPACK_IMPORTED_MODULE_4_angularfire_lite__["d" /* AngularFireLiteFirestore */],
             __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_5__services_scroll_service__["a" /* ScrollService */]])
+            __WEBPACK_IMPORTED_MODULE_5__services_scroll_service__["a" /* ScrollService */],
+            Window])
     ], AboutUsComponent);
     return AboutUsComponent;
 }());
@@ -203,21 +246,23 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire_lite__ = __webpack_require__("./node_modules/angularfire-lite/esm5/angularfire-lite.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__nicky_lenaers_ngx_scroll_to__ = __webpack_require__("./node_modules/@nicky-lenaers/ngx-scroll-to/@nicky-lenaers/ngx-scroll-to.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__web_development_web_development_component__ = __webpack_require__("./src/app/web-development/web-development.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__graphic_design_graphic_design_component__ = __webpack_require__("./src/app/graphic-design/graphic-design.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__social_media_social_media_component__ = __webpack_require__("./src/app/social-media/social-media.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__footer_footer_component__ = __webpack_require__("./src/app/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pricing_pricing_component__ = __webpack_require__("./src/app/pricing/pricing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__contact_contact_component__ = __webpack_require__("./src/app/contact/contact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__work_with_us_work_with_us_component__ = __webpack_require__("./src/app/work-with-us/work-with-us.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_contact_service__ = __webpack_require__("./src/app/services/contact.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_sharing_service__ = __webpack_require__("./src/app/services/sharing.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_scroll_service__ = __webpack_require__("./src/app/services/scroll.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__nguniversal_common__ = __webpack_require__("./node_modules/@nguniversal/common/esm5/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angular_particle__ = __webpack_require__("./node_modules/angular-particle/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__home_home_component__ = __webpack_require__("./src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__navbar_navbar_component__ = __webpack_require__("./src/app/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__web_development_web_development_component__ = __webpack_require__("./src/app/web-development/web-development.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__graphic_design_graphic_design_component__ = __webpack_require__("./src/app/graphic-design/graphic-design.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__social_media_social_media_component__ = __webpack_require__("./src/app/social-media/social-media.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__footer_footer_component__ = __webpack_require__("./src/app/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pricing_pricing_component__ = __webpack_require__("./src/app/pricing/pricing.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__contact_contact_component__ = __webpack_require__("./src/app/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__work_with_us_work_with_us_component__ = __webpack_require__("./src/app/work-with-us/work-with-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__about_about_component__ = __webpack_require__("./src/app/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_contact_service__ = __webpack_require__("./src/app/services/contact.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_sharing_service__ = __webpack_require__("./src/app/services/sharing.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_scroll_service__ = __webpack_require__("./src/app/services/scroll.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_window_service__ = __webpack_require__("./src/app/services/window.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__nguniversal_common__ = __webpack_require__("./node_modules/@nguniversal/common/esm5/common.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -250,23 +295,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__navbar_navbar_component__["a" /* NavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__web_development_web_development_component__["a" /* WebDevelopmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__social_media_social_media_component__["a" /* SocialMediaComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__pricing_pricing_component__["a" /* PricingComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__contact_contact_component__["a" /* ContactUsComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__work_with_us_work_with_us_component__["a" /* WorkWithUsComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__about_about_component__["a" /* AboutUsComponent */]
+                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__navbar_navbar_component__["a" /* NavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__web_development_web_development_component__["a" /* WebDevelopmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__social_media_social_media_component__["a" /* SocialMediaComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__pricing_pricing_component__["a" /* PricingComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__contact_contact_component__["a" /* ContactUsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__work_with_us_work_with_us_component__["a" /* WorkWithUsComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__about_about_component__["a" /* AboutUsComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */].withServerTransition({ appId: 'my-app' }),
@@ -278,25 +325,27 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6_angular_font_awesome__["a" /* AngularFontAwesomeModule */],
                 __WEBPACK_IMPORTED_MODULE_7_ngx_smart_modal__["a" /* NgxSmartModalModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_10__nicky_lenaers_ngx_scroll_to__["a" /* ScrollToModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_11_angular_particle__["a" /* ParticlesModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot([
-                    { path: '', component: __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */], pathMatch: 'full' },
-                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_12__home_home_component__["a" /* HomeComponent */] },
-                    { path: 'web-design-development', component: __WEBPACK_IMPORTED_MODULE_14__web_development_web_development_component__["a" /* WebDevelopmentComponent */] },
-                    { path: 'graphic-design-branding', component: __WEBPACK_IMPORTED_MODULE_15__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */] },
-                    { path: 'social-media-marketing', component: __WEBPACK_IMPORTED_MODULE_16__social_media_social_media_component__["a" /* SocialMediaComponent */] },
-                    { path: 'packages', component: __WEBPACK_IMPORTED_MODULE_18__pricing_pricing_component__["a" /* PricingComponent */] },
-                    { path: 'about-us', component: __WEBPACK_IMPORTED_MODULE_21__about_about_component__["a" /* AboutUsComponent */] },
+                    { path: '', component: __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */], pathMatch: 'full' },
+                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */] },
+                    { path: 'web-design-development', component: __WEBPACK_IMPORTED_MODULE_15__web_development_web_development_component__["a" /* WebDevelopmentComponent */] },
+                    { path: 'graphic-design-branding', component: __WEBPACK_IMPORTED_MODULE_16__graphic_design_graphic_design_component__["a" /* GraphicDesignComponent */] },
+                    { path: 'social-media-marketing', component: __WEBPACK_IMPORTED_MODULE_17__social_media_social_media_component__["a" /* SocialMediaComponent */] },
+                    { path: 'packages', component: __WEBPACK_IMPORTED_MODULE_19__pricing_pricing_component__["a" /* PricingComponent */] },
+                    { path: 'about-us', component: __WEBPACK_IMPORTED_MODULE_22__about_about_component__["a" /* AboutUsComponent */] },
                     { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' },
                     { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule' }
                 ]),
-                __WEBPACK_IMPORTED_MODULE_25__nguniversal_common__["a" /* TransferHttpCacheModule */],
+                __WEBPACK_IMPORTED_MODULE_27__nguniversal_common__["a" /* TransferHttpCacheModule */],
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_22__services_contact_service__["a" /* ContactService */],
-                __WEBPACK_IMPORTED_MODULE_23__services_sharing_service__["a" /* SharingService */],
-                __WEBPACK_IMPORTED_MODULE_24__services_scroll_service__["a" /* ScrollService */]
+                __WEBPACK_IMPORTED_MODULE_23__services_contact_service__["a" /* ContactService */],
+                __WEBPACK_IMPORTED_MODULE_24__services_sharing_service__["a" /* SharingService */],
+                __WEBPACK_IMPORTED_MODULE_25__services_scroll_service__["a" /* ScrollService */],
+                __WEBPACK_IMPORTED_MODULE_26__services_window_service__["b" /* WINDOW_PROVIDERS */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -963,6 +1012,13 @@ var ScrollService = (function () {
         };
         this.scrollToService.scrollTo(config);
     };
+    ScrollService.prototype.triggerScrollToWithSpeed = function (target) {
+        var config = {
+            target: target,
+            duration: 250
+        };
+        this.scrollToService.scrollTo(config);
+    };
     ScrollService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__nicky_lenaers_ngx_scroll_to__["b" /* ScrollToService */]])
@@ -1017,6 +1073,88 @@ var SharingService = (function () {
     return SharingService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/services/window.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WINDOW; });
+/* unused harmony export WindowRef */
+/* unused harmony export BrowserWindowRef */
+/* unused harmony export windowFactory */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return WINDOW_PROVIDERS; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+/* Create a new injection token for injecting the window into a component */
+var WINDOW = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* InjectionToken */]('WindowToken');
+/* Define abstract class for obtaining reference to the global window object */
+var WindowRef = (function () {
+    function WindowRef() {
+    }
+    Object.defineProperty(WindowRef.prototype, "nativeWindow", {
+        get: function () {
+            throw new Error('Not implemented');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return WindowRef;
+}());
+
+/* Define class that implements the abstract class and returns the native window object. */
+var BrowserWindowRef = (function (_super) {
+    __extends(BrowserWindowRef, _super);
+    function BrowserWindowRef() {
+        return _super.call(this) || this;
+    }
+    Object.defineProperty(BrowserWindowRef.prototype, "nativeWindow", {
+        get: function () {
+            return window;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return BrowserWindowRef;
+}(WindowRef));
+
+/* Create a factory function that returns the native window object */
+function windowFactory(browserWindowRef, platformId) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_0__angular_common__["j" /* isPlatformBrowser */])(platformId)) {
+        return browserWindowRef.nativeWindow;
+    }
+    return new Object();
+}
+/* Create an injectable provider for the WindowRef token that uses the BrowserWindowRef class. */
+var browserWindowProvider = {
+    provide: WindowRef,
+    useClass: BrowserWindowRef
+};
+/* Create an injectable provider that uses the windowFactory function for returining the native window object. */
+var windowProvider = {
+    provide: WINDOW,
+    useFactory: windowFactory,
+    deps: [WindowRef, __WEBPACK_IMPORTED_MODULE_1__angular_core__["R" /* PLATFORM_ID */]]
+};
+/* Create an array of providers */
+var WINDOW_PROVIDERS = [
+    browserWindowProvider,
+    windowProvider
+];
 
 
 /***/ }),

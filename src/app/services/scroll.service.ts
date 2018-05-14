@@ -12,4 +12,12 @@ export class ScrollService {
     this.scrollToService.scrollTo(config);
   }
 
+  public triggerScrollToWithSpeed(target) {
+    const config: ScrollToConfigOptions = {
+      target: target,
+      duration: 250
+    };
+    this.scrollToService.scrollTo(config);
+  }
+
 }

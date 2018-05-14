@@ -9,6 +9,7 @@ import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { AngularFireLite } from 'angularfire-lite';
 import { environment } from '../environments/environment';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { ParticlesModule } from 'angular-particle';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,6 +26,7 @@ import { AboutUsComponent } from './about/about.component';
 import { ContactService } from './services/contact.service';
 import { SharingService } from './services/sharing.service';
 import { ScrollService } from './services/scroll.service';
+import { WINDOW_PROVIDERS } from './services/window.service';
 
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { Http } from '@angular/http';
@@ -53,6 +55,7 @@ import { Http } from '@angular/http';
     AngularFontAwesomeModule,
     NgxSmartModalModule.forRoot(),
     ScrollToModule.forRoot(),
+    ParticlesModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'home', component: HomeComponent },
@@ -69,7 +72,8 @@ import { Http } from '@angular/http';
   providers: [
     ContactService,
     SharingService,
-    ScrollService
+    ScrollService,
+    WINDOW_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })
