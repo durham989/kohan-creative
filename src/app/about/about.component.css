@@ -74,8 +74,9 @@
 }
 
 .kohan-secondary-statement {
-  text-align: center;
+  text-align: left;
   font-weight: 300;
+  font-size: 24px;
 }
 
 .services-image-margins {
@@ -185,7 +186,7 @@
 }
 
 .about-us-background {
-  /* background: url('../../assets/img/cad_7.jpg') no-repeat center center, #222; */
+  /* background: url('../../assets/img/AboutUsBackground.png') no-repeat center center; */
   background-size: 100%;
   padding: 10%;
   text-align: center;
@@ -252,7 +253,8 @@
   }
 
   .kohan-secondary-statement {
-    font-size: 26px;
+    /* font-size: 26px; */
+    font-size: 16px;
   }
 
   .button-spacing {

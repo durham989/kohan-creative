@@ -3,6 +3,7 @@
 @import url("https://use.typekit.net/pkn6hzc.css");
 @import './devices.min.css';
 @import './apple_devices.css';
+@import './sphere.css';
 
 body {
   font-family: futura-pt, sans-serif;
@@ -496,5 +497,18 @@ section {
   100%{
       transform:translateY(0);
       -webkit-transform:translateY(0)
+  }
+}
+
+@keyframes smoke{
+  0%{
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100%{
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+    filter: blur(20px);
   }
 }
