@@ -92,8 +92,10 @@ export class ContactUsComponent implements OnInit {
     }
     
     const data = {
-      toEmail: 'sfarrugia@kohaninc.com',
-      toName: 'Sabina Farrugia',
+      // toEmail: 'sfarrugia@kohaninc.com',
+      // toName: 'Sabina Farrugia',
+      toEmail: 'info@kohancreative.com',
+      toName: 'Kohan Creative',
       leadFirstName: contactUsInfo.firstName,
       leadLastName: contactUsInfo.lastName,
       leadEmailAddress: contactUsInfo.email,

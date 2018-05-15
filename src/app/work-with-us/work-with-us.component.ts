@@ -79,8 +79,10 @@ export class WorkWithUsComponent implements OnInit {
     }
     
     const data = {
-      toEmail: 'sfarrugia@kohaninc.com',
-      toName: 'Sabina Farrugia',
+      // toEmail: 'sfarrugia@kohaninc.com',
+      // toName: 'Sabina Farrugia',
+      toEmail: 'info@kohancreative.com',
+      toName: 'Kohan Creative',
       leadEmailAddress: signUpInfo.email,
       leadPracticeName: signUpInfo.practiceName
     }
