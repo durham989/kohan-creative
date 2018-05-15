@@ -77,6 +77,7 @@
   text-align: left;
   font-weight: 300;
   font-size: 24px;
+  color: #FFFFFF;
 }
 
 .services-image-margins {
@@ -186,10 +187,15 @@
 }
 
 .about-us-background {
-  /* background: url('../../assets/img/AboutUsBackground.png') no-repeat center center; */
-  background-size: 100%;
-  padding: 10%;
+  /* background: url('../../assets/img/about_background.png') no-repeat center center; */
+  background: url('../../assets/img/about_background.png') no-repeat;
+  /* background-size: 100vh; */
+  /* background-size: 100%; */
+  background-size: cover;
+  background-position: 30% 60%;
+  /* padding: 10%; */
   text-align: center;
+  background-color: #e4e0dc;
 }
 
 .sign-up-button {
@@ -255,11 +261,16 @@
   .kohan-secondary-statement {
     /* font-size: 26px; */
     font-size: 16px;
+    color: #FFFFFF;
   }
 
   .button-spacing {
     margin-top: 10%;
     margin-bottom: 5%;
+  }
+
+  .about-us-background {
+    background-position: 30% 90%;
   }
 }
 

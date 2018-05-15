@@ -258,6 +258,9 @@ section {
   /*whatever width you want*/
 }
 
+.text-align-left {
+  text-align: left;
+}
 
 /* iPhone rendering */
 

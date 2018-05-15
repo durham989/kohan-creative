@@ -54,8 +54,8 @@ export class AboutUsComponent implements OnInit {
   }
 
   scrollToPageSection(target) {
-    // this.scrollService.triggerScrollTo(target);
-    this.scrollService.triggerScrollToWithSpeed(target);
+    this.scrollService.triggerScrollTo(target);
+    // this.scrollService.triggerScrollToWithSpeed(target);
   }
 
   configureParticles() {
