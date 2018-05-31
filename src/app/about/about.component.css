@@ -77,7 +77,8 @@
   text-align: left;
   font-weight: 300;
   font-size: 24px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
+  color: rgba(31,31,31,.5);
 }
 
 .services-image-margins {
@@ -188,7 +189,8 @@
 
 .about-us-background {
   /* background: url('../../assets/img/about_background.png') no-repeat center center; */
-  background: url('../../assets/img/about_background.png') no-repeat;
+  /* background: url('../../assets/img/about_background.png') no-repeat; */
+  background: url('https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/about_background.png?alt=media&token=863bc74a-5dbe-4df9-aeb2-c2c0fe7334cd') no-repeat;
   /* background-size: 100vh; */
   /* background-size: 100%; */
   background-size: cover;
@@ -261,7 +263,8 @@
   .kohan-secondary-statement {
     /* font-size: 26px; */
     font-size: 16px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: rgba(31,31,31,.5);
   }
 
   .button-spacing {

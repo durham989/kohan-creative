@@ -64,12 +64,13 @@
 
   <div class="container">
 
+    <!-- <section id="web-design-development" (mouseenter)="fireAnimation(true)" (mouseleave)="fireAnimation(false)" class="full-individual-section"> -->
     <section id="web-design-development" class="full-individual-section">
       <div class="row align-items-center align-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
-          <img src="../assets/img/design_graphic.png" class="img-fluid img-cursor" (click)="navigateToPage('web-design-development')">
+          <img src="../assets/img/design_graphic.png" class="img-fluid img-cursor" (click)="navigateToPage('web-design-development')" [class.slide-in-left]="pageSection == 'web-design-development'">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center" [class.slide-in-right]="pageSection == 'web-design-development'">
           <h3 class="service-offerings-title text-align-center">
             <a routerLink="/web-design-development" class="link-to-services text-align-center">Website Design & Development</a>
           </h3>
@@ -93,9 +94,9 @@
     <section id="graphic-design-branding" class="full-individual-section">
       <div class="row align-items-center align-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
-          <img src="../assets/img/branding_graphic.png" class="img-fluid img-cursor" (click)="navigateToPage('graphic-design-branding')">
+          <img src="../assets/img/branding_graphic.png" class="img-fluid img-cursor" (click)="navigateToPage('graphic-design-branding')" [class.slide-in-elliptic-top-fwd]="pageSection == 'graphic-design-branding'">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center" [class.slide-in-elliptic-top-fwd]="pageSection == 'graphic-design-branding'">
           <h3 class="service-offerings-title text-align-center">
             <a routerLink="/graphic-design-branding" class="link-to-services text-align-center">Graphic Design & Branding</a>
           </h3>
@@ -119,9 +120,9 @@
     <section id="social-media-marketing" class="full-individual-section">
       <div class="row align-items-center align-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
-          <img src="../assets/img/social_graphic.png" class="img-fluid img-cursor" (click)="navigateToPage('social-media-marketing')">
+          <img src="../assets/img/social_graphic.png" class="img-fluid img-cursor" (click)="navigateToPage('social-media-marketing')" [class.scale-in-center]="pageSection == 'social-media-marketing'">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center" [class.scale-in-center]="pageSection == 'social-media-marketing'">
           <h3 class="service-offerings-title text-align-center">
             <a routerLink="/social-media-marketing" class="link-to-services text-align-center">Social Media Marketing</a>
           </h3>

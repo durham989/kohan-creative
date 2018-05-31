@@ -67,6 +67,7 @@
     "pre-commit": "^1.2.2",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.5.2",
+    "three": "^0.92.0",
     "ts-loader": "^2.3.7",
     "tslint": "^5.7.0",
     "typescript": "~2.4.2",

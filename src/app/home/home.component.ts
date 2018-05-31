@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/httpEmail';
   public pageSection: any;
   public screenHeight: any;
+  public animationBoolean: Boolean;
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,
@@ -51,5 +52,9 @@ export class HomeComponent implements OnInit {
   scrollToPageSection(target) {
     this.pageSection = target;
     this.scrollService.triggerScrollTo(target);
+  }
+
+  fireAnimation(animationBool) {
+    this.animationBoolean = animationBool;
   }
 }

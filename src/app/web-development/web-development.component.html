@@ -79,9 +79,9 @@
     <section class="full-individual-section" id="holistic-design">
       <div class="row align-items-center align-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
-          <img src="../assets/img/kohan_laptop_template1.png" class="img-fluid">
+          <img src="../assets/img/kohan_laptop_template1.png" class="img-fluid" [class.slide-in-left]="pageSection == 'holistic-design'">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center" [class.slide-in-right]="pageSection == 'holistic-design'">
           <h3 class="service-offerings-title text-align-center">
             <div class="link-to-services text-align-center">Holistic Design & Development</div>
           </h3>
@@ -105,7 +105,7 @@
 
     <section class="full-individual-section" id="optimization">
       <div class="row align-items-center align-content-center">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center" [class.slide-in-elliptic-top-fwd]="pageSection == 'optimization'">
           <h3 class="service-offerings-title text-align-center">
             <div class="link-to-services text-align-center">Built for Maximum Optimization</div>
           </h3>
@@ -118,7 +118,7 @@
           </h3>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 order-first order-md-2 text-align-center">
-          <img src="../assets/img/Endodontic_Desktop.png" class="img-fluid">
+          <img src="../assets/img/Endodontic_Desktop.png" class="img-fluid" [class.slide-in-elliptic-top-fwd]="pageSection == 'optimization'">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center pt-5 order-last hide-on-mobile">
           <div class="scroll-down-animation" (click)="scrollToPageSection('digital-office')">
@@ -166,9 +166,9 @@
     <section class="full-individual-section" id="digital-office">
       <div class="row align-items-center align-content-center">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
-          <img src="../assets/img/iphone_example.png" class="img-fluid">
+          <img src="../assets/img/iphone_example.png" class="img-fluid" [class.scale-in-center]="pageSection == 'digital-office'">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 text-align-center" [class.scale-in-center]="pageSection == 'digital-office'">
           <h3 class="service-offerings-title text-align-center">
             <div class="link-to-services text-align-center">Your Digital Dental Office</div>
           </h3>
