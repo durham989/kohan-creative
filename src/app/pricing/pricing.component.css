@@ -109,6 +109,16 @@
   line-height: 1.3em;
 }
 
+.package-subheader {
+  color: #1F1F1F;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.3em;
+}
+
 .link-to-services {
   color: rgba(31,31,31,.5);
   text-decoration: none;
@@ -264,7 +274,7 @@
 }
 
 .iphone-padding {
-  padding: 6% 10% 10% 10%;
+  padding: 4% 8% 4% 10%;
 }
 
 .iphone-margins {
@@ -326,8 +336,12 @@
     font-size: 20px;
   }
 
+  .package-subheader {
+    font-size: 12px;
+  }
+
   .responsive-iphone-container {
-    font-size: 0.65px;
+    font-size: 0.69px;
     display: block;
   }
   
@@ -337,6 +351,18 @@
   }
 
   .package-features-paragraph {
+    font-size: 12px;
+  }
+
+  .sign-up-button {
+    color: #000000;
+    border: 1px solid #000000;
+    background-color: transparent;
+    -webkit-font-smoothing: subpixel-antialiased;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 14px;
     font-size: 12px;
   }
 }

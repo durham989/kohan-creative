@@ -165,6 +165,7 @@ export class AboutUsComponent implements OnInit {
     }
 
     this.document.body.appendChild(this.renderer.domElement);
+    // this.document.getElementById('tagline').appendChild(this.renderer.domElement);
     this.animate();
     
   }

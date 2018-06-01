@@ -307,6 +307,16 @@ section {
 	        animation: slide-in-elliptic-bottom-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+canvas {
+  position: absolute;
+  /* height: 100%;
+  width: 100%; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -9999;
+}
 
 
 /* iPhone rendering */
