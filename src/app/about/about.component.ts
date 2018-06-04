@@ -122,7 +122,8 @@ export class AboutUsComponent implements OnInit {
 
     this.geometry = new THREE.CubeGeometry(200,200,200);
     this.material = new THREE.MeshLambertMaterial({
-      color: 0xaa6666,
+      // color: 0xaa6666,
+      color: 0xFFFFFF,
       wireframe: false
     });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
@@ -130,7 +131,8 @@ export class AboutUsComponent implements OnInit {
 
     var textGeo = new THREE.PlaneGeometry(300,300);
     THREE.ImageUtils.crossOrigin = '';
-    var textTexture = THREE.ImageUtils.loadTexture('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/quickText.png');
+    var textTexture = THREE.ImageUtils.loadTexture('../../assets/img/about_text.png');
+    // var textTexture = THREE.ImageUtils.loadTexture('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/quickText.png');
     // var textTexture = THREE.ImageUtils.loadTexture('https://firebasestorage.googleapis.com/v0/b/kohan-creative.appspot.com/o/about_background.png?alt=media&token=863bc74a-5dbe-4df9-aeb2-c2c0fe7334cd');
     var textMaterial = new THREE.MeshLambertMaterial({
       color: 0x00ffff,
@@ -141,7 +143,7 @@ export class AboutUsComponent implements OnInit {
     });
     var text = new THREE.Mesh(textGeo,textMaterial);
     text.position.z = 800;
-    this.scene.add(text);
+    // this.scene.add(text);
 
     this.light = new THREE.DirectionalLight(0xffffff,0.5);
     this.light.position.set(-1,0,1);
@@ -180,7 +182,8 @@ export class AboutUsComponent implements OnInit {
     var sp = this.smokeParticles.length;
     var delta = new THREE.Clock();
     while(sp--) {
-      this.smokeParticles[sp].rotation.z += (delta.getDelta() * 0.2);
+      // this.smokeParticles[sp].rotation.z += (delta.getDelta() * 0.2);
+      this.smokeParticles[sp].rotation.z += (delta.getDelta() * 0.8);
     }
   }
 
