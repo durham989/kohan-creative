@@ -25,6 +25,7 @@ export class ContactUsComponent implements OnInit {
   });
   public endpoint = 'https://us-central1-kohan-creative.cloudfunctions.net/contactUsEmail';
   public previouslySubmittedEmail: any;
+  public submitted: Boolean = false;
 
   constructor(private router: Router,
     public ngxSmartModalService: NgxSmartModalService,
@@ -104,6 +105,7 @@ export class ContactUsComponent implements OnInit {
     }
 
     this.httpClient.post(this.endpoint, data, {headers: apiHeaders}).subscribe();
+    this.submitted = true;
   }
 
   sendEmailToSharedService(emailAddress) {

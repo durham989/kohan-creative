@@ -1,15 +1,8 @@
 <div class="container">
-  <!-- <div class="stripes-background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div> -->
-  <!-- <h4 style="text-align: center;">Contact Kohan Creative</h4> -->
   <div class="text-align-center">
     <img class="img-fluid kohan-logo" src="../assets/img/KOHAN-Creative-Logo.png">
   </div>
-  <form [formGroup]="contactUsForm" (ngSubmit)="saveContactInformation()">
+  <form *ngIf="!submitted" [formGroup]="contactUsForm" (ngSubmit)="saveContactInformation()">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="firstName" class="lighter-font-weight">First Name *</label>
@@ -48,4 +41,9 @@
       [disabled]="contactUsForm.invalid">Submit</button>
     <!-- <small *ngIf="contactUsForm.invalid && (contactUsForm.dirty || contactUsForm.touched)" class="form-text invalid-text">Please fill out all required fields.</small> -->
   </form>
+
+  <div class="text-align-center mt-5" *ngIf="submitted">
+    <p style="font-weight: 300;">Thank you! We will reach out to you shortly via email to learn more about your needs and to schedule a time to chat.</p>
+  </div>
+
 </div>
