@@ -289,13 +289,12 @@ var AppComponent = (function () {
         ]);
     }
     AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
         // Scroll to top on route change
         this.router.events.subscribe(function (evt) {
             if (!(evt instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* NavigationEnd */])) {
                 return;
             }
-            _this.window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
         });
     };
     AppComponent = __decorate([
@@ -422,8 +421,8 @@ var AppModule = (function () {
                     { path: 'packages', component: __WEBPACK_IMPORTED_MODULE_19__pricing_pricing_component__["a" /* PricingComponent */] },
                     { path: 'about-us', component: __WEBPACK_IMPORTED_MODULE_22__about_about_component__["a" /* AboutUsComponent */] },
                     { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule' },
-                    { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule' }
-                ]),
+                    { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule' },
+                ], { initialNavigation: 'enabled' }),
                 __WEBPACK_IMPORTED_MODULE_27__nguniversal_common__["a" /* TransferHttpCacheModule */],
             ],
             providers: [

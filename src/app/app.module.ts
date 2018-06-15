@@ -65,8 +65,8 @@ import { Http } from '@angular/http';
       { path: 'packages', component: PricingComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-      { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
-    ]),
+      { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'},
+    ], { initialNavigation: 'enabled' }),
     TransferHttpCacheModule,
   ],
   providers: [

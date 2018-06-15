@@ -28,7 +28,7 @@ export class AppComponent {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
-      this.window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
     });
   }
 
