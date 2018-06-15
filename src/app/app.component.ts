@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { WINDOW } from './services/window.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ export class AppComponent {
 
   constructor(private router: Router,
     public pageMeta: Meta,
-    public pageTitle: Title) {
+    public pageTitle: Title,
+    @Inject(WINDOW) private window: Window) {
       pageTitle.setTitle('Kohan Creative: Dental Website Design & Development');
       pageMeta.addTags([
         { name: 'author', content: 'https://www.kasuriagroup.com/' },
@@ -26,7 +28,7 @@ export class AppComponent {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
-      window.scrollTo(0, 0);
+      this.window.scrollTo(0, 0);
     });
   }
 

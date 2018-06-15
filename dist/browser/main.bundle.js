@@ -258,6 +258,7 @@ module.exports = "<!-- <kohan-navbar></kohan-navbar> -->\n<router-outlet></route
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_window_service__ = __webpack_require__("./src/app/services/window.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -267,14 +268,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 
 
 var AppComponent = (function () {
-    function AppComponent(router, pageMeta, pageTitle) {
+    function AppComponent(router, pageMeta, pageTitle, window) {
         this.router = router;
         this.pageMeta = pageMeta;
         this.pageTitle = pageTitle;
+        this.window = window;
         pageTitle.setTitle('Kohan Creative: Dental Website Design & Development');
         pageMeta.addTags([
             { name: 'author', content: 'https://www.kasuriagroup.com/' },
@@ -283,12 +289,13 @@ var AppComponent = (function () {
         ]);
     }
     AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
         // Scroll to top on route change
         this.router.events.subscribe(function (evt) {
             if (!(evt instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* NavigationEnd */])) {
                 return;
             }
-            window.scrollTo(0, 0);
+            _this.window.scrollTo(0, 0);
         });
     };
     AppComponent = __decorate([
@@ -297,9 +304,11 @@ var AppComponent = (function () {
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")]
         }),
+        __param(3, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */])(__WEBPACK_IMPORTED_MODULE_3__services_window_service__["a" /* WINDOW */])),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["d" /* Meta */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["e" /* Title */]])
+            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["e" /* Title */],
+            Window])
     ], AppComponent);
     return AppComponent;
 }());
