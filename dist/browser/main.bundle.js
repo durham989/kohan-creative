@@ -294,7 +294,7 @@ var AppComponent = (function () {
             if (!(evt instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* NavigationEnd */])) {
                 return;
             }
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
         });
     };
     AppComponent = __decorate([
